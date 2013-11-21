@@ -42,21 +42,13 @@
 				<control type="image">
 					<posx>549</posx>
 					<posy>87</posy>
-					<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
-					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
-					<visible>!Skin.HasSetting(watched.alternative)</visible>
+					<include>overlay_UnWatched</include>
 				</control>
 				<control type="image">
 					<posx>549</posx>
 					<posy>87</posy>
 					<include>overlay_Resumable</include>
 					<visible>Skin.HasSetting(watched.original)</visible>
-				</control>
-				<control type="image">
-					<posx>518</posx>
-					<posy>56</posy>
-					<info>ListItem.Overlay</info>
-					<visible>Skin.HasSetting(watched.alternative)</visible>				
 				</control>				
 			</itemlayout>															
 			<focusedlayout height="137" width="600">
@@ -92,28 +84,19 @@
 				<control type="image">
 					<posx>549</posx>
 					<posy>87</posy>
-					<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
-					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
-					<visible>!Skin.HasSetting(watched.alternative)</visible>
+					<include>overlay_UnWatched</include>
 				</control>
 				<control type="image">
 					<posx>549</posx>
 					<posy>87</posy>
-					<include>overlay_Resumable</include>
-					<visible>!Skin.HasSetting(watched.alternative)</visible>
-				</control>
-				<control type="image">
-					<posx>518</posx>
-					<posy>56</posy>
-					<info>ListItem.Overlay</info>
-					<visible>Skin.HasSetting(watched.alternative)</visible>				
+					<include>overlay_Resumable</include>			
 				</control>						
 			</focusedlayout>
 		</control>
 			<!---container info--->
 		<control type="grouplist">
-			<posx>30</posx>
-			<posy>600</posy>
+			<posx>70</posx>
+			<posy>630</posy>
 			<itemgap>0</itemgap>
 			<include>toggle_Menu</include>
 			<include>transition_Container</include>
@@ -136,33 +119,6 @@
 				<label>$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[16101] $LOCALIZE[20360]]</label>
 				<include>info_Sub</include>
 			</control>
-			<control type="label">
-				<width>500</width>
-				<label fallback="32022">$VAR[tvshow_Info.NextAired]</label>
-				<include>info_Sub</include>
-				<visible>!SubString(ListItem.Icon,default)</visible>
-			</control>
-			<control type="image">
-				<posx>695</posx>
-				<posy>650</posy>
-				<width>128</width>
-				<height>48</height>
-				<texture>$INFO[ListItem.StarRating]</texture>
-				<aspectratio align="left">keep</aspectratio>
-				<visible>!IsEmpty(ListItem.TVShowTitle)</visible>
-			</control>
-		</control>
-		 <control type ="image">
-			<posx>1040</posx>
-			<posy>520</posy>
-			<width>215</width>
-			<height>300</height>
-			<texture>$VAR[art_Logo.Condition]</texture>
-			<aspectratio align="center">keep</aspectratio>
-			<include>toggle_Menu</include>
-			<include>transition_Container</include>
-			<include>infoDialogHide</include>
-			<visible>Control.IsVisible(5411) + [Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
 		</control>
 	</include>
 	<!---banner poster------>
@@ -278,7 +234,7 @@
 		</control>
 			<!---container info--->
 		<control type="grouplist">
-			<posx>340</posx>
+			<posx>400</posx>
 			<posy>350</posy>
 			<itemgap>0</itemgap>
 			<include>toggle_Menu</include>
@@ -302,51 +258,12 @@
 				<label>$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[16101] $LOCALIZE[20360]]</label>
 				<include>info_Sub</include>
 			</control>
-			<control type="label">
-				<width>500</width>
-				<label>$VAR[tvshow_Info.NextAired]</label>
-				<include>info_Sub</include>
-				<visible>!SubString(ListItem.Icon,default) + !IsEmpty(Window(Home).Property(NextAired.Label))</visible>
-			</control>
-			<control type="label">
-				<width>500</width>
-				<label fallback="32022">$VAR[tvshow_Info.ShowStatus]</label>
-				<include>info_Sub</include>
-				<visible>!SubString(ListItem.Icon,default) + !StringCompare(Window(Home).Property(NextAired.Status),canceled/ended)</visible>
-			</control>
-			<control type="label">
-				<width>500</width>
-				<label fallback="32022">$VAR[tvshow_Info.ShowStatus]</label>
-				<include>info_Sub</include>
-				<visible>!SubString(ListItem.Icon,default) + IsEmpty(Window(Home).Property(NextAired.Label))</visible>
-			</control>
-			<control type="image">
-				<posx>695</posx>
-				<posy>650</posy>
-				<width>128</width>
-				<height>48</height>
-				<texture>$INFO[ListItem.StarRating]</texture>
-				<aspectratio align="left">keep</aspectratio>
-				<visible>!IsEmpty(ListItem.TVShowTitle)</visible>
-			</control>
-		</control>
-		 <control type ="image">
-			<posx>1040</posx>
-			<posy>520</posy>
-			<width>215</width>
-			<height>300</height>
-			<texture>$VAR[art_Logo.Condition]</texture>
-			<aspectratio align="center">keep</aspectratio>
-			<include>toggle_Menu</include>
-			<include>transition_Container</include>
-			<include>infoDialogHide</include>
-			<visible>Control.IsVisible(54111) + [Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
 		</control>
 		<control type ="image">
-			<posx>47</posx>
-			<posy>350</posy>
+			<posx>85</posx>
+			<posy>355</posy>
 			<width>264</width>
-			<height>359</height>
+			<height>320</height>
 			<texture>$INFO[ListItem.Art(poster)]</texture>
 			<aspectratio align="center">keep</aspectratio>
 			<include>toggle_Menu</include>
@@ -355,25 +272,10 @@
 			<visible>Control.IsVisible(54111) + [Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
 		</control>
 		<control type="textbox" id="4">
-			<posx>480</posx>
-			<posy>440</posy>
-			<width>690</width>
-			<height>177</height>
-			<label>$VAR[global_Plot.Condition]</label>
-			<include>description_Small</include>
-			<textcolor>Color4</textcolor>
-			<include>transition_Container</include>
-			<include>infoDialogHide</include>
-			<include>toggle_Menu</include>
-			<include>autoscroll-line</include>
-			<include>autoscroll-plot</include>
-			<visible>Control.IsVisible(54111) + [Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)] + StringCompare(Window(Home).Property(NextAired.Status),canceled/ended)</visible>
-		</control>
-		<control type="textbox" id="4">
-			<posx>480</posx>
-			<posy>460</posy>
-			<width>690</width>
-			<height>177</height>
+			<posx>400</posx>
+			<posy>430</posy>
+			<width>742</width>
+			<height>244</height>
 			<label>$VAR[global_Plot.Condition]</label>
 			<include>description_Small</include>
 			<textcolor>Color4</textcolor>
@@ -521,7 +423,7 @@
 					<include>focus_Banner</include>
 					<visible>!SubString(ListItem.Icon,default)</visible>
 				</control>
-				<control type="image" id="92529">
+				<!--<control type="image" id="92529">
 					<posx>678</posx>
 					<posy>214</posy>
 					<width>128</width>
@@ -539,7 +441,7 @@
 					<aspectratio align="right">keep</aspectratio>
 					<include>focus_Banner</include>
 					<visible>StringCompare(Control.GetLabel(92529),empty)</visible> 
-				</control>
+				</control>-->
 			</focusedlayout>
 			
 			<itemlayout condition="Container.Content(movies)" width="560" height="65">
@@ -803,12 +705,12 @@
 				<label>$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[16101] $LOCALIZE[20360]]</label>
 				<include>info_Sub</include>
 			</control>
-			<control type="label">
+			<!--<control type="label">
 				<width>500</width>
 				<label>$VAR[tvshow_Info.NextAired]</label>
 				<include>info_Sub</include>
 				<visible>!SubString(ListItem.Icon,default)</visible>
-			</control>
+			</control>-->
 			<control type="image">
 				<posx>695</posx>
 				<posy>650</posy>
