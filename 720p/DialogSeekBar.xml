@@ -11,8 +11,8 @@
 
 <!-- reFocus BIG OSD -->
 		<!-- clearart -->
-			<control type ="group">
-				<visible>Skin.HasSetting(videoosd.clearart) + [VideoPlayer.Content(episodes) | VideoPlayer.Content(movies)]</visible>
+		<control type="group">
+			<visible>player.paused</visible>
 				<control type ="image" id="1">
 					<posx>1022</posx>
 					<posy>527</posy>
@@ -21,8 +21,8 @@
 					<texture background="true">$INFO[Player.Art(tvshow.clearart)]</texture>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<include>transition_OSD</include>
+					<visible>Skin.HasSetting(videoosd.clearart) + [VideoPlayer.Content(episodes) | VideoPlayer.Content(movies)]</visible>
 				</control>
-			</control>	
 
 				<!--thumb for streams-->
 				<control type="image" id="1">
@@ -60,6 +60,7 @@
 					<visible>[VideoPlayer.Content(movies)]</visible>
 				</control>
 			</control>
+		</control>
 
 		<control type="group" id="213">
 			<posy>677</posy>
