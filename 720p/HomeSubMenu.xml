@@ -574,47 +574,16 @@
 				<include>homeMenusLayoutOriginal</include>
 				<content>
 					<item id="1">
-						<label>$LOCALIZE[1024]</label>
-						<onclick>ActivateWindow(Videos,tvshowtitles,$INFO[Skin.String(backspacehome)])</onclick>
-					</item>
-					<item id="2">
-						<label>$LOCALIZE[32052]</label>
-						<onclick>Skin.SetString(Watchlist,Shows)</onclick>
-						<onclick>ActivateWindow(63)</onclick>
-						<onclick>SetFocus(52)</onclick>
-						<visible>System.HasAddon(service.skin.widgets) + Skin.HasSetting(tvshowsmenu.watchlist) + !Skin.HasSetting(watchlist.disable)</visible>
-					</item>
-					<item id="3">
 						<label>$LOCALIZE[31094]</label>
 						<onclick>ActivateWindow(Videos,recentlyaddedepisodes,$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>Skin.HasSetting(tvshowsmenu.recent)</visible>
 					</item>
-					<item id="4">
-						<label>$LOCALIZE[16101]</label>
-						<onclick>ActivateWindow(Videos,special://skin/playlists/Unwatched Episodes.xsp,$INFO[Skin.String(backspacehome)])</onclick>
-						<visible>Skin.HasSetting(tvshowsmenu.unwatched)</visible>
-					</item>
-					<item id="5">
+					<item id="2">
 						<label>$LOCALIZE[575]</label>
 						<onclick>ActivateWindow(Videos,library://video/inprogressshows.xml,$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>Skin.HasSetting(tvshowsmenu.inprogress)</visible>
 					</item>
-					<item id="6">
-						<label>$LOCALIZE[135]</label>
-						<onclick>ActivateWindow(Videos,tvshowgenres,$INFO[Skin.String(backspacehome)])</onclick>
-						<visible>Skin.HasSetting(tvshowsmenu.genres)</visible>
-					</item>
-					<item id="7">
-						<label>$LOCALIZE[652]</label>
-						<onclick>ActivateWindow(Videos,tvshowyears,$INFO[Skin.String(backspacehome)])</onclick>
-						<visible>Skin.HasSetting(tvshowsmenu.years)</visible>
-					</item>
-					<item id="8">
-						<label>$LOCALIZE[344]</label>
-						<onclick>ActivateWindow(Videos,tvshowactors,$INFO[Skin.String(backspacehome)])</onclick>
-						<visible>Skin.HasSetting(tvshowsmenu.actors)</visible>
-					</item>
-					<item id="9">
+					<item id="3">
 						<label>$LOCALIZE[31070]</label>
 						<onclick>RunAddon(script.tv.show.next.aired)</onclick>
 						<visible>System.HasAddon(script.tv.show.next.aired) + Skin.HasSetting(tvshowsmenu.guide)</visible>

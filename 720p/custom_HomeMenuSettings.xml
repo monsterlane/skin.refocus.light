@@ -517,13 +517,12 @@
 						<selected>!Skin.HasSetting(homemenu.tvshows)</selected>
 						<include>dialog_Radio</include>
 					</control>
-					<!--watchlist-->
-					<control type="radiobutton" id="203">
-						<label>$LOCALIZE[31086]</label>
+					<!--directly go to recent episodes when pressing right on Homescreen-->
+					<control type="radiobutton" id="202">
+						<label>press right to go directly to new episodes</label>
 						<width>557</width>
-						<onclick>Skin.ToggleSetting(tvshowsmenu.watchlist)</onclick>
-						<selected>Skin.HasSetting(tvshowsmenu.watchlist)</selected>
-						<enable>!Skin.HasSetting(watchlist.disable</enable>
+						<onclick>Skin.ToggleSetting(homemenu.directrecent)</onclick>
+						<selected>Skin.HasSetting(homemenu.directrecent)</selected>
 						<include>dialog_Radio</include>
 					</control>
 					<!--recent episodes-->
@@ -533,14 +532,7 @@
 						<onclick>Skin.ToggleSetting(tvshowsmenu.recent)</onclick>
 						<selected>Skin.HasSetting(tvshowsmenu.recent)</selected>
 						<include>dialog_Radio</include>
-					</control>
-					<!--unwatched episodes-->
-					<control type="radiobutton" id="205">
-						<label>$LOCALIZE[16101]</label>
-						<width>557</width>
-						<onclick>Skin.ToggleSetting(tvshowsmenu.unwatched)</onclick>
-						<selected>Skin.HasSetting(tvshowsmenu.unwatched)</selected>
-						<include>dialog_Radio</include>
+						<enable>!Skin.HasSetting(homemenu.directrecent)</enable>
 					</control>
 					<!--episodes in progress-->
 					<control type="radiobutton" id="206">
@@ -549,30 +541,7 @@
 						<onclick>Skin.ToggleSetting(tvshowsmenu.inprogress)</onclick>
 						<selected>Skin.HasSetting(tvshowsmenu.inprogress)</selected>
 						<include>dialog_Radio</include>
-					</control>
-					<!--genres-->
-					<control type="radiobutton" id="207">
-						<label>$LOCALIZE[135]</label>
-						<width>557</width>
-						<onclick>Skin.ToggleSetting(tvshowsmenu.genres)</onclick>
-						<selected>Skin.HasSetting(tvshowsmenu.genres)</selected>
-						<include>dialog_Radio</include>
-					</control>
-					<!--years-->
-					<control type="radiobutton" id="208">
-						<label>$LOCALIZE[652]</label>
-						<width>557</width>
-						<onclick>Skin.ToggleSetting(tvshowsmenu.years)</onclick>
-						<selected>Skin.HasSetting(tvshowsmenu.years)</selected>
-						<include>dialog_Radio</include>
-					</control>
-					<!--actors-->
-					<control type="radiobutton" id="209">
-						<label>$LOCALIZE[344]</label>
-						<width>557</width>
-						<onclick>Skin.ToggleSetting(tvshowsmenu.actors)</onclick>
-						<selected>Skin.HasSetting(tvshowsmenu.actors)</selected>
-						<include>dialog_Radio</include>
+						<enable>!Skin.HasSetting(homemenu.directrecent)</enable>
 					</control>
 					<!--tv guide-->
 					<control type="radiobutton" id="210">
@@ -581,6 +550,7 @@
 						<onclick>Skin.ToggleSetting(tvshowsmenu.guide)</onclick>
 						<selected>Skin.HasSetting(tvshowsmenu.guide)</selected>
 						<include>dialog_Radio</include>
+						<enable>!Skin.HasSetting(homemenu.directrecent)</enable>
 					</control>
 				</control>
 			<!--livetv submenu-->

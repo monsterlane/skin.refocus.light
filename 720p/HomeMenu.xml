@@ -6,147 +6,19 @@
 			<height>633</height>
 			<onup>9000</onup>
 			<ondown>9000</ondown>
-			<onright condition="!Skin.HasSetting(slideshow.home)">8004</onright>
-			<onright condition="Skin.HasSetting(slideshow.home) + [!Skin.HasSetting(home.widgets.tvmovies) + Container(9000).HasFocus(1)] | [!Skin.HasSetting(home.widgets.tvmovies) + Container(9000).HasFocus(2)] | [!Skin.HasSetting(home.widgets.movies) + Container(9000).HasFocus(3)] | [!Skin.HasSetting(home.widgets.movies) + Container(9000).HasFocus(4)] | [!Skin.HasSetting(home.widgets.tvshows) + Container(9000).HasFocus(5)] | [!Skin.HasSetting(home.widgets.tvshows) + Container(9000).HasFocus(6)] | [!Skin.HasSetting(home.widgets.music) + Container(9000).HasFocus(9)] | [!Skin.HasSetting(home.widgets.music) + Container(9000).HasFocus(10)] | [!Skin.HasSetting(home.widgets.addons) + Container(9000).HasFocus(13)] | [!Skin.HasSetting(home.widgets.addons) + Container(9000).HasFocus(14)] | [!Skin.HasSetting(home.widgets.weather) + Container(9000).HasFocus(17)]">8004</onright>
-			<onright condition="Skin.HasSetting(slideshow.home) + ![!Skin.HasSetting(home.widgets.tvmovies) + Container(9000).HasFocus(1)] + ![!Skin.HasSetting(home.widgets.tvmovies) + Container(9000).HasFocus(2)] + ![!Skin.HasSetting(home.widgets.movies) + Container(9000).HasFocus(3)] + ![!Skin.HasSetting(home.widgets.movies) + Container(9000).HasFocus(4)] + ![!Skin.HasSetting(home.widgets.tvshows) + Container(9000).HasFocus(5)] + ![!Skin.HasSetting(home.widgets.tvshows) + Container(9000).HasFocus(6)] + ![!Skin.HasSetting(home.widgets.music) + Container(9000).HasFocus(9)] + ![!Skin.HasSetting(home.widgets.music) + Container(9000).HasFocus(10)] + ![!Skin.HasSetting(home.widgets.addons) + Container(9000).HasFocus(13)] + ![!Skin.HasSetting(home.widgets.addons) + Container(9000).HasFocus(14)] + ![!Skin.HasSetting(home.widgets.weather) + Container(9000).HasFocus(17)]">600</onright>
-			<onleft condition="!Skin.HasSetting(home.searchleft)">RunAddon(script.globalsearch)</onleft>
+			<onright condition="Container(9000).HasFocus(3)">1200</onright>
+			<onright condition="Container(9000).HasFocus(5) + !Skin.HasSetting(homemenu.directrecent)">1210</onright>
+			<onright condition="Container(9000).HasFocus(5) + Skin.HasSetting(homemenu.directrecent)">ActivateWindow(Videos,recentlyaddedepisodes,$INFO[Skin.String(backspacehome)])</onright>
+			<onright condition="Container(9000).HasFocus(13)">1150</onright>
+			<onright condition="Container(9000).HasFocus(9)">1130</onright>
+			<onleft>XBMC.ActivateWindow(ShutdownMenu)</onleft>
 			<orientation>vertical</orientation>
 			<scrolltime tween="Cubic" easing="Out">400</scrolltime>
 			<visible allowhiddenfocus="true">![ControlGroup(1100).HasFocus() | ControlGroup(4000).HasFocus() | ControlGroup(2100).HasFocus()]</visible>	
 			<include>transition_HomeMenu</include>
-			
-			<include condition="[Skin.HasSetting(home.category1.addon) | Skin.HasSetting(home.category1.program) | Skin.HasSetting(home.category1.playlist)  | Skin.HasSetting(home.category1.favourite)] | [Skin.HasSetting(home.category2.addon) | Skin.HasSetting(home.category2.program) | Skin.HasSetting(home.category2.playlist)  | Skin.HasSetting(home.category2.favourite)] | [Skin.HasSetting(home.category3.addon) | Skin.HasSetting(home.category3.program) | Skin.HasSetting(home.category3.playlist)  | Skin.HasSetting(home.category3.favourite)] | [Skin.HasSetting(home.category4.addon) | Skin.HasSetting(home.category4.program) | Skin.HasSetting(home.category4.playlist)  | Skin.HasSetting(home.category4.favourite)] | [Skin.HasSetting(home.category5.addon) | Skin.HasSetting(home.category5.program) | Skin.HasSetting(home.category5.playlist)  | Skin.HasSetting(home.category5.favourite)]">homeMenusLayoutMod</include>
-			<include condition="![Skin.HasSetting(home.category1.addon) | Skin.HasSetting(home.category1.program) | Skin.HasSetting(home.category1.playlist)  | Skin.HasSetting(home.category1.favourite)] + ![Skin.HasSetting(home.category2.addon) | Skin.HasSetting(home.category2.program) | Skin.HasSetting(home.category2.playlist)  | Skin.HasSetting(home.category2.favourite)] + ![Skin.HasSetting(home.category3.addon) | Skin.HasSetting(home.category3.program) | Skin.HasSetting(home.category3.playlist)  | Skin.HasSetting(home.category3.favourite)] + ![Skin.HasSetting(home.category4.addon) | Skin.HasSetting(home.category4.program) | Skin.HasSetting(home.category4.playlist)  | Skin.HasSetting(home.category4.favourite)] + ![Skin.HasSetting(home.category5.addon) | Skin.HasSetting(home.category5.program) | Skin.HasSetting(home.category5.playlist)  | Skin.HasSetting(home.category5.favourite)]">homeMenusLayoutOriginal</include>
+			<include>homeMenusLayoutOriginal</include>
 	
 			<content>
-			
-				<!--custom categories-->
-				<!--first subcategory-->
-				<item id="24">
-					<label>$INFO[Skin.String(addonsmenu.category1.addon.label)]</label>
-					<onclick>RunAddon($INFO[Skin.String(addonsmenu.category1.addon.path)])</onclick>
-					<visible>Skin.HasSetting(home.category1.addon) + Skin.HasSetting(home.category.top)</visible>
-					<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_category1]</icon>
-				</item>
-				<item id="24">
-					<label>$INFO[Skin.String(programs.category1.program.label)]</label>
-					<onclick>RunAddon($INFO[Skin.String(programs.category1.program.path)])</onclick>
-					<visible>Skin.HasSetting(home.category1.program) + Skin.HasSetting(home.category.top)</visible>
-					<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_category1]</icon>
-				</item>
-				<item id="24">
-					<label>$INFO[Skin.String(videomenu.category1.playlist.label)]</label>
-					<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.category1.playlist.path)],$INFO[Skin.String(backspacehome)])</onclick>
-					<visible>Skin.HasSetting(home.category1.playlist) + Skin.HasSetting(home.category.top)</visible>
-					<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_category1]</icon>
-				</item>
-				<item id="24">
-    					<label>$INFO[Skin.String(CustomVideo.Category1.Label)]</label>
-    					<onclick>$INFO[Skin.String(CustomVideo.Category1.Path)]</onclick>
-    					<visible>Skin.HasSetting(home.category1.favourite) + Skin.HasSetting(home.category.top)</visible>
-						<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_category1]</icon>
-				</item>
-				<!--second subcategory-->
-				<item id="25">
-					<label>$INFO[Skin.String(addonsmenu.category2.addon.label)]</label>
-					<onclick>RunAddon($INFO[Skin.String(addonsmenu.category2.addon.path)])</onclick>
-					<visible>Skin.HasSetting(home.category2.addon) + Skin.HasSetting(home.category.top)</visible>
-					<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_category2]</icon>
-				</item>
-				<item id="25">
-					<label>$INFO[Skin.String(programs.category2.program.label)]</label>
-					<onclick>RunAddon($INFO[Skin.String(programs.category2.program.path)])</onclick>
-					<visible>Skin.HasSetting(home.category2.program) + Skin.HasSetting(home.category.top)</visible>
-					<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_category2]</icon>
-				</item>
-				<item id="25">
-					<label>$INFO[Skin.String(videomenu.category2.playlist.label)]</label>
-					<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.category2.playlist.path)],$INFO[Skin.String(backspacehome)])</onclick>
-					<visible>Skin.HasSetting(home.category2.playlist) + Skin.HasSetting(home.category.top)</visible>
-					<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_category2]</icon>
-				</item>
-				<item id="25">
-    					<label>$INFO[Skin.String(CustomVideo.category2.Label)]</label>
-    					<onclick>$INFO[Skin.String(CustomVideo.category2.Path)]</onclick>
-    					<visible>Skin.HasSetting(home.category2.favourite) + Skin.HasSetting(home.category.top)</visible>
-						<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_category2]</icon>
-				</item>
-				<!--third subcategory-->
-				<item id="26">
-					<label>$INFO[Skin.String(addonsmenu.category3.addon.label)]</label>
-					<onclick>RunAddon($INFO[Skin.String(addonsmenu.category3.addon.path)])</onclick>
-					<visible>Skin.HasSetting(home.category3.addon) + Skin.HasSetting(home.category.top)</visible>
-					<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_category3]</icon>
-				</item>
-				<item id="26">
-					<label>$INFO[Skin.String(programs.category3.program.label)]</label>
-					<onclick>RunAddon($INFO[Skin.String(programs.category3.program.path)])</onclick>
-					<visible>Skin.HasSetting(home.category3.program) + Skin.HasSetting(home.category.top)</visible>
-					<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_category3]</icon>
-				</item>
-				<item id="26">
-					<label>$INFO[Skin.String(videomenu.category3.playlist.label)]</label>
-					<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.category3.playlist.path)],$INFO[Skin.String(backspacehome)])</onclick>
-					<visible>Skin.HasSetting(home.category3.playlist) + Skin.HasSetting(home.category.top)</visible>
-					<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_category3]</icon>
-				</item>
-				<item id="26">
-    					<label>$INFO[Skin.String(CustomVideo.category3.Label)]</label>
-    					<onclick>$INFO[Skin.String(CustomVideo.category3.Path)]</onclick>
-    					<visible>Skin.HasSetting(home.category3.favourite) + Skin.HasSetting(home.category.top)</visible>
-						<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_category3]</icon>
-				</item>
-				<!--fourth subcategory-->
-				<item id="27">
-					<label>$INFO[Skin.String(addonsmenu.category4.addon.label)]</label>
-					<onclick>RunAddon($INFO[Skin.String(addonsmenu.category4.addon.path)])</onclick>
-					<visible>Skin.HasSetting(home.category4.addon) + Skin.HasSetting(home.category.top)</visible>
-					<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_category4]</icon>
-				</item>
-				<item id="27">
-					<label>$INFO[Skin.String(programs.category4.program.label)]</label>
-					<onclick>RunAddon($INFO[Skin.String(programs.category4.program.path)])</onclick>
-					<visible>Skin.HasSetting(home.category4.program) + Skin.HasSetting(home.category.top)</visible>
-					<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_category4]</icon>
-				</item>
-				<item id="27">
-					<label>$INFO[Skin.String(videomenu.category4.playlist.label)]</label>
-					<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.category4.playlist.path)],$INFO[Skin.String(backspacehome)])</onclick>
-					<visible>Skin.HasSetting(home.category4.playlist) + Skin.HasSetting(home.category.top)</visible>
-					<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_category4]</icon>
-				</item>
-				<item id="27">
-    					<label>$INFO[Skin.String(CustomVideo.category4.Label)]</label>
-    					<onclick>$INFO[Skin.String(CustomVideo.category4.Path)]</onclick>
-    					<visible>Skin.HasSetting(home.category4.favourite) + Skin.HasSetting(home.category.top)</visible>
-						<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_category4]</icon>
-				</item>
-				<!--fifth subcategory-->
-				<item id="28">
-					<label>$INFO[Skin.String(addonsmenu.category5.addon.label)]</label>
-					<onclick>RunAddon($INFO[Skin.String(addonsmenu.category5.addon.path)])</onclick>
-					<visible>Skin.HasSetting(home.category5.addon) + Skin.HasSetting(home.category.top)</visible>
-					<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_category5]</icon>
-				</item>
-				<item id="28">
-					<label>$INFO[Skin.String(programs.category5.program.label)]</label>
-					<onclick>RunAddon($INFO[Skin.String(programs.category5.program.path)])</onclick>
-					<visible>Skin.HasSetting(home.category5.program) + Skin.HasSetting(home.category.top)</visible>
-					<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_category5]</icon>
-				</item>
-				<item id="28">
-					<label>$INFO[Skin.String(videomenu.category5.playlist.label)]</label>
-					<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.category5.playlist.path)],$INFO[Skin.String(backspacehome)])</onclick>
-					<visible>Skin.HasSetting(home.category5.playlist) + Skin.HasSetting(home.category.top)</visible>
-					<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_category5]</icon>
-				</item>
-				<item id="28">
-    					<label>$INFO[Skin.String(CustomVideo.category5.Label)]</label>
-    					<onclick>$INFO[Skin.String(CustomVideo.category5.Path)]</onclick>
-    					<visible>Skin.HasSetting(home.category5.favourite) + Skin.HasSetting(home.category.top)</visible>
-						<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_category5]</icon>
-				</item>
-				
 				<!--videos-->
 				<item id="1">
 					<label>$VAR[tvshows_homemenu]</label>
@@ -176,30 +48,18 @@
 				<!--movies-->
 				<item id="3">
 					<label>$VAR[movies_homemenu]</label>
-					<onclick>SetFocus(1200)</onclick>
-					<visible>Library.HasContent(movies) + !Skin.HasSetting(homemenu.movies) + [Skin.HasSetting(moviesmenu.watchlist) | Skin.HasSetting(moviesmenu.recent) | Skin.HasSetting(moviesmenu.unwatched) | Skin.HasSetting(moviesmenu.inprogress) | Skin.HasSetting(moviesmenu.trailers) | Skin.HasSetting(moviesmenu.genres) | Skin.HasSetting(moviesmenu.years) | Skin.HasSetting(moviesmenu.actors) | Skin.HasSetting(moviesmenu.moviesets) | Skin.HasSetting(moviesmenu.randomgenre) | Skin.HasSetting(moviesmenu.randommovie)]</visible>
-					<icon fallback="special://skin/backgrounds/movies.jpg">$VAR[value_mainmenubg_movies]</icon>
-				</item>
-				<item id="4">
-					<label>$VAR[movies_homemenu]</label>
 					<onclick>ActivateWindow(MyVideoLibrary,movietitles,$INFO[Skin.String(backspacehome)])</onclick>
-					<visible>Library.HasContent(movies) + !Skin.HasSetting(homemenu.movies) + ![Skin.HasSetting(moviesmenu.watchlist) | Skin.HasSetting(moviesmenu.recent) | Skin.HasSetting(moviesmenu.unwatched) | Skin.HasSetting(moviesmenu.inprogress) | Skin.HasSetting(moviesmenu.trailers) | Skin.HasSetting(moviesmenu.genres) | Skin.HasSetting(moviesmenu.years) | Skin.HasSetting(moviesmenu.actors) | Skin.HasSetting(moviesmenu.moviesets) | Skin.HasSetting(moviesmenu.randomgenre) | Skin.HasSetting(moviesmenu.randommovie)]</visible>
+					<visible>Library.HasContent(movies) + !Skin.HasSetting(homemenu.movies)</visible>
 					<icon fallback="special://skin/backgrounds/movies.jpg">$VAR[value_mainmenubg_movies]</icon>
 				</item>
 				<!--tv shows-->
 				<item id="5">
 					<label>$VAR[tvshows_homemenu_tvshows]</label>
-					<onclick>SetFocus(1210)</onclick>
-					<visible>Library.HasContent(tvshows) + !Skin.HasSetting(homemenu.tvshows) + [Skin.HasSetting(tvshowsmenu.watchlist) | Skin.HasSetting(tvshowsmenu.recent) | Skin.HasSetting(tvshowsmenu.unwatched) | Skin.HasSetting(tvshowsmenu.inprogress) | Skin.HasSetting(tvshowsmenu.genres) | Skin.HasSetting(tvshowsmenu.years) | Skin.HasSetting(tvshowsmenu.actors) | Skin.HasSetting(tvshowsmenu.guide)]</visible>
-					<icon fallback="special://skin/backgrounds/tvshows.jpg">$VAR[value_mainmenubg_tvshows]</icon>
-				</item>
-				<item id="6">
-					<label>$VAR[tvshows_homemenu_tvshows]</label>
+					<visible>Library.HasContent(tvshows) + !Skin.HasSetting(homemenu.tvshows)</visible>
 					<onclick>ActivateWindow(MyVideoLibrary,tvshowtitles,$INFO[Skin.String(backspacehome)])</onclick>
-					<visible>Library.HasContent(tvshows) + !Skin.HasSetting(homemenu.tvshows) + ![Skin.HasSetting(tvshowsmenu.watchlist) | Skin.HasSetting(tvshowsmenu.recent) | Skin.HasSetting(tvshowsmenu.unwatched) | Skin.HasSetting(tvshowsmenu.inprogress) | Skin.HasSetting(tvshowsmenu.genres) | Skin.HasSetting(tvshowsmenu.years) | Skin.HasSetting(tvshowsmenu.actors) | Skin.HasSetting(tvshowsmenu.guide)]</visible>
 					<icon fallback="special://skin/backgrounds/tvshows.jpg">$VAR[value_mainmenubg_tvshows]</icon>
 				</item>
-				<!--live tv-->
+				<!--livetv-->
 				<item id="7">
 					<label>$VAR[livetv_homemenu]</label>
 					<onclick>SetFocus(1120)</onclick>
@@ -215,14 +75,8 @@
 				<!--music-->
 				<item id="9">
 					<label>$VAR[music_homemenu]</label>
-					<onclick>SetFocus(1130)</onclick>
-					<visible>!Skin.HasSetting(homemenu.music) + [Skin.HasSetting(musicmenu.recent) | Skin.HasSetting(musicmenu.artists) | Skin.HasSetting(musicmenu.played) | Skin.HasSetting(musicmenu.genres) | Skin.HasSetting(musicmenu.addons) | Skin.HasSetting(musicmenu.playlists) | Skin.HasSetting(musicmenu.partymode) | Skin.HasSetting(musicmenu.lastfm) | Skin.HasSetting(musicmenu.videos) | !IsEmpty(Skin.String(musicmenu.playlist1.path)) | !IsEmpty(Skin.String(CustomMusic.1.Path))]</visible>
-					<icon fallback="special://skin/backgrounds/music.jpg">$VAR[value_mainmenubg_music]</icon>
-				</item>
-				<item id="10">
-					<label>$VAR[music_homemenu]</label>
 					<onclick>ActivateWindow(MyMusicLibrary)</onclick>
-					<visible>!Skin.HasSetting(homemenu.music) + ![Skin.HasSetting(musicmenu.recent) | Skin.HasSetting(musicmenu.artists) | Skin.HasSetting(musicmenu.played) | Skin.HasSetting(musicmenu.genres) | Skin.HasSetting(musicmenu.addons) | Skin.HasSetting(musicmenu.playlists) | Skin.HasSetting(musicmenu.partymode) | Skin.HasSetting(musicmenu.lastfm) | Skin.HasSetting(musicmenu.videos) | !IsEmpty(Skin.String(musicmenu.playlist1.path)) | !IsEmpty(Skin.String(CustomMusic.1.Path))]</visible>
+					<visible>!Skin.HasSetting(homemenu.music)</visible>
 					<icon fallback="special://skin/backgrounds/music.jpg">$VAR[value_mainmenubg_music]</icon>
 				</item>
 				<!--pictures-->
@@ -241,14 +95,8 @@
 				<!--addons-->
 				<item id="13">
 					<label>$VAR[addons_homemenu]</label>
-					<onclick>SetFocus(1150)</onclick>
-					<visible>!Skin.HasSetting(homemenu.addons) + [Skin.HasSetting(addonsmenu.updates) | Skin.HasSetting(addonsmenu.programs) | !IsEmpty(Skin.String(addonsmenu.addon1.label)) | !IsEmpty(Skin.String(addonsmenu.addon1.label)) | !IsEmpty(Skin.String(addonsmenu.addon3.label)) | !IsEmpty(Skin.String(addonsmenu.addon4.label)) | !IsEmpty(Skin.String(addonsmenu.addon5.label)) | !IsEmpty(Skin.String(addonsmenu.addon6.label))]</visible>
-					<icon fallback="special://skin/backgrounds/addons.jpg">$VAR[value_mainmenubg_addons]</icon>
-				</item>
-				<item id="14">
-					<label>$VAR[addons_homemenu]</label>
-					<onclick>ActivateWindow(addonbrowser,addons://all/)</onclick>
-					<visible>!Skin.HasSetting(homemenu.addons) + ![Skin.HasSetting(addonsmenu.updates) | Skin.HasSetting(addonsmenu.programs) | !IsEmpty(Skin.String(addonsmenu.addon1.label)) | !IsEmpty(Skin.String(addonsmenu.addon2.label)) | !IsEmpty(Skin.String(addonsmenu.addon3.label)) | !IsEmpty(Skin.String(addonsmenu.addon4.label)) | !IsEmpty(Skin.String(addonsmenu.addon5.label)) | !IsEmpty(Skin.String(addonsmenu.addon6.label))]</visible>
+					<onclick>ActivateWindow(addonbrowser)</onclick>
+					<visible>!Skin.HasSetting(homemenu.addons)</visible>
 					<icon fallback="special://skin/backgrounds/addons.jpg">$VAR[value_mainmenubg_addons]</icon>
 				</item>
 				<!--system-->
@@ -256,12 +104,6 @@
 					<label>$VAR[system_homemenu]</label>
 					<onclick>SetFocus(1160)</onclick>
 					<visible>[Skin.HasSetting(systemmenu.info) | Skin.HasSetting(systemmenu.filemanager) | Skin.HasSetting(systemmenu.exit)] + ![[Skin.HasSetting(home.category1.addon) | Skin.HasSetting(home.category1.program) | Skin.HasSetting(home.category1.playlist)  | Skin.HasSetting(home.category1.favourite)] | [Skin.HasSetting(home.category2.addon) | Skin.HasSetting(home.category2.program) | Skin.HasSetting(home.category2.playlist) | Skin.HasSetting(home.category2.favourite)] | [Skin.HasSetting(home.category3.addon) | Skin.HasSetting(home.category3.program) | Skin.HasSetting(home.category3.playlist)  | Skin.HasSetting(home.category3.favourite)] | [Skin.HasSetting(home.category4.addon) | Skin.HasSetting(home.category4.program) | Skin.HasSetting(home.category4.playlist)  | Skin.HasSetting(home.category4.favourite)] | [Skin.HasSetting(home.category5.addon) | Skin.HasSetting(home.category5.program) | Skin.HasSetting(home.category5.playlist)  | Skin.HasSetting(home.category5.favourite)]]</visible>
-					<icon fallback="special://skin/backgrounds/settings.jpg">$VAR[value_mainmenubg_system]</icon>
-				</item>
-				<item id="16">
-					<label>$VAR[system_homemenu]</label>
-					<onclick>ActivateWindow(settings)</onclick>
-					<visible>![Skin.HasSetting(systemmenu.info) | Skin.HasSetting(systemmenu.filemanager) | Skin.HasSetting(systemmenu.exit)] + ![[Skin.HasSetting(home.category1.addon) | Skin.HasSetting(home.category1.program) | Skin.HasSetting(home.category1.playlist)  | Skin.HasSetting(home.category1.favourite)] | [Skin.HasSetting(home.category2.addon) | Skin.HasSetting(home.category2.program) | Skin.HasSetting(home.category2.playlist) | Skin.HasSetting(home.category2.favourite)] | [Skin.HasSetting(home.category3.addon) | Skin.HasSetting(home.category3.program) | Skin.HasSetting(home.category3.playlist)  | Skin.HasSetting(home.category3.favourite)] | [Skin.HasSetting(home.category4.addon) | Skin.HasSetting(home.category4.program) | Skin.HasSetting(home.category4.playlist)  | Skin.HasSetting(home.category4.favourite)] | [Skin.HasSetting(home.category5.addon) | Skin.HasSetting(home.category5.program) | Skin.HasSetting(home.category5.playlist)  | Skin.HasSetting(home.category5.favourite)]]</visible>
 					<icon fallback="special://skin/backgrounds/settings.jpg">$VAR[value_mainmenubg_system]</icon>
 				</item>
 				<!--weather-->
@@ -315,255 +157,8 @@
 					<visible>!Skin.HasSetting(homemenu.playing) + Player.HasVideo + Skin.HasSetting(backgroundvideo)</visible>
 					<!--<label2>$INFO[VideoPlayer.TVShowTitle,,: ]$INFO[VideoPlayer.Artist,, - ]$INFO[VideoPlayer.Title]</label2>-->
 				</item>
-				<!--custom categories-->
-				<!--first subcategory-->
-				<item id="24">
-					<label>$INFO[Skin.String(addonsmenu.category1.addon.label)]</label>
-					<onclick>RunAddon($INFO[Skin.String(addonsmenu.category1.addon.path)])</onclick>
-					<visible>Skin.HasSetting(home.category1.addon) + !Skin.HasSetting(home.category.top)</visible>
-					<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_settings]</icon>
-				</item>
-				<item id="24">
-					<label>$INFO[Skin.String(programs.category1.program.label)]</label>
-					<onclick>RunAddon($INFO[Skin.String(programs.category1.program.path)])</onclick>
-					<visible>Skin.HasSetting(home.category1.program) + !Skin.HasSetting(home.category.top)</visible>
-					<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_settings]</icon>
-				</item>
-				<item id="24">
-					<label>$INFO[Skin.String(videomenu.category1.playlist.label)]</label>
-					<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.category1.playlist.path)],$INFO[Skin.String(backspacehome)])</onclick>
-					<visible>Skin.HasSetting(home.category1.playlist) + !Skin.HasSetting(home.category.top)</visible>
-					<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_settings]</icon>
-				</item>
-				<item id="24">
-    					<label>$INFO[Skin.String(CustomVideo.Category1.Label)]</label>
-    					<onclick>$INFO[Skin.String(CustomVideo.Category1.Path)]</onclick>
-    					<visible>Skin.HasSetting(home.category1.favourite) + !Skin.HasSetting(home.category.top)</visible>
-						<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_settings]</icon>
-				</item>
-				<!--second subcategory-->
-				<item id="25">
-					<label>$INFO[Skin.String(addonsmenu.category2.addon.label)]</label>
-					<onclick>RunAddon($INFO[Skin.String(addonsmenu.category2.addon.path)])</onclick>
-					<visible>Skin.HasSetting(home.category2.addon) + !Skin.HasSetting(home.category.top)</visible>
-					<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_settings]</icon>
-				</item>
-				<item id="25">
-					<label>$INFO[Skin.String(programs.category2.program.label)]</label>
-					<onclick>RunAddon($INFO[Skin.String(programs.category2.program.path)])</onclick>
-					<visible>Skin.HasSetting(home.category2.program) + !Skin.HasSetting(home.category.top)</visible>
-					<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_settings]</icon>
-				</item>
-				<item id="25">
-					<label>$INFO[Skin.String(videomenu.category2.playlist.label)]</label>
-					<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.category2.playlist.path)],$INFO[Skin.String(backspacehome)])</onclick>
-					<visible>Skin.HasSetting(home.category2.playlist) + !Skin.HasSetting(home.category.top)</visible>
-					<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_settings]</icon>
-				</item>
-				<item id="25">
-    					<label>$INFO[Skin.String(CustomVideo.category2.Label)]</label>
-    					<onclick>$INFO[Skin.String(CustomVideo.category2.Path)]</onclick>
-    					<visible>Skin.HasSetting(home.category2.favourite) + !Skin.HasSetting(home.category.top)</visible>
-						<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_settings]</icon>
-				</item>
-				<!--third subcategory-->
-				<item id="26">
-					<label>$INFO[Skin.String(addonsmenu.category3.addon.label)]</label>
-					<onclick>RunAddon($INFO[Skin.String(addonsmenu.category3.addon.path)])</onclick>
-					<visible>Skin.HasSetting(home.category3.addon) + !Skin.HasSetting(home.category.top)</visible>
-					<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_settings]</icon>
-				</item>
-				<item id="26">
-					<label>$INFO[Skin.String(programs.category3.program.label)]</label>
-					<onclick>RunAddon($INFO[Skin.String(programs.category3.program.path)])</onclick>
-					<visible>Skin.HasSetting(home.category3.program) + !Skin.HasSetting(home.category.top)</visible>
-					<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_settings]</icon>
-				</item>
-				<item id="26">
-					<label>$INFO[Skin.String(videomenu.category3.playlist.label)]</label>
-					<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.category3.playlist.path)],$INFO[Skin.String(backspacehome)])</onclick>
-					<visible>Skin.HasSetting(home.category3.playlist) + !Skin.HasSetting(home.category.top)</visible>
-					<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_settings]</icon>
-				</item>
-				<item id="26">
-    					<label>$INFO[Skin.String(CustomVideo.category3.Label)]</label>
-    					<onclick>$INFO[Skin.String(CustomVideo.category3.Path)]</onclick>
-    					<visible>Skin.HasSetting(home.category3.favourite) + !Skin.HasSetting(home.category.top)</visible>
-						<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_settings]</icon>
-				</item>
-				<!--fourth subcategory-->
-				<item id="27">
-					<label>$INFO[Skin.String(addonsmenu.category4.addon.label)]</label>
-					<onclick>RunAddon($INFO[Skin.String(addonsmenu.category4.addon.path)])</onclick>
-					<visible>Skin.HasSetting(home.category4.addon) + !Skin.HasSetting(home.category.top)</visible>
-					<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_settings]</icon>
-				</item>
-				<item id="27">
-					<label>$INFO[Skin.String(programs.category4.program.label)]</label>
-					<onclick>RunAddon($INFO[Skin.String(programs.category4.program.path)])</onclick>
-					<visible>Skin.HasSetting(home.category4.program) + !Skin.HasSetting(home.category.top)</visible>
-					<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_settings]</icon>
-				</item>
-				<item id="27">
-					<label>$INFO[Skin.String(videomenu.category4.playlist.label)]</label>
-					<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.category4.playlist.path)],$INFO[Skin.String(backspacehome)])</onclick>
-					<visible>Skin.HasSetting(home.category4.playlist) + !Skin.HasSetting(home.category.top)</visible>
-					<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_settings]</icon>
-				</item>
-				<item id="27">
-    					<label>$INFO[Skin.String(CustomVideo.category4.Label)]</label>
-    					<onclick>$INFO[Skin.String(CustomVideo.category4.Path)]</onclick>
-    					<visible>Skin.HasSetting(home.category4.favourite) + !Skin.HasSetting(home.category.top)</visible>
-						<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_settings]</icon>
-				</item>
-				<!--fifth subcategory-->
-				<item id="28">
-					<label>$INFO[Skin.String(addonsmenu.category5.addon.label)]</label>
-					<onclick>RunAddon($INFO[Skin.String(addonsmenu.category5.addon.path)])</onclick>
-					<visible>Skin.HasSetting(home.category5.addon) + !Skin.HasSetting(home.category.top)</visible>
-					<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_settings]</icon>
-				</item>
-				<item id="28">
-					<label>$INFO[Skin.String(programs.category5.program.label)]</label>
-					<onclick>RunAddon($INFO[Skin.String(programs.category5.program.path)])</onclick>
-					<visible>Skin.HasSetting(home.category5.program) + !Skin.HasSetting(home.category.top)</visible>
-					<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_settings]</icon>
-				</item>
-				<item id="28">
-					<label>$INFO[Skin.String(videomenu.category5.playlist.label)]</label>
-					<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.category5.playlist.path)],$INFO[Skin.String(backspacehome)])</onclick>
-					<visible>Skin.HasSetting(home.category5.playlist) + !Skin.HasSetting(home.category.top)</visible>
-					<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_settings]</icon>
-				</item>
-				<item id="28">
-    					<label>$INFO[Skin.String(CustomVideo.category5.Label)]</label>
-    					<onclick>$INFO[Skin.String(CustomVideo.category5.Path)]</onclick>
-    					<visible>Skin.HasSetting(home.category5.favourite) + !Skin.HasSetting(home.category.top)</visible>
-						<icon fallback="special://skin/backgrounds/category.jpg">$VAR[value_mainmenubg_settings]</icon>
-				</item>
-				<!--system-->
-				<item id="15">
-					<label>$VAR[system_homemenu]</label>
-					<onclick>SetFocus(1160)</onclick>
-					<visible>[Skin.HasSetting(systemmenu.info) | Skin.HasSetting(systemmenu.filemanager) | Skin.HasSetting(systemmenu.exit)] + [[Skin.HasSetting(home.category1.addon) | Skin.HasSetting(home.category1.program) | Skin.HasSetting(home.category1.playlist)  | Skin.HasSetting(home.category1.favourite)] | [Skin.HasSetting(home.category2.addon) | Skin.HasSetting(home.category2.program) | Skin.HasSetting(home.category2.playlist) | Skin.HasSetting(home.category2.favourite)] | [Skin.HasSetting(home.category3.addon) | Skin.HasSetting(home.category3.program) | Skin.HasSetting(home.category3.playlist)  | Skin.HasSetting(home.category3.favourite)] | [Skin.HasSetting(home.category4.addon) | Skin.HasSetting(home.category4.program) | Skin.HasSetting(home.category4.playlist)  | Skin.HasSetting(home.category4.favourite)] | [Skin.HasSetting(home.category5.addon) | Skin.HasSetting(home.category5.program) | Skin.HasSetting(home.category5.playlist)  | Skin.HasSetting(home.category5.favourite)]]</visible>
-					<icon fallback="special://skin/backgrounds/settings.jpg">$VAR[value_mainmenubg_settings]</icon>
-				</item>
-				<item id="16">
-					<label>$VAR[system_homemenu]</label>
-					<onclick>ActivateWindow(settings)</onclick>
-					<visible>![Skin.HasSetting(systemmenu.info) | Skin.HasSetting(systemmenu.filemanager) | Skin.HasSetting(systemmenu.exit)] + [[Skin.HasSetting(home.category1.addon) | Skin.HasSetting(home.category1.program) | Skin.HasSetting(home.category1.playlist)  | Skin.HasSetting(home.category1.favourite)] | [Skin.HasSetting(home.category2.addon) | Skin.HasSetting(home.category2.program) | Skin.HasSetting(home.category2.playlist) | Skin.HasSetting(home.category2.favourite)] | [Skin.HasSetting(home.category3.addon) | Skin.HasSetting(home.category3.program) | Skin.HasSetting(home.category3.playlist)  | Skin.HasSetting(home.category3.favourite)] | [Skin.HasSetting(home.category4.addon) | Skin.HasSetting(home.category4.program) | Skin.HasSetting(home.category4.playlist)  | Skin.HasSetting(home.category4.favourite)] | [Skin.HasSetting(home.category5.addon) | Skin.HasSetting(home.category5.program) | Skin.HasSetting(home.category5.playlist)  | Skin.HasSetting(home.category5.favourite)]]</visible>
-					<icon fallback="special://skin/backgrounds/settings.jpg">$VAR[value_mainmenubg_settings]</icon>
-				</item>
-				
 			</content>
 		</control>
 		<include>homeSubMenu</include>
-		<!--
-		<control type="fixedlist" id="6000">
-			<posx>-240</posx>
-			<posy>0</posy>
-			<width>600</width>
-			<height>720</height>
-			<visible>true</visible>
-			<onup>6000</onup>
-			<ondown>6000</ondown>
-			<onleft>1</onleft>
-			<onright>9000</onright>
-			<orientation>vertical</orientation>
-			<pagecontrol>25</pagecontrol>
-			<scrolltime>200</scrolltime>
-			<focusposition>1</focusposition>
-			<animation effect="slide" start="0" end="240" time="200" tween="cubic" easing="in" condition="Control.HasFocus(6000)">Conditional</animation>
-			<itemlayout width="250" height="180">
-				<control type="image">
-					<posx>7</posx>
-					<posy>7</posy>
-					<width>250</width>
-					<height>141</height>
-					<texture>$INFO[ListItem.Icon]</texture>
-				</control>
-				<control type="label">
-					<posx>30</posx>
-					<posy>3</posy>
-					<width>430</width>
-					<height>22</height>
-					<font>font13</font>
-					<aligny>center</aligny>
-					<selectedcolor>green</selectedcolor>
-					<align>left</align>
-					<info>ListItem.Label</info>
-				</control>
-				</itemlayout>
-			<focusedlayout width="250" height="180">
-				<control type="image">
-					<width>264</width>
-					<height>155</height>
-					<texture border="10">views/list-focus-bigAlt.png</texture>
-				</control>
-				<control type="image">
-					<posx>7</posx>
-					<posy>7</posy>
-					<width>250</width>
-					<height>141</height>
-					<texture>$INFO[ListItem.Icon]</texture>
-				</control>
-				<control type="label">
-					<posx>30</posx>
-					<posy>3</posy>
-					<width>430</width>
-					<height>22</height>
-					<font>font13</font>
-					<aligny>center</aligny>
-					<selectedcolor>green</selectedcolor>
-					<align>left</align>
-					<info>ListItem.Label</info>
-				</control>
-			</focusedlayout>
-			<content>
-				<item id="1">
-					<label>$INFO[Window.Property(LatestMovie.1.Title)]</label>
-					<label2></label2>
-					<onclick>PlayMedia($INFO[Window.Property(LatestMovie.1.Path)])</onclick>
-					<icon>$INFO[Window.Property(LatestMovie.1.Fanart)]</icon>
-					<thumb>-</thumb>
-				</item>
-				<item id="2">
-					<label>$INFO[Window.Property(LatestMovie.2.Title)]</label>
-					<label2></label2>
-					<onclick>PlayMedia($INFO[Window.Property(LatestMovie.2.Path)])</onclick>
-					<icon>$INFO[Window.Property(LatestMovie.2.Fanart)]</icon>
-					<thumb>-</thumb>
-				</item>
-				<item id="3">
-					<label>$INFO[Window.Property(LatestMovie.3.Title)]</label>
-					<label2></label2>
-					<onclick>PlayMedia($INFO[Window.Property(LatestMovie.3.Path)])</onclick>
-					<icon>$INFO[Window.Property(LatestMovie.3.Fanart)]</icon>
-					<thumb>-</thumb>
-				</item>
-				<item id="4">
-					<label>$INFO[Window.Property(LatestMovie.4.Title)]</label>
-					<label2></label2>
-					<onclick>PlayMedia($INFO[Window.Property(LatestMovie.4.Path)])</onclick>
-					<icon>$INFO[Window.Property(LatestMovie.4.Fanart)]</icon>
-					<thumb>-</thumb>
-				</item>
-				<item id="5">
-					<label>$INFO[Window.Property(LatestMovie.5.Title)]</label>
-					<label2></label2>
-					<onclick>PlayMedia($INFO[Window.Property(LatestMovie.5.Path)])</onclick>
-					<icon>$INFO[Window.Property(LatestMovie.5.Fanart)]</icon>
-					<thumb>-</thumb>
-				</item>
-				<item id="6">
-					<label>$INFO[Window.Property(LatestMovie.6.Title)]</label>
-					<label2></label2>
-					<onclick>PlayMedia($INFO[Window.Property(LatestMovie.6.Path)])</onclick>
-					<icon>$INFO[Window.Property(LatestMovie.6.Fanart)]</icon>
-					<thumb>-</thumb>
-				</item>
-			</content>
-		</control>
-			-->
 	</include>
 </includes>
