@@ -43,7 +43,7 @@
 				<include>transition_Fanart</include>
 				<visible>Control.IsVisible(47) + ControlGroup(6000).HasFocus()</visible>
 			</control>
-			<control type="multiimage">
+			<!--<control type="multiimage">
 				<include>screen_Dimensions</include>
 				<imagepath background="true">$VAR[extrafanart.path]</imagepath>
 				<aspectratio align="center">scale</aspectratio>
@@ -52,14 +52,14 @@
                     <fadetime>600</fadetime>
                     <loop>yes</loop>
 				<visible>Control.IsVisible(47) + Skin.HasSetting(gallery.extrafanart)</visible>
-				</control>
+				</control>-->
 			<!--<control type="group">
 				<include>global_Clock</include>
 				<visible>Control.IsVisible(47)</visible>
 			</control>-->
 		
 		<!---scroll indicators------->
-		<control type="group">
+		<!--<control type="group">
 			<posy>336</posy>
 			<include>fadeinout</include>
 			<visible>Control.IsVisible(47) + System.IdleTime(3) + ![ControlGroup(6000).HasFocus() | Window.IsActive(movieinformation)]</visible>
@@ -77,7 +77,7 @@
 				<texture>views/scrollRightIndicator.png</texture>
 				<aspectratio>keep</aspectratio>
 			</control>
-		</control>
+		</control>-->
 
 		<control type="group">
 			<posy>500</posy>
