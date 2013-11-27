@@ -10,12 +10,16 @@
 			<orientation>horizontal</orientation>
 			<visible>[Control.IsVisible(52) | Control.IsVisible(521) | Control.IsVisible(522)] + IsEmpty(ListItem.Property(ReleaseDate))</visible>
 			<control type="image">
-				<width>128</width>
+				<width>33</width>
 				<height>32</height>
-				<info>ListItem.StarRating</info>
+				<texture>rating/star_rating.png</texture>
 				<aspectratio align="center">keep</aspectratio>
-				<!--<visible>![Window.IsVisible(VideoFiles) | Container.Content(seasons) | Container.Content(musicvideos) | [ListItem.IsFolder + !Container.Content(tvshows)]] + IsEmpty(ListItem.Property(ReleaseDate)) + !SubString(ListItem.Icon,default)</visible>-->
-				<visible>!SubString(ListItem.Icon,default) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos)]</visible>
+			</control>
+			<control type="label">
+				<width>35</width>
+                <height>32</height>
+				<font>rating</font>
+                <label>$INFO[ListItem.Rating]</label>
 			</control>
 			<control type="image">
 				<width>96</width>
@@ -529,13 +533,13 @@
 				<aspectratio align="center">keep</aspectratio>
 				<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
 			</control>
-			<control type="image" id="99899">
+			<!--<control type="image" id="99899">
 				<width>96</width>
 				<height>64</height>
 				<texture>$VAR[flag_Studio_alt]</texture>
 				<aspectratio align="center">keep</aspectratio>
 				<visible>StringCompare(Control.GetLabel(99799),empty) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos)]</visible>
-			</control>
+			</control>-->
 		</control>
 	</include>
 	<!--pvr-->

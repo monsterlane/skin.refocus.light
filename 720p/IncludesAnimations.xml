@@ -70,20 +70,10 @@
 		<animation effect="zoom" tween="Cubic" start="130" end="100" center="110,80" time="200">UnFocus</animation>
 	</include>
 	<include name="focus_SlidePoster">
-		<animation type="focus">
-			<effect type="zoom" tween="Quadratic" start="100" end="130" center="112,100" easing="Out" time="200"/>
-		</animation>
-		<animation type="unfocus">
-			<effect type="zoom" tween="Quadratic" start="130" end="100" center="112,100" easing="Out" time="200" />
-		</animation>
+		<animation effect="zoom" tween="Quadratic" start="100" end="130" center="112,100" easing="out" time="200">focus</animation>
 	</include>
 	<include name="focus_SlideWide">
-		<animation type="focus">
-			<effect type="zoom" tween="Quadratic" start="100" end="140" center="225,120" easing="Out" time="200"/>
-		</animation>
-		<animation type="unfocus">
-			<effect type="zoom" tween="Quadratic" start="140" end="100" center="225,120" easing="Out" time="200" />
-		</animation>
+		<animation effect="zoom" start="100" end="140" center="225,120">focus</animation>
 	</include>
     <include name="focus_Landscape">
 		<animation type="focus">

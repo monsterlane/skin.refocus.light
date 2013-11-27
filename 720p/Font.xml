@@ -2,6 +2,12 @@
 	<fontset id="Default" unicode="true">
 	<!---NEW------>	
 		<font>
+			<name>rating</name>
+			<filename>Ubuntu-R.ttf</filename>
+			<style>bold</style>
+			<size>26</size>
+		</font>
+		<font>
 			<name>light</name>
 			<filename>Light.ttf</filename>
 			<size>52</size>
