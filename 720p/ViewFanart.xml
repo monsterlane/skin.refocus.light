@@ -43,16 +43,6 @@
 				<include>transition_Fanart</include>
 				<visible>Control.IsVisible(47) + ControlGroup(6000).HasFocus()</visible>
 			</control>
-			<!--<control type="multiimage">
-				<include>screen_Dimensions</include>
-				<imagepath background="true">$VAR[extrafanart.path]</imagepath>
-				<aspectratio align="center">scale</aspectratio>
-				<timeperimage>9000</timeperimage>
-                    <randomize>true</randomize>
-                    <fadetime>600</fadetime>
-                    <loop>yes</loop>
-				<visible>Control.IsVisible(47) + Skin.HasSetting(gallery.extrafanart)</visible>
-				</control>-->
 			<!--<control type="group">
 				<include>global_Clock</include>
 				<visible>Control.IsVisible(47)</visible>
@@ -109,35 +99,42 @@
 					<label>$INFO[ListItem.Title]</label>
 					<font>osdTitle</font>
 					<aligny>top</aligny>
-					<width>835</width>
+					<width>750</width>
 					<textcolor>Color1</textcolor>
-					<width>screen_Width</width>
 				</control>
 				<control type="label">
 					<posy>40</posy>
-					<width>795</width>
+					<width>780</width>
 					<label>$INFO[ListItem.TVShowTitle] • $INFO[ListItem.Season,$LOCALIZE[20373] , - ]$INFO[ListItem.Episode,$LOCALIZE[20359] ]</label>
 					<font>smallerCaps</font>
 					<align>left</align>	
 					<textcolor>Color2</textcolor>
 					<visible>Container.Content(episodes)</visible>
 				</control>
-				<control type="image">
-					<posx>785</posx>
-					<posy>44</posy>
-					<width>128</width>
-					<height>22</height>
-					<texture>$INFO[ListItem.StarRating,rating/nf-,]</texture>
-					<colordiffuse>Color1</colordiffuse>
-					<aspectratio align="right">keep</aspectratio>
-					<visible>!SubString(ListItem.Icon,default)</visible>
-				</control>				
+				<control type="grouplist">
+				<posx>815</posx>
+				<posy>15</posy>
+				<orientation>horizontal</orientation>
+					<control type="image">
+						<width>33</width>
+						<height>32</height>
+						<texture>rating/star_rating.png</texture>
+						<aspectratio align="center">keep</aspectratio>
+						<visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(movies)</visible>
+					</control>
+					<control type="label">
+						<width>45</width>
+						<height>32</height>
+						<font>rating</font>
+						<label>$INFO[ListItem.Rating]</label>
+					</control>
+				</control>
 				<control type="textbox" id="1">
 					<posy>70</posy>
 					<height>98</height>
 					<width>910</width>
 					<label>$VAR[global_Plot.Condition]</label>
-					<textcolor>Color1</textcolor>
+					<textcolor>Color1</textcolor>					
 					<font>descriptionbig</font>
 					<include>description_OSD</include>
 				</control>
@@ -151,27 +148,11 @@
 					    <include>flag_Res</include>	
 				    </control>
 			    </control>				
-			    <control type="group">
+			    <control type="image">
 				<posx>-49</posx>
 				<posy>135</posy>
-				<control type="image">
-					<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
-					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+					<include>overlay_UnWatched</include>
 				</control>
-				<control type="image">
-						<include>overlay_Resumable</include>
-						<visible>Skin.HasSetting(watched.original)</visible>
-					</control>
-				<visible>Container.Content(episodes) + !Skin.HasSetting(watched.alternative)</visible>	
-			    </control>
-			 <control type="group">
-				    <posx>-81</posx>
-				    <posy>104</posy>
-				<control type="image">
-					<info>ListItem.Overlay</info>
-				</control>
-				<visible>Container.Content(episodes) + Skin.HasSetting(watched.alternative)</visible>	
-			    </control>	
 			
 			</control>			
 		</control>	

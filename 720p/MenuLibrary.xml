@@ -698,7 +698,7 @@
 					<height>42</height>
 					<visible>Container.Content(episodes)</visible>
 					<control type="button" id="415">
-						<label>$LOCALIZE[31002]</label>
+						<label>Fanart</label>
 						<onclick>Container.SetViewMode(47)</onclick>
 						<onclick>SetFocus(1)</onclick>
 						<onclick>SetFocus(47)</onclick>
@@ -714,7 +714,7 @@
 					<height>42</height>
 					<visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(seasons) | Container.Content(episodes)] + !substring(container.folderpath,plugin://)</visible>
 					<control type="button" id="416">
-						<label>Fanart</label>
+						<label>Landscape Thumb</label>
 						<onclick>Container.SetViewMode(550)</onclick>
 						<onclick>SetFocus(1)</onclick>
 						<onclick>SetFocus(550)</onclick>
