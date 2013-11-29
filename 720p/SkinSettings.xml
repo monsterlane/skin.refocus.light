@@ -206,12 +206,6 @@
 				<include>button_Settings</include>
 			</control>
 			<!--Search-->
-			<control type="radiobutton" id="116">
-				<label>$LOCALIZE[32301]</label>
-				<onclick>Skin.ToggleSetting(home.searchleft)</onclick>
-				<selected>Skin.HasSetting(home.searchleft)</selected>
-				<include>button_Settings</include>
-			</control>
 		</control>
 <!--ARTWORK-->
 		<control type="grouplist" id="600">
@@ -231,27 +225,6 @@
 				<font>category</font>
 				<textcolor>Color2</textcolor>
 				<include>button_Settings</include>
-			</control>
-			<!--extra fanart-->
-			<control type="radiobutton" id="602">
-				<label>$LOCALIZE[32036]</label>
-				<onclick>Skin.ToggleSetting(fanart.extra)</onclick>
-				<selected>Skin.HasSetting(fanart.extra)</selected>
-				<include>button_Settings</include>
-			</control>
-			<!--animate backgrounds-->
-			<control type="radiobutton" id="603">
-				<label>$LOCALIZE[32037]</label>
-				<onclick>Skin.ToggleSetting(fanart.animate)</onclick>
-				<selected>Skin.HasSetting(fanart.animate)</selected>
-				<include>button_Settings</include>
-			</control>
-			<control type="radiobutton" id="604">
-				<label>$LOCALIZE[32038]</label>
-				<onclick>Skin.ToggleSetting(fanart.animateslow)</onclick>
-				<selected>Skin.HasSetting(fanart.animateslow)</selected>
-				<include>button_Settings</include>
-				<visible>Skin.HasSetting(fanart.animate)</visible>
 			</control>
 			<!--visualization fanart-->
 			<control type="radiobutton" id="606">
@@ -282,27 +255,6 @@
 				<font>category</font>
 				<textcolor>Color2</textcolor>
 				<include>button_Settings</include>
-			</control>
-			<!--banners-->
-			<control type="radiobutton" id="611">
-				<label>$LOCALIZE[31066]</label>
-				<onclick>Skin.ToggleSetting(banners.enable)</onclick>
-				<selected>Skin.HasSetting(banners.enable)</selected>
-				<include>button_Settings</include>
-			</control>
-			<!--<control type="radiobutton" id="612">
-				<label>- $LOCALIZE[31067]</label>
-				<onclick>Skin.ToggleSetting(banners.local)</onclick>
-				<selected>Skin.HasSetting(banners.local)</selected>
-				<include>button_Settings</include>
-				<visible>Skin.HasSetting(banners.enable)</visible>
-			</control>-->
-			<control type="button" id="613">
-				<label>- $LOCALIZE[31129]</label>
-				<onclick>XBMC.RunScript(script.artwork.downloader, mode=custom, mediatype=tvshow, silent=true,banner)</onclick>
-				<include>button_Settings</include>
-				<visible>Skin.HasSetting(banners.enable) + Skin.HasSetting(banners.local)</visible>
-				<enable>System.HasAddon(script.artwork.downloader)</enable>
 			</control>
 			<!--tv show logos-->
 			<control type="radiobutton" id="614">
@@ -345,20 +297,7 @@
 				<onclick>Skin.ToggleSetting(studionetworkosd.enable)</onclick>
 				<selected>!Skin.HasSetting(studionetworkosd.enable)</selected>
 				<include>button_Settings</include>-->
-			
-			<control type="radiobutton" id="619">
-				<label>$LOCALIZE[31132]</label>
-				<onclick>Skin.ToggleSetting(gallery.extrafanart)</onclick>
-				<include>button_Settings</include>
-				<selected>Skin.HasSetting(gallery.extrafanart)</selected>
-			</control>
-			<control type="button" id="620">
-				<label>- $LOCALIZE[31131]</label>
-				<onclick>XBMC.runscript(script.artwork.downloader, mode=custom, extrafanart)</onclick>
-				<include>button_Settings</include>
-				<visible>Skin.HasSetting(gallery.extrafanart)</visible>
-				<enable>System.HasAddon(script.artwork.downloader)</enable>
-			</control>
+
 			<!-- artist logos -->
 			<control type="radiobutton" id="621">
 				<label>$LOCALIZE[31995]</label>

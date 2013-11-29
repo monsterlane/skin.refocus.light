@@ -17,7 +17,7 @@
 			<include>transition_Container</include>
 			<include>infoDialogHide</include>
 			<include>toggle_Menu</include>
-			<visible>[Container.Content(tvshows) + Skin.HasSetting(banners.enable)] + !substring(container.folderpath,plugin://)</visible>			
+			<visible>Container.Content(tvshows) + !substring(container.folderpath,plugin://)</visible>			
 			<itemlayout height="137" width="600">		
 				<control type="image">
 					<posx>0</posx>
@@ -139,7 +139,7 @@
 			<include>transition_Container</include>
 			<include>infoDialogHide</include>
 			<include>toggle_Menu</include>
-			<visible>[Container.Content(tvshows) + Skin.HasSetting(banners.enable)] + !substring(container.folderpath,plugin://)</visible>			
+			<visible>[Container.Content(tvshows) + !substring(container.folderpath,plugin://)</visible>			
 			<itemlayout height="137" width="600">		
 				<control type="image">
 					<posx>0</posx>
@@ -305,7 +305,7 @@
 			<include>transition_Container</include>
 			<include>infoDialogHide</include>
 			<include>toggle_Menu</include>
-			<visible>!substring(container.folderpath,plugin://) + [Container.Content(tvshows) + Skin.HasSetting(banners.enable)] | Container.Content(movies) | [Container.Content(seasons) + Skin.HasSetting(banners.enable)]</visible>
+			<visible>!substring(container.folderpath,plugin://) + Container.Content(tvshows) | Container.Content(movies) | Container.Content(seasons)</visible>
 			<animation effect="slide" start="0,0" end="-66,10" time="0" condition="Container.Content(movies)">Conditional</animation>
 			<itemlayout condition="Container.Content(tvshows) | Container.Content(seasons)" width="560" height="65">
 				<control type="label">
@@ -608,7 +608,7 @@
 			<include>transition_Container</include>
 			<include>infoDialogHide</include>
 			<include>toggle_Menu</include>
-			<visible>[Container.Content(tvshows) + Skin.HasSetting(banners.enable)] + !substring(container.folderpath,plugin://)</visible>
+			<visible>Container.Content(tvshows) + !substring(container.folderpath,plugin://)</visible>
 			<itemlayout width="645" height="122">
 				<control type="image">
 					<posx>10</posx>

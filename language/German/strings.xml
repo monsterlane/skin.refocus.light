@@ -148,7 +148,7 @@ Bitte denke darüber nach, die Entwicklung von XBMC durch eine Spende zu unterst
 <string id="31125">Ordner</string>
 <string id="31126">Visualisierung und Fanart überblenden</string>
 <string id="31127">Artwork</string>
-<string id="31128">Statusleiste anzeigen (deaktiviert RSS-Ticker)</string>
+<string id="31128">Statusleiste anzeigen</string>
 <string id="31129">Banner herunterladen</string>
 <string id="31130">Logos herunterladen</string>
 <string id="31131">Extrafanart herunterladen</string>
@@ -276,4 +276,5 @@ Bitte denke darüber nach, die Entwicklung von XBMC durch eine Spende zu unterst
 <!--realaska-->
 <string id="31997">Aktiviere reAlaska-OSD</string>
 <string id="31998">Aktiviere reAlaska-OSD-Progressbar</string>
+<string id="31999">Aktiviere originale Uhr</string>
 </strings>

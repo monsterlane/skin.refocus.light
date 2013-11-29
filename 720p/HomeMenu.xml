@@ -3,7 +3,7 @@
 		<control type="list" id="9000">
 			<posy>30</posy>
 			<width>1000</width>
-			<height>633</height>
+			<height>720</height>
 			<onup>9000</onup>
 			<ondown>9000</ondown>
 			<onright condition="Container(9000).HasFocus(3)">1200</onright>
@@ -32,7 +32,7 @@
 					<visible>!Skin.HasSetting(homemenu.videos) + IsEmpty(Skin.String(videomenu.playlist1.path)) + IsEmpty(Skin.String(videomenu.playlist2.path)) + IsEmpty(Skin.String(videomenu.playlist4.path)) + IsEmpty(Skin.String(videomenu.playlist4.path)) + IsEmpty(Skin.String(videomenu.playlist5.path)) + IsEmpty(Skin.String(videomenu.playlist6.path)) + IsEmpty(Skin.String(videomenu.playlist7.path)) + IsEmpty(Skin.String(videomenu.playlist8.path)) + IsEmpty(Skin.String(CustomVideo.1.Path)) + IsEmpty(Skin.String(CustomVideo.2.Path)) + IsEmpty(Skin.String(CustomVideo.3.Path)) + IsEmpty(Skin.String(CustomVideo.4.Path)) + IsEmpty(Skin.String(CustomVideo.5.Path)) + IsEmpty(Skin.String(CustomVideo.6.Path)) + IsEmpty(Skin.String(CustomVideo.7.Path)) + IsEmpty(Skin.String(CustomVideo.8.Path)) + Skin.HasSetting(videomenu.addons) + Skin.HasSetting(videomenu.videoplaylists)</visible>
 					<icon fallback="special://skin/backgrounds/videos.jpg">$VAR[value_mainmenubg_videos]</icon>
 				</item>
-				<!-- MOVIE SETS 
+				<!-- MOVIE SETS-- 
 					<item id="523">
 						<label>$LOCALIZE[31993]</label>
 						<label2>-</label2>
@@ -103,13 +103,12 @@
 				<item id="15">
 					<label>$VAR[system_homemenu]</label>
 					<onclick>SetFocus(1160)</onclick>
-					<visible>[Skin.HasSetting(systemmenu.info) | Skin.HasSetting(systemmenu.filemanager) | Skin.HasSetting(systemmenu.exit)] + ![[Skin.HasSetting(home.category1.addon) | Skin.HasSetting(home.category1.program) | Skin.HasSetting(home.category1.playlist)  | Skin.HasSetting(home.category1.favourite)] | [Skin.HasSetting(home.category2.addon) | Skin.HasSetting(home.category2.program) | Skin.HasSetting(home.category2.playlist) | Skin.HasSetting(home.category2.favourite)] | [Skin.HasSetting(home.category3.addon) | Skin.HasSetting(home.category3.program) | Skin.HasSetting(home.category3.playlist)  | Skin.HasSetting(home.category3.favourite)] | [Skin.HasSetting(home.category4.addon) | Skin.HasSetting(home.category4.program) | Skin.HasSetting(home.category4.playlist)  | Skin.HasSetting(home.category4.favourite)] | [Skin.HasSetting(home.category5.addon) | Skin.HasSetting(home.category5.program) | Skin.HasSetting(home.category5.playlist)  | Skin.HasSetting(home.category5.favourite)]]</visible>
 					<icon fallback="special://skin/backgrounds/settings.jpg">$VAR[value_mainmenubg_system]</icon>
 				</item>
 				<!--weather-->
 				<item id="17">
-					<!--<label>$LOCALIZE[8]</label>-->
-					<label>$VAR[weather_homemenu]</label>
+					<label>$LOCALIZE[8]</label>
+					<!--<label>$VAR[weather_homemenu]</label>-->
 					<onclick>ActivateWindow(weather)</onclick>
 					
 					<visible>!Skin.HasSetting(homemenu.weather) + Weather.IsFetched + [[!Skin.HasSetting(home.widgets.tvmovies) + Container(9000).HasFocus(1)] | [!Skin.HasSetting(home.widgets.tvmovies) + Container(9000).HasFocus(2)] | [!Skin.HasSetting(home.widgets.movies) + Container(9000).HasFocus(3)] | [!Skin.HasSetting(home.widgets.movies) + Container(9000).HasFocus(4)] | [!Skin.HasSetting(home.widgets.tvshows) + Container(9000).HasFocus(5)] | [!Skin.HasSetting(home.widgets.tvshows) + Container(9000).HasFocus(6)] | [!Skin.HasSetting(home.widgets.music) + Container(9000).HasFocus(9)] | [!Skin.HasSetting(home.widgets.music) + Container(9000).HasFocus(10)] | [!Skin.HasSetting(home.widgets.addons) + Container(9000).HasFocus(13)] | [!Skin.HasSetting(home.widgets.addons) + Container(9000).HasFocus(14)] | [!Skin.HasSetting(home.widgets.weather) + Container(9000).HasFocus(17)]]</visible>
