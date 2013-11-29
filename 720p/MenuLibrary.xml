@@ -616,7 +616,7 @@
 				<control type="group">
 					<width>220</width>
 					<height>42</height>
-					<visible>Container.Content(tvshows) + Skin.HasSetting(banners.enable) + !SubString(Container.FolderPath,plugin://)</visible>
+					<visible>Container.Content(tvshows) + !SubString(Container.FolderPath,plugin://)</visible>
 					<control type="button" id="410">
 						<label>$LOCALIZE[31093]</label>
 						<onclick>Container.SetViewMode(541)</onclick>
@@ -632,7 +632,7 @@
 				<control type="group">
 					<width>220</width>
 					<height>42</height>
-					<visible>Container.Content(tvshows) + Skin.HasSetting(banners.enable) + !SubString(Container.FolderPath,plugin://)</visible>
+					<visible>Container.Content(tvshows) + !SubString(Container.FolderPath,plugin://)</visible>
 					<control type="button" id="411">
 						<label>$LOCALIZE[32019]</label>
 						<onclick>Container.SetViewMode(5411)</onclick>
@@ -648,7 +648,7 @@
 				<control type="group">
 					<width>220</width>
 					<height>42</height>
-					<visible>Container.Content(tvshows) + Skin.HasSetting(banners.enable) + !SubString(Container.FolderPath,plugin://)</visible>
+					<visible>Container.Content(tvshows) + !SubString(Container.FolderPath,plugin://)</visible>
 					<control type="button" id="412">
 						<label>$LOCALIZE[32021]</label>
 						<onclick>Container.SetViewMode(54111)</onclick>
@@ -664,7 +664,7 @@
 				<control type="group">
 					<width>220</width>
 					<height>42</height>
-					<visible>[Container.Content(tvshows) | Container.Content(movies) |  Container.Content(seasons)] + Skin.HasSetting(banners.enable) + !SubString(Container.FolderPath,plugin://)</visible>
+					<visible>[Container.Content(tvshows) | Container.Content(movies) |  Container.Content(seasons)] + !SubString(Container.FolderPath,plugin://)</visible>
 					<control type="button" id="413">
 						<label>$LOCALIZE[31004]</label>
 						<onclick>Container.SetViewMode(54)</onclick>

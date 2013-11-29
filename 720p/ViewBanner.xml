@@ -27,28 +27,11 @@
 					<texture fallback="thumbs/tvshow_banner.jpg" background="true">$INFO[ListItem.Art(banner)]</texture>
 					<aspectratio>stretch</aspectratio>
 					<bordersize>9</bordersize>
-					<visible>!Skin.HasSetting(banners.local)</visible>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>590</width>
-					<height>128</height>
-					<texture fallback="thumbs/tvshow_banner.jpg" background="true">$INFO[ListItem.Art(banner)]</texture>
-					<bordersize>9</bordersize>
-					<aspectratio>stretch</aspectratio>
-					<visible>Skin.HasSetting(banners.local)</visible>
 				</control>
 				<control type="image">
 					<posx>549</posx>
 					<posy>87</posy>
 					<include>overlay_UnWatched</include>
-				</control>
-				<control type="image">
-					<posx>549</posx>
-					<posy>87</posy>
-					<include>overlay_Resumable</include>
-					<visible>Skin.HasSetting(watched.original)</visible>
 				</control>				
 			</itemlayout>															
 			<focusedlayout height="137" width="600">
@@ -69,27 +52,11 @@
 					<texture fallback="thumbs/tvshow_banner.jpg" background="true">$INFO[ListItem.Art(banner)]</texture>
 					<aspectratio>stretch</aspectratio>
 					<bordersize>9</bordersize>
-					<visible>!Skin.HasSetting(banners.local)</visible>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>590</width>
-					<height>128</height>
-					<texture fallback="thumbs/tvshow_banner.jpg" background="true">$INFO[ListItem.Art(banner)]</texture>
-					<aspectratio>stretch</aspectratio>
-					<bordersize>9</bordersize>
-					<visible>Skin.HasSetting(banners.local)</visible>
 				</control>
 				<control type="image">
 					<posx>549</posx>
 					<posy>87</posy>
 					<include>overlay_UnWatched</include>
-				</control>
-				<control type="image">
-					<posx>549</posx>
-					<posy>87</posy>
-					<include>overlay_Resumable</include>			
 				</control>						
 			</focusedlayout>
 		</control>
@@ -139,7 +106,7 @@
 			<include>transition_Container</include>
 			<include>infoDialogHide</include>
 			<include>toggle_Menu</include>
-			<visible>[Container.Content(tvshows) + !substring(container.folderpath,plugin://)</visible>			
+			<visible>Container.Content(tvshows) + !substring(container.folderpath,plugin://)</visible>			
 			<itemlayout height="137" width="600">		
 				<control type="image">
 					<posx>0</posx>
@@ -149,36 +116,11 @@
 					<texture fallback="thumbs/tvshow_banner.jpg" background="true">$INFO[ListItem.Art(banner)]</texture>
 					<aspectratio>stretch</aspectratio>
 					<bordersize>9</bordersize>
-					<visible>!Skin.HasSetting(banners.local)</visible>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>590</width>
-					<height>128</height>
-					<texture fallback="thumbs/tvshow_banner.jpg" background="true">$INFO[ListItem.Art(banner)]</texture>
-					<bordersize>9</bordersize>
-					<aspectratio>stretch</aspectratio>
-					<visible>Skin.HasSetting(banners.local)</visible>
 				</control>
 				<control type="image">
 					<posx>549</posx>
-					<posy>89</posy>
-					<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
-					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
-					<visible>!Skin.HasSetting(watched.alternative)</visible>
-				</control>
-				<control type="image">
-					<posx>549</posx>
-					<posy>89</posy>
-					<include>overlay_Resumable</include>
-					<visible>!Skin.HasSetting(watched.alternative)</visible>
-				</control>
-				<control type="image">
-					<posx>518</posx>
-					<posy>56</posy>
-					<info>ListItem.Overlay</info>
-					<visible>Skin.HasSetting(watched.alternative)</visible>
+					<posy>87</posy>
+					<include>overlay_UnWatched</include>
 				</control>				
 			</itemlayout>															
 			<focusedlayout height="137" width="600">
@@ -199,36 +141,11 @@
 					<texture fallback="thumbs/tvshow_banner.jpg" background="true">$INFO[ListItem.Art(banner)]</texture>
 					<aspectratio>stretch</aspectratio>
 					<bordersize>9</bordersize>
-					<visible>!Skin.HasSetting(banners.local)</visible>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>590</width>
-					<height>128</height>
-					<texture fallback="thumbs/tvshow_banner.jpg" background="true">$INFO[ListItem.Art(banner)]</texture>
-					<aspectratio>stretch</aspectratio>
-					<bordersize>9</bordersize>
-					<visible>Skin.HasSetting(banners.local)</visible>
 				</control>
 				<control type="image">
 					<posx>549</posx>
-					<posy>89</posy>
-					<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
-					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
-					<visible>!Skin.HasSetting(watched.alternative)</visible>		
-				</control>
-				<control type="image">
-					<posx>549</posx>
-					<posy>89</posy>
-					<include>overlay_Resumable</include>
-					<visible>!Skin.HasSetting(watched.alternative)</visible>		
-				</control>
-				<control type="image">
-					<posx>518</posx>
-					<posy>56</posy>
-					<info>ListItem.Overlay</info>
-					<visible>Skin.HasSetting(watched.alternative)</visible>		
+					<posy>87</posy>
+					<include>overlay_UnWatched</include>
 				</control>			
 			</focusedlayout>
 		</control>
@@ -322,15 +239,6 @@
 					<font>listInfo</font>
 					<textcolor>Color2</textcolor>
 				</control>
-				<control type="image">
-					<posx>685</posx>
-					<posy>12</posy>
-					<width>128</width>
-					<height>22</height>
-					<texture>$INFO[ListItem.StarRating,rating/nf-,]</texture>
-					<aspectratio align="right">keep</aspectratio>
-					<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
-				</control>
 			</itemlayout>
 			<focusedlayout condition="Container.Content(tvshows) | Container.Content(seasons)" width="560" height="290">
 				<control type="image">
@@ -355,22 +263,7 @@
 					<posy>132</posy>
 					<include>focus_Banner</include>
 					<control type="image">
-						<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
-						<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
-						<visible>!Skin.HasSetting(watched.alternative)</visible>
-					</control>
-					<control type="image">
-						<include>overlay_Resumable</include>
-						<visible>Skin.HasSetting(watched.original)</visible>
-					</control>
-				</control>
-				<control type="group">
-					<posx>756</posx>
-					<posy>100</posy>
-					<include>focus_Banner</include>
-					<visible>Skin.HasSetting(watched.alternative)</visible>
-					<control type="image">
-						<info>ListItem.Overlay</info>
+						<include>overlay_UnWatched</include>
 					</control>
 				</control>
 				<control type="image">
@@ -401,7 +294,6 @@
 					<include>focus_Banner</include>
 					<visible>![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Property(UnWatchedEpisodes))]</visible>
 				</control>
-				
 				<control type="label">
 					<posx>34</posx>
 					<posy>234</posy>
@@ -413,35 +305,6 @@
 					<include>focus_Banner</include>
 					<visible>![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Property(UnWatchedEpisodes))]</visible>
 				</control>
-				<control type="image">
-					<posx>678</posx>
-					<posy>180</posy>
-					<width>128</width>
-					<height>22</height>
-					<texture>$INFO[ListItem.StarRating,rating/fo-,]</texture>
-					<aspectratio align="right">keep</aspectratio>
-					<include>focus_Banner</include>
-					<visible>!SubString(ListItem.Icon,default)</visible>
-				</control>
-				<!--<control type="image" id="92529">
-					<posx>678</posx>
-					<posy>214</posy>
-					<width>128</width>
-					<height>48</height>
-					<texture fallback="empty">$VAR[flag_Studio]</texture>
-					<aspectratio align="right">keep</aspectratio>
-					<include>focus_Banner</include>
-				</control>
-				<control type="image" id="92729">
-					<posx>678</posx>
-					<posy>214</posy>
-					<width>128</width>
-					<height>48</height>
-					<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
-					<aspectratio align="right">keep</aspectratio>
-					<include>focus_Banner</include>
-					<visible>StringCompare(Control.GetLabel(92529),empty)</visible> 
-				</control>-->
 			</focusedlayout>
 			
 			<itemlayout condition="Container.Content(movies)" width="560" height="65">
@@ -479,36 +342,12 @@
 					<include>dialogWindow</include>
 					<include>focus_Banner</include>
 				</control>
-				<control type="image">
-					<posx>24</posx>
-					<posy>23</posy>
-					<width>172</width>
-					<height>248</height>
-					<texture diffuse="frames/frame_Portrait-mask.png" fallback="thumbs/movie_portrait.jpg">$INFO[ListItem.Art(poster)]</texture>
-					<aspectratio scalediffuse="false" align="left">stretch</aspectratio>
-					<include>focus_Banner</include>
-				</control>
 				<control type="group">
 					<posx>164</posx>
 					<posy>241</posy>
 					<include>focus_Banner</include>
 					<control type="image">
-						<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
-						<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
-						<visible>!Skin.HasSetting(watched.alternative)</visible>
-					</control>
-					<control type="image">
-						<include>overlay_Resumable</include>
-						<visible>Skin.HasSetting(watched.original)</visible>
-					</control>
-				</control>
-				<control type="group">
-					<posx>129</posx>
-					<posy>208</posy>
-					<include>focus_Banner</include>
-					<visible>Skin.HasSetting(watched.alternative)</visible>
-					<control type="image">
-						<info>ListItem.Overlay</info>
+						<include>overlay_UnWatched</include>
 					</control>
 				</control>
 				<control type="image">
@@ -539,17 +378,6 @@
 					<width>565</width>
 					<include>focus_Banner</include>
 				</control>
-				<control type="image">
-					<posx>780</posx>
-					<posy>57</posy>
-					<width>128</width>
-					<height>22</height>
-					<texture>$INFO[ListItem.StarRating,rating/fo-,]</texture>
-					<textcolor>Color4</textcolor>
-					<aspectratio align="right">keep</aspectratio>
-					<include>focus_Banner</include>
-					<visible>!SubString(ListItem.Icon,default)</visible>
-				</control>
 				<control type="textbox" id="4">
 					<posx>215</posx>
 					<posy>95</posy>
@@ -564,29 +392,6 @@
 				</control>
 			</focusedlayout>
 		</control>
-		<!--<control type="grouplist" id="54">
-			<posx>260</posx>
-			<posy>415</posy>
-			<itemgap>0</itemgap>
-			<scrolltime tween="Cubic" easing="Out">300</scrolltime>
-			<include>transition_Container</include>
-			<include>infoDialogHide</include>
-			<include>toggle_Menu</include>
-			<visible>Control.IsVisible(54) + Container.Content(tvshows)</visible>
-			 <include>NowPlayingFullscreenOSD</include>
-			<include>focus_Banner</include>
-			<control type="label" id="1">
-					<posx>34</posx>
-					<posy>210</posy>
-					<label>$VAR[tvshow_Info.NextAired]</label>
-					<font>info</font>
-					<textcolor>Color4</textcolor>
-					<align>left</align>
-					<width>650</width>
-					<include>focus_Banner</include>
-					<visible>!SubString(ListItem.Icon,default)</visible>
-			</control>
-		</control>-->
 	</include>
 
 <!---BANNERS------>
@@ -622,22 +427,8 @@
 				</control>
 				<control type="image">
 					<posx>592</posx>
-					<posy>89</posy>
-					<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
-					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
-					<visible>!Skin.HasSetting(watched.alternative)</visible>
-				</control>
-				<control type="image">
-					<posx>592</posx>
-					<posy>89</posy>
-					<include>overlay_Resumable</include>
-					<visible>!Skin.HasSetting(watched.alternative)</visible>
-				</control>
-				<control type="image">
-					<posx>560</posx>
-					<posy>56</posy>
-					<info>ListItem.Overlay</info>
-					<visible>Skin.HasSetting(watched.alternative)</visible>
+					<posy>87</posy>
+					<include>overlay_UnWatched</include>
 				</control>
 			</itemlayout>
 			<focusedlayout width="645" height="122">
@@ -660,22 +451,8 @@
 				</control>
 				<control type="image">
 					<posx>592</posx>
-					<posy>89</posy>
-					<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
-					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
-					<visible>!Skin.HasSetting(watched.alternative)</visible>
-				</control>
-				<control type="image">
-					<posx>592</posx>
-					<posy>89</posy>
-					<include>overlay_Resumable</include>
-					<visible>!Skin.HasSetting(watched.alternative)</visible>
-				</control>
-				<control type="image">
-					<posx>560</posx>
-					<posy>56</posy>
-					<info>ListItem.Overlay</info>
-					<visible>Skin.HasSetting(watched.alternative)</visible>
+					<posy>87</posy>
+					<include>overlay_UnWatched</include>
 				</control>
 			</focusedlayout>
 		</control>
@@ -705,24 +482,9 @@
 				<label>$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[16101] $LOCALIZE[20360]]</label>
 				<include>info_Sub</include>
 			</control>
-			<!--<control type="label">
-				<width>500</width>
-				<label>$VAR[tvshow_Info.NextAired]</label>
-				<include>info_Sub</include>
-				<visible>!SubString(ListItem.Icon,default)</visible>
-			</control>-->
-			<control type="image">
-				<posx>695</posx>
-				<posy>650</posy>
-				<width>128</width>
-				<height>48</height>
-				<texture>$INFO[ListItem.StarRating]</texture>
-				<aspectratio align="left">keep</aspectratio>
-				<visible>!IsEmpty(ListItem.TVShowTitle)</visible>
-			</control>
 			<control type="textbox" id="4">
 				<width>500</width>
-				<height>345</height>
+				<height>440</height>
 				<label>$VAR[global_Plot.Condition]</label>
 				<include>description_Small</include>
 			</control>
@@ -738,18 +500,6 @@
 			<include>transition_Container</include>
 			<include>infoDialogHide</include>
 			<visible>Control.IsVisible(541) + [Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
-		</control>
-		<control type="image" id="1234567">
-			<posx>695</posx>
-			<posy>610</posy>
-			<width>128</width>
-			<height>64</height>
-			<aspectratio align="left">keep</aspectratio>
-			<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
-			<include>toggle_Menu</include>
-			<include>transition_Container</include>
-			<include>infoDialogHide</include>
-			<visible>StringCompare(Control.GetLabel(12345),empty) + Control.IsVisible(541) + [Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
 		</control>
 	</include>
 </includes>

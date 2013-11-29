@@ -203,7 +203,6 @@
 		<value>$INFO[ListItem.Thumb]</value>
 	</variable>
 	<variable name="view_Banner.Thumb">
-		<value condition="!Skin.HasSetting(banners.local)">$INFO[ListItem.Icon]</value>
 		<value>$INFO[ListItem.path]banner.jpg</value>
 	</variable>
 	<variable name="global_Rating.Condition">

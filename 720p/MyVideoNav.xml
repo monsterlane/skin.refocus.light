@@ -20,10 +20,10 @@
 		<include>view_SlideSquare</include>
 		<include>view_IconSquare3</include>
 		<include>view_MovieSets</include>
-		<include condition="Skin.HasSetting(banners.enable)">view_Banner</include>
-		<include condition="Skin.HasSetting(banners.enable)">view_BannerWide</include>
-		<include condition="Skin.HasSetting(banners.enable)">view_BannerDoubleRow</include>
-		<include condition="Skin.HasSetting(banners.enable)">view_BannerPoster</include>
+		<include>view_Banner</include>
+		<include>view_BannerWide</include>
+		<include>view_BannerDoubleRow</include>
+		<include>view_BannerPoster</include>
 
 	<!---TRIGGER------>	
 		<control type="button" id="8000">
