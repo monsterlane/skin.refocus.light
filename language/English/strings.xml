@@ -272,10 +272,6 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="31995">Enable Artist Logos on Music</string>
 <string id="31996">Set Music Folder Path</string>
 
-<!--realaska-->
-<string id="31997">Enable reAlaska OSD</string>
-<string id="31998">Enable reAlaska OSD Progressbar</string>
-
 <!--BIG-->
 <string id="31999">Enable Original Clock</string>
 
@@ -456,17 +452,8 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="32500">Disable Fading on Pointer on Home Menu</string>
 
 <!--osd-->
-<string id="32600">Use original reFocus OSD</string>
-<string id="32601">Use reFocus BIG OSD</string>
 <string id="32602">Use Clearart</string>
-<string id="32603">Use Poster</string>
-<string id="32604">Use Episode Thumb</string>
-<string id="32605">Use Network/Studio Thumb</string>
 <string id="32606">Use Logo</string>
-<string id="32607">Display Episode Info</string>
-<string id="32608">OSD Extended</string>
-<string id="32609">Use OSD Extended Info</string>
-<string id="32610">Hide Codec Information</string>
 
 <!--fanart-->
 <string id="32700">Use Extra Fanart</string>
