@@ -47,7 +47,7 @@
 				<visible>VideoPlayer.Content(files) | SubString(Player.Filenameandpath,http://)</visible>
 			</control>
 			<control type="label" id="1">
-				<posx>170r</posx>
+				<posx>180r</posx>
 				<label>$INFO[VideoPlayer.TimeRemaining(hh:mm:ss)]</label>
 				<include>toast_Side</include>
 			</control>

@@ -486,6 +486,63 @@
 			</control>
 		</control>
 	</include>
+	<!--video info dialog-->
+	<include name="flags_Type-info">
+		<control type="grouplist" id="100">
+			<width>900</width>
+			<height>64</height>
+			<itemgap>10</itemgap>
+			<orientation>horizontal</orientation>
+			<control type="image">
+				<width>128</width>
+				<height>64</height>
+				<info>ListItem.StarRating</info>
+				<aspectratio align="center">keep</aspectratio>
+			</control>
+			<control type="image">
+				<width>96</width>
+				<height>64</height>
+				<texture>$INFO[ListItem.VideoResolution,flags/video/resolution/,.png]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(musicvideos)] + !IsEmpty(Listitem.VideoResolution)</visible>
+			</control>
+			<control type="image">
+				<width>96</width>
+				<height>64</height>
+				<texture>$INFO[Listitem.VideoCodec,flags/codec/,.png]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(musicvideos)] + !IsEmpty(Listitem.VideoCodec)</visible>
+			</control>
+			<control type="image">
+				<width>96</width>
+				<height>64</height>
+				<texture>$INFO[Listitem.AudioCodec,flags/codec/,.png]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(musicvideos)] + !IsEmpty(Listitem.AudioCodec)</visible>
+			</control>
+			<control type="image">
+				<width>96</width>
+				<height>64</height>
+				<texture>$INFO[Listitem.VideoAspect,flags/video/aspectratio/,.png]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(musicvideos)] + !IsEmpty(Listitem.VideoAspect)</visible>
+			</control>
+			<control type="image" id="99799">
+				<width>96</width>
+				<height>64</height>
+				<texture fallback="empty">$VAR[flag_Studio]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
+			</control>
+			<!--<control type="image" id="99899">
+				<width>96</width>
+				<height>64</height>
+				<texture>$VAR[flag_Studio_alt]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>StringCompare(Control.GetLabel(99799),empty) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos)]</visible>
+			</control>-->
+		</control>
+	</include>
 	<!--pvr-->
 	<include name="flags_PVR">
 		<control type="image">

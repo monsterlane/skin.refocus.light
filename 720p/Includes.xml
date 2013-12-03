@@ -1106,7 +1106,7 @@
 				<posx>160</posx>
 				<posy>34</posy>
 				<control type="label" id="1">
-					<width>870</width>
+					<width>800</width>
 					<label>$VAR[osd.Title.Info]</label>
 					<textcolor>Color1</textcolor>
 					<font>titleSpecial</font>
