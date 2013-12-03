@@ -1,15 +1,11 @@
 ﻿<window type="dialog" id="142">
 	<defaultcontrol>7000</defaultcontrol>
 	<controls>
-
-	<!--<include>clock</include>-->
 		<control type="group">
 			<include>clock</include>
 			<include>OverlayTop</include>
 		</control>
-	
-	
-				<control type="group">
+		<control type="group">
 			<include>osd_Info</include>
 			<include>transition_OSD</include>
 		</control>

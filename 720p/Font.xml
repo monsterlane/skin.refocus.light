@@ -8,6 +8,13 @@
 			<size>26</size>
 		</font>
 		<font>
+			<name>osd_rating</name>
+			<filename>Regular.ttf</filename>
+			<style>bold</style>
+			<size>30</size>
+			<textcolor>Color3</textcolor>
+		</font>
+		<font>
 			<name>light</name>
 			<filename>Light.ttf</filename>
 			<size>52</size>

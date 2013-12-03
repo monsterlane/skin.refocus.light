@@ -38,16 +38,6 @@
 		<value>$INFO[ListItem.Plot]</value>
 	</variable>
 	<variable name="global_Background.Fallback">
-		<value condition="[Container.Content(movies) | Window.IsActive(21) | Window.IsActive(22) | Window.IsActive(23) | Window.IsActive(24) | Window.IsActive(25)]">backgrounds/movies.jpg</value>
-		<value condition="[Container.Content(tvshows) | Container.Content(seasons)  | Container.Content(episodes) | stringcompare(container.folderpath,videodb://2/) | stringcompare(container.folderpath,videodb://5/)]">backgrounds/tvshows.jpg</value>
-		<value condition="[Window.IsActive(600) | Window.IsActive(tvsettings)]">backgrounds/livetv.jpg</value>
-		<value condition="[Window.IsActive(501) | Window.IsActive(502)]">backgrounds/music.jpg</value>
-		<value condition="Window.IsActive(2) + !Control.IsVisible(531)">backgrounds/pictures.jpg</value>
-		<value condition="Window.IsActive(programs)">backgrounds/programs.jpg</value>
-		<value condition="Window.IsActive(weather) + !Skin.HasSetting(fanart.weather)">backgrounds/weather.jpg</value>
-		<value condition="[Window.IsActive(picturessettings) | Window.IsActive(appearancesettings) | Window.IsActive(networksettings) | Window.IsActive(videossettings) | Window.IsActive(systemsettings) | Window.IsActive(musicsettings) | Window.IsActive(weathersettings) | Window.IsActive(programssettings) | Window.IsActive(picturessettings) | Window.IsActive(filemanager) | Window.IsActive(settings) | Window.IsActive(systeminfo) | Window.IsActive(profiles)]">backgrounds/settings.jpg</value>
-		<value condition="Window.IsActive(skinsettings)">backgrounds/skin.jpg</value>
-		<value condition="Window.IsActive(addonbrowser)">backgrounds/addons.jpg</value>
 		<value condition="!Control.IsVisible(56)">$INFO[ListItem.Art(fanart)]</value>
 	</variable>
 
