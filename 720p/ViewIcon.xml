@@ -12,7 +12,7 @@
 			<onup>57</onup>
 			<ondown>57</ondown>
 			<pagecontrol>83</pagecontrol>
-			<preloaditems>2</preloaditems>
+			<preloaditems>4</preloaditems>
 			<scrolltime tween="Cubic" easing="Out">400</scrolltime>
 			<orientation>vertical</orientation>
 			<include>transition_Container</include>
@@ -101,7 +101,7 @@
 			<onup>575</onup>
 			<ondown>575</ondown>
 			<pagecontrol>85</pagecontrol>
-			<preloaditems>2</preloaditems>
+			<preloaditems>4</preloaditems>
 			<scrolltime tween="Cubic" easing="Out">400</scrolltime>
 			<include>transition_Container</include>
 			<include>infoDialogHide</include>
@@ -294,7 +294,7 @@
 			<onright>83</onright>
 			<onup>573</onup>
 			<ondown>573</ondown>
-			<preloaditems>2</preloaditems>
+			<preloaditems>4</preloaditems>
 			<pagecontrol>83</pagecontrol>
 			<scrolltime tween="Cubic" easing="Out">400</scrolltime>
 			<include>transition_Container</include>
@@ -431,8 +431,8 @@
 			<onup>575</onup>
 			<ondown>575</ondown>
 			<pagecontrol>85</pagecontrol>
-			<preloaditems>2</preloaditems>
-			<scrolltime tween="Cubic" easing="Out">400</scrolltime>
+			<preloaditems>4</preloaditems>
+			<scrolltime>0</scrolltime>
 			<include>transition_Container</include>
 			<include>infoDialogHide</include>
 			<include>toggle_Menu</include>
