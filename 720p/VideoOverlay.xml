@@ -9,7 +9,7 @@
 			<visible>Player.HasVideo + !Skin.HasSetting(overlay.enable) + ![Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog) | Window.IsActive(musicscan) | Window.IsActive(home) | Window.IsActive(fullscreenvideo) | Window.IsActive(614)]</visible>
 			<include>toggle_ToastMute</include>
 			<control type="label" id="200">
-				<posx>180r</posx>
+				<posx>190r</posx>
 				<posy>2</posy>
 				<label>$INFO[VideoPlayer.Title]</label>
 				<include>toast_Top</include>
@@ -22,7 +22,7 @@
 				<visible>VideoPlayer.Content(movies) + !SubString(Player.Filenameandpath,http://)</visible>
 			</control>
 			<control type="label" id="203">
-				<posx>180r</posx>
+				<posx>190r</posx>
 				<label>$INFO[VideoPlayer.TVShowTitle]</label>
 				<include>toast_Bottom</include>
 				<visible>VideoPlayer.Content(episodes)</visible>
@@ -41,7 +41,7 @@
 				<include>toast_Bottom</include>
 			</control>
 			<control type="label" id="201">
-				<posx>180r</posx>
+				<posx>190r</posx>
 				<label>$INFO[VideoPlayer.Duration,, $LOCALIZE[31100]]</label>
 				<include>toast_Bottom</include>
 				<visible>VideoPlayer.Content(files) | SubString(Player.Filenameandpath,http://)</visible>
