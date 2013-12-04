@@ -14,7 +14,7 @@
 				<height>32</height>
 				<texture>rating/star_rating.png</texture>
 				<aspectratio align="center">keep</aspectratio>
-				<visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(movies)</visible>
+				<visible>[Container.Content(episodes) | Container.Content(tvshows) | Container.Content(movies)] + !IsEmpty(ListItem.Rating)</visible>
 			</control>
 			<control type="label">
 				<width>45</width>

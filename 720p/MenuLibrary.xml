@@ -98,33 +98,6 @@
 				<onclick>SetFocus(50)</onclick>
 			</control>
 		</control>
-		<!--search-->
-		<control type="group">
-			<width>220</width>
-			<height>42</height>
-			<visible>!Skin.HasSetting(search.addon)</visible>
-			<control type="button" id="8">
-				<label>$LOCALIZE[137]</label>
-				<onup>17</onup>
-				<ondown>9</ondown>
-				<onright>50</onright>
-				<include>button_Menu</include>
-				<onclick>SetFocus(300)</onclick>
-			</control>
-		</control>
-		<control type="group">
-			<width>220</width>
-			<height>42</height>
-			<visible>Skin.HasSetting(search.addon)</visible>
-			<control type="button" id="9">
-				<label>$LOCALIZE[137]</label>
-				<onup>8</onup>
-				<ondown>19</ondown>
-				<onright>50</onright>
-				<include>button_Menu</include>
-				<onclick>RunAddon(script.globalsearch)</onclick>
-			</control>
-		</control>
 		<!--filter-->
 		<control type="group">
 			<width>220</width>
@@ -239,7 +212,7 @@
 						<include>button_Menu</include>
 					</control>
 				</control>
-				<!--FANART: use posters-->
+				<!--LANDSCAPE THUMB: use posters-->
 				<control type="group">
 					<width>220</width>
 					<height>42</height>
@@ -255,7 +228,7 @@
 						<include>button_Menu</include>
 					</control>
 				</control>
-				<!--FANART: use fanart-->
+				<!--LANDSCAPE THUMB: use fanart-->
 				<control type="group">
 					<width>220</width>
 					<height>42</height>
@@ -438,6 +411,36 @@
 						<onright>50</onright>
 						<onclick>Skin.ToggleSetting(view.biglist.posters)</onclick>
 						<onclick>SetFocus(51)</onclick>
+						<include>button_Menu</include>
+					</control>
+				</control>
+				<!--FANART: use ClearArt-->
+				<control type="group">
+					<width>220</width>
+					<height>42</height>
+					<visible>Control.IsVisible(98245) + Container.Content(episodes) + !SubString(Container.FolderPath,plugin://) + !Skin.HasSetting(view.fanart.clearart)</visible>
+					<control type="button" id="90">
+						<label>Use ClearArt</label>
+						<onup>31</onup>
+						<ondown>1</ondown>
+						<onright>50</onright>
+						<onclick>Skin.ToggleSetting(view.fanart.clearart)</onclick>
+						<onclick>SetFocus(98245)</onclick>
+						<include>button_Menu</include>
+					</control>
+				</control>
+				<!--FANART: use ClearLogo-->
+				<control type="group">
+					<width>220</width>
+					<height>42</height>
+					<visible>Control.IsVisible(98245) + Container.Content(episodes) + !SubString(Container.FolderPath,plugin://) + Skin.HasSetting(view.fanart.clearart)</visible>
+					<control type="button" id="90">
+						<label>Use ClearLogo</label>
+						<onup>31</onup>
+						<ondown>1</ondown>
+						<onright>50</onright>
+						<onclick>Skin.ToggleSetting(view.fanart.clearart)</onclick>
+						<onclick>SetFocus(98245)</onclick>
 						<include>button_Menu</include>
 					</control>
 				</control>
