@@ -1208,6 +1208,7 @@
 						<visible>VideoPlayer.Content(musicvideos)</visible>
 					</control>-->
 					<control type="group">
+					<visible>!IsEmpty(VideoPlayer.Rating)</visible>	
 						<control type="image">
 							<posx>15</posx>
 							<width>28</width>
@@ -1218,10 +1219,10 @@
 						<control type="label">
 							<posx>45</posx>
 							<width>45</width>
-			                			<height>64</height>
+							<height>64</height>
 							<font>osd_rating</font>
-			                			<label>$INFO[VideoPlayer.Rating]</label>
-			                			<textcolor>Color3</textcolor>
+							<label>$INFO[VideoPlayer.Rating]</label>
+							<textcolor>Color3</textcolor>
 						</control>
 					</control>
 				</control>

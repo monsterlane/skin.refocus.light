@@ -12,7 +12,6 @@
 			<filename>Regular.ttf</filename>
 			<style>bold</style>
 			<size>30</size>
-			<textcolor>Color3</textcolor>
 		</font>
 		<font>
 			<name>light</name>

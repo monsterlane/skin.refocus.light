@@ -125,6 +125,7 @@
 						<height>32</height>
 						<font>rating</font>
 						<label>$INFO[ListItem.Rating]</label>
+						<textcolor>Color3</textcolor>
 					</control>
 				</control>
 				<control type="textbox" id="1">
@@ -147,7 +148,7 @@
 				    </control>
 			    </control>				
 			    <control type="image">
-				<posx>912</posx>
+				<posx>913</posx>
 				<posy>110</posy>
 					<include>overlay_UnWatched</include>
 				</control>
