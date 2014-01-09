@@ -212,7 +212,7 @@
 				<texture>$VAR[global_Rating.Condition]</texture>
 				<colordiffuse>Color7</colordiffuse>
 				<aspectratio align="right">keep</aspectratio>
-				<visible>!Container.Content(artists)</visible>
+				<visible>!Container.Content(artists) + !Container.Content(seasons)</visible>
 			</control>
 		</focusedlayout>
 	</include>

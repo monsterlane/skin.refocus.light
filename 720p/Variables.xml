@@ -196,7 +196,7 @@
 		<value>$INFO[ListItem.path]banner.jpg</value>
 	</variable>
 	<variable name="global_Rating.Condition">
-		<value condition="!IsEmpty(ListItem.Artist) | !IsEmpty(ListItem.Title)">$INFO[ListItem.StarRating]</value>
+		<value condition="[!IsEmpty(ListItem.Artist) | !IsEmpty(ListItem.Title)] + !IsEmpty(ListItem.Rating)">$INFO[ListItem.StarRating]</value>
 		<value condition="Container.Content(addons) | SubString(Container.FolderPath,addons)">$INFO[ListItem.Property(Addon.StarRating)]</value>
 	</variable>
 	<variable name="custom_Rating.Container">
