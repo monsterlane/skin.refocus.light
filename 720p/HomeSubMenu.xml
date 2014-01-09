@@ -23,44 +23,43 @@
 						<onclick>ActivateWindow(Videos,Files,$INFO[Skin.String(backspacehome)])</onclick>
 					</item>
 					<item id="2">
+						<label>Update Video Library</label>
+						<onclick>XBMC.UpdateLibrary(Video)</onclick>
+					</item>
+					<item id="3">
 						<label>$INFO[Skin.String(videomenu.playlist1.label)]</label>
 						<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.playlist1.path)],$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>!IsEmpty(Skin.String(videomenu.playlist1.path)) + !Skin.HasSetting(favourites.global)</visible>
 					</item>
-					<item id="3">
+					<item id="4">
 						<label>$INFO[Skin.String(videomenu.playlist2.label)]</label>
 						<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.playlist2.path)],$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>!IsEmpty(Skin.String(videomenu.playlist2.path)) + !Skin.HasSetting(favourites.global)</visible>
 					</item>
-					<item id="4">
+					<item id="5">
 						<label>$INFO[Skin.String(videomenu.playlist3.label)]</label>
 						<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.playlist3.path)],$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>!IsEmpty(Skin.String(videomenu.playlist3.path)) + !Skin.HasSetting(favourites.global)</visible>
 					</item>
-					<item id="5">
+					<item id="6">
 						<label>$INFO[Skin.String(videomenu.playlist4.label)]</label>
 						<onclick>ActivateWindow(videolibrary,$INFO[Skin.String(videomenu.playlist4.path)],$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>!IsEmpty(Skin.String(videomenu.playlist4.path)) + !Skin.HasSetting(favourites.global)</visible>
 					</item>
-					<item id="6">
+					<item id="7">
 						<label>$INFO[Skin.String(videomenu.playlist5.label)]</label>
 						<onclick>ActivateWindow(Videos,$INFO[Skin.String(videomenu.playlist5.path)],$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>!IsEmpty(Skin.String(videomenu.playlist5.path)) + !Skin.HasSetting(favourites.global)</visible>
 					</item>
-					<item id="7">
+					<item id="8">
 						<label>$INFO[Skin.String(videomenu.playlist6.label)]</label>
 						<onclick>ActivateWindow(Videos,$INFO[Skin.String(videomenu.playlist6.path)],$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>!IsEmpty(Skin.String(videomenu.playlist6.path)) + !Skin.HasSetting(favourites.global)</visible>
 					</item>
-					<item id="8">
+					<item id="9">
 						<label>$INFO[Skin.String(videomenu.playlist7.label)]</label>
 						<onclick>ActivateWindow(Videos,$INFO[Skin.String(videomenu.playlist7.path)],$INFO[Skin.String(backspacehome)])</onclick>
 						<visible>!IsEmpty(Skin.String(videomenu.playlist7.path)) + !Skin.HasSetting(favourites.global)</visible>
-					</item>
-					<item id="9">
-						<label>$INFO[Skin.String(videomenu.playlist8.label)]</label>
-						<onclick>ActivateWindow(Videos,$INFO[Skin.String(videomenu.playlist8.path)],$INFO[Skin.String(backspacehome)])</onclick>
-						<visible>!IsEmpty(Skin.String(videomenu.playlist8.path)) + !Skin.HasSetting(favourites.global)</visible>
 					</item>
 					<item id="10">
 						<label>$LOCALIZE[24001]</label>

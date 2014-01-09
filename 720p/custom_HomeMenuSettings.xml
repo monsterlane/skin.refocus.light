@@ -281,21 +281,6 @@
 						<enable>!Skin.HasSetting(homemenu.videos)</enable>
 						<visible>!Skin.HasSetting(favourites.global)</visible>
 					</control>
-					<!--folder 4-->
-					<!--playlist 8-->
-					<control type="button" id="217">
-						<width>557</width>
-						<label>$LOCALIZE[31033] 8</label>
-						<label2>[I]$INFO[Skin.String(videomenu.playlist8.label)][/I]</label2>
-						<onclick>Skin.Reset(videomenu.playlist8)</onclick>
-						<onclick>Skin.Reset(videomenu.playlist8.path)</onclick>
-						<onclick>Skin.Reset(videomenu.playlist8.label)</onclick>
-						<onclick>Skin.SetFile(videomenu.playlist8.path,.xsp,special://profile/playlists/video/)</onclick>
-						<onclick>Skin.SetString(videomenu.playlist8.label)</onclick>
-						<include>dialog_Radio</include>
-						<enable>!Skin.HasSetting(homemenu.videos)</enable>
-						<visible>!Skin.HasSetting(favourites.global)</visible>
-					</control>
 
 					<!--favourite 1-->
 					<control type="button" id="210">
