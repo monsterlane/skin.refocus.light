@@ -488,12 +488,6 @@
 				<label>$VAR[global_Plot.Condition]</label>
 				<include>description_Small</include>
 			</control>
-			<control type="textbox" id="5">
-				<width>200</width>
-				<height>50</height>
-				<label>$INFO[Listitem.studio]</label>
-				<include>description_Small</include>
-			</control>
 		</control>
 		<control type="image" id="12345">
 			<posx>695</posx>
