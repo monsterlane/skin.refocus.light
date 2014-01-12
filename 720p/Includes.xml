@@ -1208,7 +1208,7 @@
 							<aspectratio align="center">keep</aspectratio>
 						</control>
 						<control type="label">
-							<posx>45</posx>
+							<posx>55</posx>
 							<width>45</width>
 							<height>64</height>
 							<font>osd_rating</font>

@@ -17,7 +17,7 @@
 				<visible>[Container.Content(episodes) | Container.Content(tvshows) | Container.Content(movies)] + !IsEmpty(ListItem.Rating)</visible>
 			</control>
 			<control type="label">
-				<width>45</width>
+				<width>50</width>
 				<height>32</height>
 				<font>rating</font>
 				<textcolor>Color3</textcolor>
@@ -25,14 +25,14 @@
 				<visible>!IsEmpty(ListItem.Rating)</visible>
 			</control>
 			<control type="image">
-				<width>96</width>
+				<width>106</width>
 				<height>34</height>
 				<aspectratio align="center">keep</aspectratio>
 				<texture>$INFO[Listitem.VideoResolution,flags/video/resolution/,.png]</texture>
 				<visible>!IsEmpty(Listitem.VideoResolution)</visible>
 			</control>
 			<control type="image">
-				<width>53</width>
+				<width>63</width>
 				<height>34</height>
 				<aspectratio align="center">keep</aspectratio>
 				<texture>$INFO[Listitem.AudioChannels,flags/audio/,.png]</texture>
