@@ -1158,7 +1158,7 @@
 				<control type="grouplist" id="1">
 					<width>900</width>
 					<height>64</height>
-					<posx>800</posx>
+					<posx>795</posx>
 					<posy>-15</posy>
 					<itemgap>10</itemgap>
 					<orientation>horizontal</orientation>
@@ -1208,8 +1208,8 @@
 							<aspectratio align="center">keep</aspectratio>
 						</control>
 						<control type="label">
-							<posx>55</posx>
-							<width>45</width>
+							<posx>45</posx>
+							<width>60</width>
 							<height>64</height>
 							<font>osd_rating</font>
 							<label>$INFO[VideoPlayer.Rating]</label>
