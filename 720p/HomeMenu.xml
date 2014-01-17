@@ -136,15 +136,14 @@
 				</item>
 				<item id="22">
 					<label>31051</label>
-					<onclick>ActivateWindow(videoplaylist)</onclick>
+					<onclick>ActivateWindow(fullscreenvideo)</onclick>
 					<visible>!Skin.HasSetting(homemenu.playing) + Player.HasVideo + !Skin.HasSetting(backgroundvideo)</visible>
 					<!--<label2>$INFO[VideoPlayer.TVShowTitle,,: ]$INFO[VideoPlayer.Artist,, - ]$INFO[VideoPlayer.Title]</label2>-->
 				</item>
 				<item id="23">
 					<label>$INFO[VideoPlayer.TVShowTitle,,: ]$INFO[VideoPlayer.Artist,, - ]$INFO[VideoPlayer.Title]</label>
-					<onclick>ActivateWindow(videoplaylist)</onclick>
+					<onclick>ActivateWindow(fullscreenvideo)</onclick>
 					<visible>!Skin.HasSetting(homemenu.playing) + Player.HasVideo + Skin.HasSetting(backgroundvideo)</visible>
-					<!--<label2>$INFO[VideoPlayer.TVShowTitle,,: ]$INFO[VideoPlayer.Artist,, - ]$INFO[VideoPlayer.Title]</label2>-->
 				</item>
 			</content>
 		</control>
