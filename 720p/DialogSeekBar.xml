@@ -2,11 +2,7 @@
 	<defaultcontrol>23</defaultcontrol>
 	<visible>![Window.IsActive(142)] + !Player.HasAudio + [Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)] + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.Caching] + ![Window.IsActive(infodialog) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
 	<controls>
-		
-			<control type="group">
-				<include>clock</include>
-				<include>OverlayTop</include>
-			</control>
+		<include>clock</include>
 		
 
 <!-- reFocus BIG OSD -->
@@ -39,7 +35,7 @@
 			<!-- episode logo -->
 			<control type ="group">
 				<visible>Skin.HasSetting(videoosd.logo)</visible>
-				<animation effect="slide" start="0,200" end="0,0" tween="Cubic" easing="Out" time="1000" delay="1000">WindowOpen</animation>
+				<animation effect="slide" reversible="false" start="0,200" end="0,0" tween="Cubic" easing="Out" time="1000" delay="1000">WindowOpen</animation>
 				<animation effect="fade" time="300">WindowClose</animation>
 				<control type="image">
 					<posx>32</posx>

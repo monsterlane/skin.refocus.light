@@ -832,7 +832,7 @@
 		<textcolor>Color8</textcolor>
 		<scrollout>false</scrollout>
 		<pauseatend>2000</pauseatend>
-		<include>transition_Toast</include>
+		<include condition="Skin.HasSetting(videoosd.transition)">transition_Toast</include>
 	</include>
 	<!--notificationBottom-->
 	<include name="toast_Bottom">
@@ -869,7 +869,7 @@
 		<textcolor>Color8</textcolor>
 		<scroll>false</scroll>
 		<pauseatend>2000</pauseatend>
-		<include>transition_Toast</include>
+		<include condition="Skin.HasSetting(videoosd.transition)">transition_Toast</include>
 	</include>
 	<!--notificationSide-->
 	<include name="toast_Side">
@@ -1158,18 +1158,11 @@
 				<control type="grouplist" id="1">
 					<width>900</width>
 					<height>64</height>
-					<posx>795</posx>
+					<posx>325r</posx>
 					<posy>-15</posy>
 					<itemgap>10</itemgap>
 					<orientation>horizontal</orientation>
-					<visible>VideoPlayer.Content(movies) | VideoPlayer.Content(tvshows) | VideoPlayer.Content(episodes)</visible>
-					<!--<control type="image">
-						<width>58</width>
-						<height>64</height>
-						<texture>$INFO[VideoPlayer.AudioChannels,flags/audio/,.png]</texture>
-						<aspectratio align="center">keep</aspectratio>
-						<visible>!IsEmpty(VideoPlayer.AudioChannels)</visible>
-					</control>-->
+					<visible>VideoPlayer.Content(movies) | VideoPlayer.Content(tvshows) | VideoPlayer.Content(episodes) | VideoPlayer.Content(livetv)</visible>
 					<control type="image">
 						<width>96</width>
 						<height>64</height>
@@ -1184,13 +1177,20 @@
 						<aspectratio align="center">keep</aspectratio>
 						<visible>!IsEmpty(VideoPlayer.AudioCodec)</visible>
 					</control>
-					<!--<control type="image">
+					<!-- <control type="image">
+						<width>58</width>
+						<height>64</height>
+						<texture>$INFO[VideoPlayer.AudioChannels,flags/audio/,.png]</texture>
+						<aspectratio align="center">keep</aspectratio>
+						<visible>!IsEmpty(VideoPlayer.AudioChannels) + IsEmpty(VideoPlayer.Rating)</visible>
+					</control> -->
+					<control type="image">
 						<width>96</width>
 						<height>64</height>
 						<texture>$INFO[VideoPlayer.VideoCodec,flags/codec/,.png]</texture>
 						<aspectratio align="center">keep</aspectratio>
-						<visible>!IsEmpty(VideoPlayer.VideoCodec)</visible>
-					</control>-->
+						<visible>!IsEmpty(VideoPlayer.VideoCodec) + IsEmpty(VideoPlayer.Rating)</visible>
+					</control>
 					<!--<control type="image" id="99799">
 						<width>96</width>
 						<height>64</height>
