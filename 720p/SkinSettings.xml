@@ -120,13 +120,6 @@
 				<onclick>ActivateWindow(61)</onclick>
 				<include>button_Settings</include>
 			</control>
-			<!--home menu categories configuration-->
-			<control type="button" id="102">
-				<label>$LOCALIZE[40000]</label>
-				<onfocus>Skin.SetString(SubMenu,Categories)</onfocus>
-				<onclick>ActivateWindow(345)</onclick>
-				<include>button_Settings</include>
-			</control>
 			<!--backgrounds configuration-->
 			<control type="button" id="103">
 				<label>$LOCALIZE[32002]</label>
