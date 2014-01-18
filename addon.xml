@@ -1,23 +1,17 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-	<addon id="skin.refocus.big" version="0.88.7" name="reFocus Big" provider-name="Jeroen Modded by Salem, freem@n">
+	<addon id="skin.refocus.light" version="0.88.7" name="reFocus light" provider-name="Salem - modded by freem@n">
 	<requires>
 		<import addon="xbmc.gui" version="4.0.0"/>
 		<import addon="script.favourites" version="3.2.4"/>
 		<import addon="script.playlists" version="0.1.1"/>
-		<import addon="script.tv.show.next.aired" version="4.1.20"/>
 		<import addon="script.artwork.downloader" version="12.0.2"/>
-		<import addon="script.artistslideshow" version="1.3.2"/>
-		<import addon="script.globalsearch" version="0.2.5"/>
-		<import addon="script.playalbum" version="0.0.6"/>    
-		<import addon="script.randomandlastitems" version="2.0.0"/>
-		<import addon="service.skin.widgets" version="0.0.13"/>
 	</requires>
 	<extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" effectslowdown="1.00" debugging="false">
 		<res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary>reFocus BIG by Paul Salem, modded by freem@n</summary>
-		<description>reFocus mod with an added option for big and realaka fonts as well as several script support additions and new themes</description>
+		<summary>reFocus Light for Raspberry Pi by freem@n based on reFocus BIG by Paul Salem</summary>
+		<description>lightweight version of the reFocus BIG skin especially for low-power devices like the Raspberry Pi</description>
 		<disclaimer>mouse usage not supported</disclaimer>
 		<platform>all</platform>
 	</extension>
