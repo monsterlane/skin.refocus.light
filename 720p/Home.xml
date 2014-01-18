@@ -1,11 +1,4 @@
 <window id="0">
-	<!-- convert existing backspacehome setting to string -->
-	<onload condition="Skin.HasSetting(backspacehome.enable) + !Skin.HasSetting(backspacehome.upgraded)">Skin.SetString(backspacehome, return)</onload>
-	<onload condition="!Skin.HasSetting(backspacehome.upgraded)">Skin.SetBool(backspacehome.upgraded)</onload>
-	<onload condition="Skin.HasSetting(slideshow.home) + ![Control.HasFocus(8001) | Control.HasFocus(8000) | Control.HasFocus(8002) | Control.HasFocus(8005) | [Control.HasFocus(8006) | Control.HasFocus(8007)] | [Control.HasFocus(8008) | Control.HasFocus(8009)] | [Control.HasFocus(80081) | Control.HasFocus(80091)]]">AlarmClock(home_Slideshow,Control.Move(600,1)),00:10,silent,loop)</onload>
-	
-	<!-- -->
-
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	
@@ -26,22 +19,8 @@
 			<animation type="WindowClose">
 				<effect type="fade" start="100" end="0" time="200" delay="0" />
 			</animation>
-			<visible>Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] | [Skin.HasSetting(slideshow.fanart) + ![Library.HasContent(movies) + Library.HasContent(tvshows)]] + ![Control.HasFocus(8001) | Control.HasFocus(8000) | Control.HasFocus(8002) | Control.HasFocus(8005) | [Control.HasFocus(8006) | Control.HasFocus(8007)] | [Control.HasFocus(8008) | Control.HasFocus(8009)]]</visible>
+			<visible>Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + ![Library.HasContent(movies) + Library.HasContent(tvshows)]] + ![Control.HasFocus(8001) | Control.HasFocus(8000) | Control.HasFocus(8002) | Control.HasFocus(8005) | [Control.HasFocus(8006) | Control.HasFocus(8007)] | [Control.HasFocus(8008) | Control.HasFocus(8009)]]</visible>
 		</control>
-	<!-- slideshows--->
-		<control type="button" id="8000">
-			<label></label>
-			<posx>1060</posx>
-			<onup>53</onup>
-			<ondown>53</ondown>
-			<onleft>53</onleft>
-			<onright>53</onright>
-			<width>500</width>
-			<onclick>CancelAlarm(home_Slideshow,silent)</onclick>
-			<onclick>SendClick(0,600)</onclick>
-			<visible>Skin.HasSetting(slideshow.home) + ![Control.HasFocus(8001) | Control.HasFocus(8000) | Control.HasFocus(8002) | Control.HasFocus(8005) | [Control.HasFocus(8006) | Control.HasFocus(8007)] | [Control.HasFocus(8008) | Control.HasFocus(8009)] | [Control.HasFocus(80081) | Control.HasFocus(80091)]]</visible>
-		</control>
-		<include>home_Slideshows</include>
 	<!-- background video --->
 		<control type="image">
 			<include>screen_Dimensions</include>
@@ -128,7 +107,7 @@
 			<fadetime>200</fadetime>
 			<randomize>true</randomize>
 			<loop>yes</loop>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.home) + !Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))]  + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)]</visible>
+			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))]  + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)]</visible>
 		</control>
 		
 		<!-- videos fanart --->

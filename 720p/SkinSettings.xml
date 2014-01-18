@@ -471,28 +471,6 @@
 			<itemgap>0</itemgap>
 			<visible>Skin.String(SkinSettings,Addons)</visible>
 			<include>transition_Container</include>
-			<!--watchlist
-			<control type="radiobutton" id="801">
-				<label>$LOCALIZE[31082]</label>
-				<onclick>Skin.ToggleSetting(watchlist.disable)</onclick>
-				<selected>Skin.HasSetting(watchlist.disable)</selected>
-				<include>button_Settings</include>
-			</control>
-			<control type="radiobutton" id="802">
-				<label>$LOCALIZE[32090]</label>
-				<onclick>Skin.ToggleSetting(watchlist.refresh)</onclick>
-				<selected>Skin.HasSetting(watchlist.refresh)</selected>
-				<visible>!Skin.HasSetting(watchlist.disable)</visible>
-				<include>button_Settings</include>
-			</control>-->
-			<!--search CURRENTLY REMOVED
-			<control type="radiobutton" id="802">
-				<label>$LOCALIZE[31934]</label>
-				<onclick>Skin.ToggleSetting(search.addon)</onclick>
-				<selected>Skin.HasSetting(search.addon)</selected>
-				<visible>!Skin.HasSetting(home.widgets)</visible>
-				<include>button_Settings</include>
-			</control>-->
 			<!--artistslideshow-->
 			<control type="radiobutton" id="803">
 				<label>$LOCALIZE[32001]</label>
