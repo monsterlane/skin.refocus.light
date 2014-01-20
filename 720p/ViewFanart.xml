@@ -57,9 +57,9 @@
 			<visible>[[Control.IsVisible(47) + Control.HasFocus(8000)] | Control.IsVisible(47)] + !ControlGroup(6000).HasFocus()</visible>
 			<control type="image">
 				<width>1280</width>
-				<height>720</height>
-				<posy>-500</posy>
-				<texture border="0,0,0,15">views/fanart_bg_overlay.png</texture>
+				<height>284</height>
+				<posy>-64</posy>
+				<texture>views/fanart_bg_overlay.png</texture>
 			</control>
 			<!--<control type="image">
 				<posy>63</posy>
@@ -82,7 +82,7 @@
 			</control>
 			<control type="image">
 				<posx>25</posx>
-				<posy>95</posy>
+				<posy>105</posy>
 				<width>268</width>
 				<height>104</height>
 				<aspectratio>stretch</aspectratio>
