@@ -34,37 +34,8 @@
 		</control>
 		<!-- now playing widget -->
 			<control type ="group">
-				<visible>[Player.HasVideo + Skin.HasSetting(home.widgets.nowplaying) + Skin.HasSetting(backgroundvideo)] | [!Skin.HasSetting(homemenu.playing) + Player.HasVideo + !Skin.HasSetting(backgroundvideo) + Container(9000).HasFocus(22)]</visible>
-				<control type="image">
-					<posx>970</posx>
-					<posy>525</posy>
-					<width>290</width>
-					<height>170</height>
-					<texture>$INFO[Player.Art(clearart)]</texture>
-					<aspectratio>keep</aspectratio>
-					<include>transition_OSD</include>
-					<visible>VideoPlayer.Content(Movies) + Skin.HasSetting(home.widgets.nowplaying.clearart)</visible>
-				</control>
-				<control type="image">
-					<posx>975</posx>
-					<posy>511</posy>
-					<width>290</width>
-					<height>170</height>
-					<texture>$INFO[Player.Art(fanart)]</texture>
-					<aspectratio>keep</aspectratio>
-					<include>transition_OSD</include>
-					<visible>VideoPlayer.Content(Movies) + Skin.HasSetting(home.widgets.nowplaying.fanart)</visible>
-				</control>
-				<control type ="image">
-					<posx>1051</posx>
-					<posy>388</posy>
-					<width>215</width>
-					<height>300</height>
-					<texture  fallback="empty" background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[VideoPlayer.Cover]</texture>
-					<aspectratio align="center">keep</aspectratio>
-					<include>transition_OSD</include>
-					<visible>VideoPlayer.Content(movies) + ![Skin.HasSetting(home.widgets.nowplaying.clearart) | Skin.HasSetting(home.widgets.nowplaying.fanart)]</visible>
-				</control>
+				<!-- <visible>[Player.HasVideo + Skin.HasSetting(home.widgets.nowplaying) + Skin.HasSetting(backgroundvideo)] | [!Skin.HasSetting(homemenu.playing) + Player.HasVideo + !Skin.HasSetting(backgroundvideo) + Container(9000).HasFocus(22)]</visible> -->
+				<visible>Player.HasVideo + Skin.HasSetting(backgroundvideo)</visible>
 				<control type="image">
 					<posx>970</posx>
 					<posy>525</posy>
@@ -76,14 +47,24 @@
 					<visible>VideoPlayer.Content(Episodes) + Skin.HasSetting(home.widgets.nowplaying.clearart)</visible>
 				</control>
 				<control type="image">
-					<posx>975</posx>
-					<posy>511</posy>
+					<posx>970</posx>
+					<posy>575</posy>
 					<width>290</width>
 					<height>170</height>
-					<texture>$INFO[Player.Art(tvshow.fanart)]</texture>
+					<texture>$INFO[Player.Art(tvshow.clearlogo)]</texture>
 					<aspectratio>keep</aspectratio>
 					<include>transition_OSD</include>
-					<visible>VideoPlayer.Content(Episodes) + Skin.HasSetting(home.widgets.nowplaying.fanart)</visible>
+					<visible>VideoPlayer.Content(Episodes) + Skin.HasSetting(home.widgets.nowplaying.clearlogo)</visible>
+				</control>
+				<control type ="image">
+					<posx>1051</posx>
+					<posy>388</posy>
+					<width>215</width>
+					<height>300</height>
+					<texture  fallback="empty" background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[VideoPlayer.Cover]</texture>
+					<aspectratio align="center">keep</aspectratio>
+					<include>transition_OSD</include>
+					<visible>VideoPlayer.Content(movies) + ![Skin.HasSetting(home.widgets.nowplaying.clearart) | Skin.HasSetting(home.widgets.nowplaying.clearlogo]</visible>
 				</control>
 				<control type ="image">
 					<posx>1062</posx>
@@ -92,7 +73,7 @@
 					<height>300</height>
 					<texture  fallback="empty" background="true" diffuse="frames/frame_Square-small-mask.png">$INFO[Player.Art(tvshow.poster)]</texture>
 					<aspectratio align="center">keep</aspectratio>
-					<visible>VideoPlayer.Content(Episodes) + ![Skin.HasSetting(home.widgets.nowplaying.clearart) | Skin.HasSetting(home.widgets.nowplaying.fanart)]</visible>
+					<visible>Skin.HasSetting(home.widgets.nowplaying.poster) + VideoPlayer.Content(Episodes)</visible>
 					<include>transition_OSD</include>
 				</control>
 			</control>
@@ -107,7 +88,7 @@
 			<fadetime>200</fadetime>
 			<randomize>true</randomize>
 			<loop>yes</loop>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.fanart)  + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)]</visible>
+			<visible allowhiddenfocus="true">!Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)]</visible>
 		</control>
 		
 		<!-- videos fanart --->

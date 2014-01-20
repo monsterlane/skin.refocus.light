@@ -518,16 +518,27 @@
 						<width>557</width>
 						<label>$LOCALIZE[32217]</label>
 						<onclick>Skin.ToggleSetting(home.widgets.nowplaying.clearart)</onclick>
-						<onclick>Skin.Reset(home.widgets.nowplaying.fanart)</onclick>
+						<onclick>Skin.Reset(home.widgets.nowplaying.clearlogo)</onclick>
+						<onclick>Skin.Reset(home.widgets.nowplaying.poster)</onclick>
 						<selected>Skin.HasSetting(home.widgets.nowplaying.clearart)</selected>
 						<include>dialog_Radio</include>
 					</control>
 					<control type="radiobutton" id="203">
 						<width>557</width>
-						<label>$LOCALIZE[32210]</label>
-						<onclick>Skin.ToggleSetting(home.widgets.nowplaying.fanart)</onclick>
+						<label>Enable TV Show Clearlogo</label>
+						<onclick>Skin.ToggleSetting(home.widgets.nowplaying.clearlogo)</onclick>
 						<onclick>Skin.Reset(home.widgets.nowplaying.clearart)</onclick>
-						<selected>Skin.HasSetting(home.widgets.nowplaying.fanart)</selected>
+						<onclick>Skin.Reset(home.widgets.nowplaying.poster)</onclick>
+						<selected>Skin.HasSetting(home.widgets.nowplaying.clearlogo)</selected>
+						<include>dialog_Radio</include>
+					</control>
+					<control type="radiobutton" id="204">
+						<width>557</width>
+						<label>Enable TV Show Poster</label>
+						<onclick>Skin.ToggleSetting(home.widgets.nowplaying.poster)</onclick>
+						<onclick>Skin.Reset(home.widgets.nowplaying.clearart)</onclick>
+						<onclick>Skin.Reset(home.widgets.nowplaying.clearlogo)</onclick>
+						<selected>Skin.HasSetting(home.widgets.nowplaying.poster)</selected>
 						<include>dialog_Radio</include>
 					</control>
 				</control>

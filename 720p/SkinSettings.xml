@@ -133,6 +133,7 @@
 				<onfocus>Skin.SetString(SubMenu,Widgets)</onfocus>
 				<onclick>ActivateWindow(1160)</onclick>
 				<include>button_Settings</include>
+				<visible>Skin.HasSetting(devel)</visible>
 			</control>
 			<!--time-->
 			<control type="radiobutton" id="105">
@@ -206,36 +207,6 @@
 			<itemgap>0</itemgap>
 			<visible>Skin.String(SkinSettings,Artwork)</visible>
 			<include>transition_Container</include>
-			<control type="label" id="601">
-				<label>$LOCALIZE[31016]</label>
-				<font>category</font>
-				<textcolor>Color2</textcolor>
-				<include>button_Settings</include>
-			</control>
-			<!--visualization fanart-->
-			<control type="radiobutton" id="606">
-				<label>$LOCALIZE[31120]</label>
-				<onclick>Skin.ToggleSetting(fanart.visualization)</onclick>
-				<onclick>Skin.ToggleSetting(fanart.visualization.blend)</onclick>
-				<selected>Skin.HasSetting(fanart.visualization)</selected>
-				<include>button_Settings</include>
-			</control>
-			<control type="radiobutton" id="607">
-				<label>- $LOCALIZE[32700]</label>
-				<onclick>Skin.ToggleSetting(fanart.visualization.extra)</onclick>
-				<selected>Skin.HasSetting(fanart.visualization.extra)</selected>
-				<visible>Skin.HasSetting(fanart.visualization)</visible>
-				<enable>Skin.HasSetting(fanart.visualization)</enable>
-				<include>button_Settings</include>
-			</control>
-			<control type="radiobutton" id="608">
-				<label>- $LOCALIZE[31126]</label>
-				<onclick>Skin.ToggleSetting(fanart.visualization.blend)</onclick>
-				<selected>Skin.HasSetting(fanart.visualization.blend)</selected>
-				<visible>Skin.HasSetting(fanart.visualization)</visible>
-				<enable>Skin.HasSetting(fanart.visualization)</enable>
-				<include>button_Settings</include>
-			</control>
 			<control type="label" id="610">
 				<label>$LOCALIZE[31119]</label>
 				<font>category</font>
@@ -547,6 +518,13 @@
 				<label>$LOCALIZE[31964]</label>
 				<onclick>Skin.ToggleSetting(global.kiosk)</onclick>
 				<selected>Skin.HasSetting(global.kiosk)</selected>
+				<include>button_Settings</include>
+			</control>
+			<!-- developer mode -->
+			<control type="radiobutton" id="906">
+				<label>Enable Developer Mode [Warning! can be unstable]</label>
+				<onclick>Skin.ToggleSetting(devel)</onclick>
+				<selected>Skin.HasSetting(devel)</selected>
 				<include>button_Settings</include>
 			</control>
 			<!--intro
