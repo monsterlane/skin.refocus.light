@@ -107,7 +107,7 @@
 			<fadetime>200</fadetime>
 			<randomize>true</randomize>
 			<loop>yes</loop>
-			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.fanart) + [!Skin.HasSetting(slideshow.custom2) | IsEmpty(Skin.String(slideshow.custom.path))]  + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)]</visible>
+			<visible allowhiddenfocus="true">!Skin.HasSetting(slideshow.fanart)  + !Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)]</visible>
 		</control>
 		
 		<!-- videos fanart --->
