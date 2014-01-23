@@ -403,6 +403,11 @@
 		<!--rwd32--><value condition="Player.Rewinding32x">$LOCALIZE[31050]</value>
 		<!--rwd32--><value condition="Player.Rewinding32x">$LOCALIZE[31050]</value>
 	</variable>
+	<variable name="nowplaying">
+		<value condition="VideoPlayer.Content(episodes) + IntegerGreaterThan(VideoPlayer.Episode,9)">$INFO[VideoPlayer.TVShowTitle,, - ]$INFO[VideoPlayer.Season,,x]$INFO[VideoPlayer.Episode]</value>
+		<value condition="VideoPlayer.Content(episodes) + !IntegerGreaterThan(VideoPlayer.Episode,9)">$INFO[VideoPlayer.TVShowTitle,, - ]$INFO[VideoPlayer.Season,,x0]$INFO[VideoPlayer.Episode]</value><!-- leading zero -->
+		<value condition="!VideoPlayer.Content(episodes)">$INFO[VideoPlayer.Artist,, - ]$INFO[VideoPlayer.Title]</value>
+	</variable>
 	
 <!---PVR------>	
 	<variable name="PVR_Status.Condition">
