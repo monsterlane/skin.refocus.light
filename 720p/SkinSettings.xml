@@ -134,7 +134,7 @@
 				<onclick>ActivateWindow(1160)</onclick>
 				<include>button_Settings</include>
 				<visible>Skin.HasSetting(devel)</visible>
-			</control>
+			</control>			
 			<!--time-->
 			<control type="radiobutton" id="105">
 				<label>$LOCALIZE[31907]</label>
@@ -526,6 +526,14 @@
 				<onclick>Skin.ToggleSetting(devel)</onclick>
 				<selected>Skin.HasSetting(devel)</selected>
 				<include>button_Settings</include>
+			</control>
+			<!-- Startup animation -->
+			<control type="radiobutton" id="907">
+				<label>Startup animation</label>
+				<onclick>Skin.ToggleSetting(startup.animation)</onclick>
+				<selected>Skin.HasSetting(startup.animation)</selected>
+				<include>button_Settings</include>
+				<visible>Skin.HasSetting(devel)</visible>
 			</control>
 			<!--intro
 			<control type="radiobutton" id="906">
