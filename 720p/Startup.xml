@@ -5,10 +5,11 @@
 	<onload condition="Stringcompare(Skin.String(startupcount),1)">Skin.SetString(startupcount,2)</onload>
 	<onload condition="IsEmpty(Skin.String(startupcount))">Skin.SetString(startupcount,1)</onload>
 	<!--<onload condition="Library.HasContent(tvshows)">XBMC.RunScript(script.tv.show.next.aired,silent=True)</onload>-->
-	<onload condition="!Skin.HasSetting(startup.animation)">SetFocus(9000)</onload>
-	<onload condition="Skin.HasSetting(startup.animation)">AlarmClock(GotToHome,SetFocus(9000),00:04,silent)</onload>
+	<onload condition="[!Skin.HasSetting(startup.animation) + Stringcompare(Skin.String(startupcount),3)]">SetFocus(9000)</onload>
+	<!-- <onload condition="[Skin.HasSetting(startup.animation) + Stringcompare(Skin.String(startupcount),3)]">SetFocus(9000)</onload> -->
+	<onload condition="[Skin.HasSetting(startup.animation) + Stringcompare(Skin.String(startupcount),3)]">AlarmClock(GotToHome,SetFocus(9000),0:01,silent)</onload>
 	<onload>ClearProperty(FocusOnSubmenu,home)</onload>
-    <onunload>CancelAlarm(GotToHome,true)</onunload>
+	<onunload>CancelAlarm(GotToHome,true)</onunload>
 	<controls>
 		<control type="button" id="9000">
             <onfocus>ReplaceWindow(Home)</onfocus>
@@ -17,10 +18,13 @@
 		<control type="group">
 		<visible>Skin.HasSetting(startup.animation)</visible>
 			<animation type="WindowClose" reversible="false">
-				<effect type="fade" start="100" end="0" time="800" />
+				<effect type="fade" start="100" end="0" time="1000" />
 			</animation>
-			<animation type="WindowOpen" reversible="false">
+			<!-- <animation type="WindowOpen" reversible="false">
 				<effect type="fade" start="0" end="100" delay="1000" time="800" />
+			</animation> -->
+			<animation type="WindowOpen" condition="[Skin.HasSetting(startup.animation) + Stringcompare(Skin.String(startupcount),3)]" reversible="false">
+				<effect type="fade" start="0" end="100" time="1000" />
 			</animation>
 			<control type="image">
 				<include>screen_Dimensions</include>
