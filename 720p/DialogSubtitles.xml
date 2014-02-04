@@ -115,6 +115,14 @@
 				<label>$INFO[System.AddonTitle(script.xbmc.subtitles)]</label>
 				<include>dialog_Windowtitle</include>
 			</control>
+			<control type="image" id="110">
+				<description>Service Logo</description>
+				<width>250</width>
+				<height>40</height>
+				<posx>630</posx>
+				<posy>40</posy>
+				<aspectratio>keep</aspectratio>
+			</control>
 			<control type="image">
 				<posx>19</posx>
 				<posy>95</posy>
@@ -134,10 +142,6 @@
 				<wrapmultiline>false</wrapmultiline>
 				<include>dialog_Line</include>
 			</control>
-			<control type="image" id="110">
-				<description>Service Logo</description>
-				<visible>false</visible>
-			</control>	
 			<!--local subtitle available-->
 			<control type="group">
 				<posx>32</posx>
