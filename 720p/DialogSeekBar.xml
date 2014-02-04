@@ -78,6 +78,7 @@
 				<control type="progress" id="1">
 					<posy>10</posy>
 					<width>770</width>
+					<height>21</height>
 					<texturebg border="10">dialogs/progressBackground.png</texturebg>
 					<info>Player.Progress</info>
 				</control>

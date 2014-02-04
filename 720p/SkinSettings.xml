@@ -420,6 +420,7 @@
 				<onclick>Skin.ToggleSetting(videoosd.transition)</onclick>
 				<selected>Skin.HasSetting(videoosd.transition)</selected>
 				<include>button_Settings</include>
+				<visible>Skin.HasSetting(devel)</visible>
 			</control>
 		</control>
 <!--ADDONS-->
