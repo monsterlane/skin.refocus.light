@@ -1,6 +1,7 @@
 ﻿<window id="3000">
 	<defaultcontrol always="true">8001</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
+	<!-- <onload>Dialog.Close(movieinformation,true)</onload> -->
 	<controls>
 		<control type="group">
 			<include>transition_Container</include>
