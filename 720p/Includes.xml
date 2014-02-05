@@ -191,7 +191,7 @@
 	<include name="global_Clock">
 		<control type="group">
 			<include>toggle_ToastMute</include>
-			<visible>![Control.IsVisible(5411) | Control.IsVisible(54111)] + Skin.HasSetting(home.time) + !Skin.HasSetting(home.timesmall) + [![Player.HasMedia + !Skin.HasSetting(overlay.enable) + !Window.IsVisible(28)] | SubString(Window(videolibrary).Property(TvTunesIsAlive),True)] + !Control.IsVisible(56) + ![Window.IsActive(extendedprogressdialog) | Window.IsActive(infodialog) |  Window.IsActive(614)] + ![Window.IsActive(pictures) + Control.IsVisible(52)]</visible>
+			<visible>![Control.IsVisible(5411) | Control.IsVisible(54111)] + Skin.HasSetting(home.time) + !Skin.HasSetting(home.timesmall) + ![Player.HasMedia + !Skin.HasSetting(overlay.enable) + !Window.IsVisible(28)] + !Control.IsVisible(56) + ![Window.IsActive(extendedprogressdialog) | Window.IsActive(infodialog) |  Window.IsActive(614)] + ![Window.IsActive(pictures) + Control.IsVisible(52)]</visible>
 			<control type="label">
 				<posx>25r</posx>
 				<label>$VAR[global_Clock.Formats]</label>
@@ -1239,12 +1239,12 @@
 	<include name="windowTitle">
 		<posx>34</posx>
 		<posy>20</posy>
-		<width>950</width>
+		<width>850</width>
 		<aligny>center</aligny>
 		<font>windowTitle</font>
 		<textcolor>Color1</textcolor>
 		<include>transition_WindowTitle</include>
-		<include>autoscroll-line</include>
+		<!-- <include>autoscroll-line</include> -->
 		<animation effect="slide" end="0,-3" condition="Skin.HasSetting(numitems.enable)">Conditional</animation>
 		<animation effect="slide" end="25" condition="Skin.HasSetting(indicator.enable) + Control.IsVisible(6100)">Conditional</animation>
 		<visible>![Window.IsActive(Videos,recentlyaddedepisodes) + Control.IsVisible(98245)]  + !Control.IsVisible(5411) + !Control.IsVisible(54111) + !Window.IsActive(busydialog) + ![Control.IsVisible(9900) | Control.IsVisible(531) | Control.IsVisible(550) | Control.IsVisible(551) | Window.IsActive(movieinformation) | Window.IsActive(musicinformation)]</visible>
@@ -1303,39 +1303,39 @@
 		<control type="group">
 			<posx>0</posx>
 			<posy>0</posy>
-			<visible>Player.HasAudio + !SubString(Window(Videos).Property(TvTunesIsAlive),True) + !Skin.HasSetting(overlay.enable) + ![Window.IsActive(infodialog) | Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(home) | Window.IsActive(fullscreenvideo) | Window.IsActive(614) | Window.IsActive(extendedprogressdialog)]</visible>
+			<visible>Player.HasAudio + !Skin.HasSetting(overlay.enable) + ![Window.IsActive(infodialog) | Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(home) | Window.IsActive(fullscreenvideo) | Window.IsActive(614) | Window.IsActive(extendedprogressdialog)]</visible>
 				
 	 <!-- Music -->
 			<control type="group">
 				<control type="group">
 				<include>toggle_ToastMute</include>
-				<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
+				<!-- <animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 						<effect type="fade" start="0" end="100" time="500" delay="0" />
 						<effect type="fade" start="100" end="0" time="500" delay="10000" />
 						<effect type="fade" start="100" end="0" time="500" delay="20000" />
-					</animation>
+					</animation> -->
 					<control type="label" id="200">
-						<posx>130r</posx>
-						<width>250</width>
+						<posx>20r</posx>
+						<width>350</width>
 						<label>$INFO[MusicPlayer.Title]</label>
 						<include>toast_Top</include>
 						<include>autoscroll-line</include>
 					</control>
 					<control type="label" id="201">
-						<posx>130r</posx>
+						<posx>20r</posx>
 						<posy>28</posy>
-						<width>250</width>
+						<width>350</width>
 						<label>$INFO[MusicPlayer.Artist]</label>
 						<include>toast_Bottom</include>
 						<include>autoscroll-line</include>
 					</control>
-					<control type="label" id="1">
-						<posx>120r</posx>
-						<label>$INFO[MusicPlayer.TimeRemaining(mm:ss)]</label>
+					<!-- <control type="label" id="1">
+						<posx>180r</posx>
+						<label>$INFO[MusicPlayer.TimeRemaining(hh:mm:ss)]</label>
 						<include>toast_Side</include>
-					</control>
+					</control> -->
 				</control>
-				<control type="group">
+				<!-- <control type="group">
 				<visible>MusicPlayer.HasNext</visible>
 					<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 						<effect type="fade" start="0" end="100" time="500" delay="10500" />
@@ -1343,9 +1343,6 @@
 					</animation>
 					<control type="label">
 						<posx>120r</posx>
-						<posy>0</posy>
-						<width>140</width>
-						<height>37</height>
 						<label>$LOCALIZE[209]...</label>
 						<include>toast_Side</include>
 					</control>
@@ -1364,7 +1361,7 @@
 						<include>toast_Bottom</include>
 						<include>autoscroll-line</include>
 					</control>
-				</control>
+				</control> -->
 			</control>
 		</control>
 	</include>
