@@ -3,6 +3,7 @@
 	<allowoverlay>no</allowoverlay>
 	<controls>
 		<control type="group">
+		<visible>!Window.IsVisible(script-Actors-DialogInfo.xml)</visible>
 			<include>transition_Container</include>
 			<include>toggle_Menu</include>
 			<!---images--->
@@ -85,7 +86,7 @@
 							<include>autoscroll-line</include>
 						</control>
 					</control>
-					<control type="group">
+					<!-- <control type="group">
 						<width>700</width>
 						<height>22</height>
 						<visible>Container.Content(tvshows) + !IsEmpty(Window(Home).Property(NextAired.Label))</visible>
@@ -110,7 +111,7 @@
 							<include>autoscroll-line</include>
 						<visible>IsEmpty(Window(Home).Property(NextAired.NextDate)) + StringCompare(Window(Home).Property(NextAired.Status),canceled/ended)</visible>
 						</control>
-					</control>
+					</control> -->
 					<control type="group">
 						<width>700</width>
 						<height>22</height>
@@ -245,34 +246,6 @@
 							<include>button_Inline</include>
 						</control>
 					</control>
-					<!--cinema-->
-					<control type="group">
-						<width>125</width>
-						<visible>System.HasAddon(script.cinema.experience) + Container.Content(movies) + !SubString(Container.FolderPath,apple)</visible>
-						<control type="button" id="8002">
-							<label>cinema</label>
-							<onleft>8001</onleft>
-							<onright>8003</onright>
-							<onclick>Dialog.Close(MovieInformation)</onclick>
-							<onclick>Playlist.Clear</onclick>
-							<onclick>RunScript(script.cinema.experience)</onclick>	
-							<include>button_Inline</include>
-						</control>
-					</control>
-					<!--tvtunes-->
-					<control type="group">
-						<width>125</width>
-						<visible>System.HasAddon(script.tvtunes) + Container.Content(TVShows) + StringCompare(Container.FolderPath,videodb://2/2/)</visible>
-						<control type="button" id="8003">
-							<label>tvtunes</label>
-							<onleft>8002</onleft>
-							<onright>8004</onright>
-							<onclick>Playlist.Clear</onclick>
-							<onclick>SetFocus(999)</onclick>
-							<onclick>XBMC.RunScript(script.tvtunes,mode=solo&amp;tvpath=$INFO[ListItem.FilenameAndPath]&amp;tvname=$INFO[ListItem.TVShowTitle])</onclick>
-							<include>button_Inline</include>
-						</control>
-					</control>
 					<!--browse-->
 					<control type="group">
 						<width>125</width>
@@ -319,35 +292,9 @@
 							<include>button_Inline</include>
 							<onleft>8006</onleft>
 							<onright>8008</onright>
+							<ondown>60</ondown>
 						</control>
 					</control>
-					<!--random genre-->
-					<control type="group">
-						<width>125</width>
-						<visible>System.HasAddon(script.randommovie) + Container.Content(movies) </visible>
-						<control type="button" id="8008">
-							<label>Random</label>
-							<onleft>8007</onleft>
-							<onright>8009</onright>
-							<onclick>Playlist.Clear</onclick>
-							<onclick>Dialog.Close(MovieInformation)</onclick>
-							<onclick>XBMC.RunScript(script.randommovie, filtergenre=True)</onclick>
-							<include>button_Inline</include>
-						</control>
-					</control>
-					<!--random movie
-					<control type="group">
-						<width>125</width>
-						<visible>System.HasAddon(script.randommovie)</visible>
-						<control type="button" id="8009">
-							<label>random</label>
-							<onleft>8008</onleft>
-							<onright>8001</onright>
-							<onclick>Playlist.Clear</onclick>
-							<onclick>RunScript(script.randommovie)</onclick>
-							<include>button_Inline</include>
-						</control>
-					</control>-->
 				</control>
 				<!--spacer-->
 				<control type="label">
@@ -361,14 +308,14 @@
 					<label>$INFO[ListItem.Plot]</label>
 				    <font>descriptionbig</font>
 					<include>autoscroll-plot</include>
-					<visible allowhiddenfocus="true">![Control.HasFocus(8005) | Control.HasFocus(50)]</visible>
+					<visible allowhiddenfocus="true">![Control.HasFocus(8005) | Control.HasFocus(50) | Control.HasFocus(60) | Control.HasFocus(8007)]</visible>
 				</control>
 				<!--cast list-->
 				<control type="list" id="50">
 					<width>645</width>
 					<height>176</height>
 					<onleft>8000</onleft>
-					<onright>8000</onright>
+					<onright>RunScript(script.metadata.actors,$INFO[Container(50).ListItem.Label])</onright>
 					<onup>50</onup>
 					<ondown>50</ondown>
 					<scrolltime tween="Cubic" easing="Out">200</scrolltime>
@@ -402,9 +349,24 @@
 							<label>$INFO[ListItem.Label]</label>
 							<include>listButton_Label</include>
 						</control>
+						<control type="group">
+						<visible>Control.HasFocus(50) + System.HasAddon(script.metadata.actors)</visible>
+						<control type="label">
+							<posx>560</posx>
+							<width>40</width>
+							<label>Info</label>
+							<include>listButton_Label</include>
+						</control>
+						<control type="image">
+							<height>32</height>
+							<posy>5</posy>
+							<posx>608</posx>
+							<texture>navigation/indicator_Right.png</texture>
+						</control>
+						</control>
 					</focusedlayout>
 				</control>
-				<!--edit list
+				<!--edit list-->
 				<control type="list" id="60">
 					<width>645</width>
 					<height>176</height>
@@ -472,7 +434,7 @@
 							<visible>Container.Content(tvshows)</visible>
 						</item>
 					</content>
-				</control>-->
+				</control>
 			</control>
 			<!--flags-->
 			<control type="group">
