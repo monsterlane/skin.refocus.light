@@ -1,4 +1,3 @@
-<!--﻿<window id="59">-->
 <window>
 	<defaultcontrol always="true">10</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
@@ -521,11 +520,11 @@
 				<selected>Skin.HasSetting(devel)</selected>
 				<include>button_Settings</include>
 			</control>
-			<!-- Startup animation -->
-			<control type="radiobutton" id="906">
-				<label>Startup animation</label>
-				<onclick>Skin.ToggleSetting(startup.animation)</onclick>
-				<selected>Skin.HasSetting(startup.animation)</selected>
+			<!-- Startup Splash Screen -->
+			<control type="radiobutton" id="907">
+				<label>Remove reFocus-Logo Splash screen on startup</label>
+				<onclick>Skin.ToggleSetting(startup.splash)</onclick>
+				<selected>!Skin.HasSetting(startup.splash)</selected>
 				<include>button_Settings</include>
 				<visible>Skin.HasSetting(devel)</visible>
 			</control>
