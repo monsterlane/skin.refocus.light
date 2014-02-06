@@ -34,6 +34,14 @@
 					<visible>System.HasAddon(script.metadata.actors) + !Window.IsVisible(script-Actors-DialogInfo.xml)</visible>
 					<include>dialog_Button-list</include>
 			</control>
+			<control type="button" id="2002">
+					<description>trakt.tv</description>
+					<width>302</width>
+					<label>trakt.tv options</label>
+					<onclick>RunScript(script.trakt,action=contextmenu)</onclick>
+					<visible>System.HasAddon(script.trakt) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+					<include>dialog_Button-list</include>
+			</control>
 			<control type="button" id="2007">
 				<posx>0</posx>
 				<posy>0</posy>
