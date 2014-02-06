@@ -104,6 +104,7 @@
 					<label>$VAR[system_homemenu]</label>
 					<onclick>SetFocus(1160)</onclick>
 					<icon fallback="special://skin/backgrounds/settings.jpg">$VAR[value_mainmenubg_system]</icon>
+					<visible>!Skin.HasSetting(homemenu.removesystem)</visible>
 				</item>
 				<!--weather-->
 				<item id="17">
