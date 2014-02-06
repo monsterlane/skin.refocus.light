@@ -147,6 +147,14 @@
 						<selected>Skin.HasSetting(favourites.global)</selected>
 						<include>dialog_Radio</include>
 					</control>
+					<!--LightAlt font-->
+					<control type="radiobutton" id="202">
+						<width>557</width>
+						<label>Capitalize letters of Home menu items</label>
+						<onclick>Skin.ToggleSetting(homemenu.altfont)</onclick>
+						<selected>Skin.HasSetting(homemenu.altfont)</selected>
+						<include>dialog_Radio</include>
+					</control>
 				</control>
 			<!--video submenu-->
 				<control type="grouplist" id="200">

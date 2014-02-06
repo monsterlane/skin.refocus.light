@@ -11,6 +11,19 @@
 				<align>left</align>
 				<label>$INFO[ListItem.Label]</label>
 				<textcolor>Color0</textcolor>
+				<visible>!Skin.HasSetting(homemenu.altfont)</visible>
+			</control>
+			<control type="label">
+				<posx>20</posx>
+				<posy>70</posy>
+				<posy>100</posy>
+				<width>640</width>
+				<height>50</height>
+				<font>homeMenuAlt</font>
+				<align>left</align>
+				<label>$INFO[ListItem.Label]</label>
+				<textcolor>Color0</textcolor>
+				<visible>Skin.HasSetting(homemenu.altfont)</visible>
 			</control>
 		</itemlayout>			
 		<focusedlayout width="640" height="52">
@@ -33,7 +46,18 @@
 				<align>left</align>
 				<textcolor>Color5</textcolor>
 				<label>$INFO[ListItem.Label]</label>
-				<!--<visible>![Container(9000).HasFocus(21) | Container(9000).HasFocus(22)]</visible>-->
+				<visible>!Skin.HasSetting(homemenu.altfont)</visible>
+			</control>
+			<control type="label">
+				<posy>70</posy>
+				<posx>20</posx>
+				<width>640</width>
+				<height>50</height>
+				<font>homeMenuAlt</font>
+				<align>left</align>
+				<textcolor>Color5</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+				<visible>Skin.HasSetting(homemenu.altfont)</visible>
 			</control>
 			<control type="label">
 				<posy>70</posy>
