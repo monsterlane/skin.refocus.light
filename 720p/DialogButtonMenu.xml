@@ -17,7 +17,7 @@
 			<include>dialogOpen</include>
 			<control type="image" id="997">
 				<width>360</width>
-				<height>356</height>
+				<height>396</height>
 				<texture border="20">dialogs/button_Menu.png</texture>
 			</control>
 			<control type="image">
@@ -123,6 +123,13 @@
 					<onclick>XBMC.Minimize()</onclick>
 					<include>dialog_Button-list</include>
 					<visible>!System.IsStandalone</visible>
+				</control>
+				<!--Show System Menu-->
+				<control type="button" id="511">
+					<width>352</width>
+					<label>Show/Hide System Menu</label>
+					<onclick>Skin.ToggleSetting(homemenu.removesystem)</onclick>
+					<include>dialog_Button-list</include>
 				</control>
 			</control>
 		</control>

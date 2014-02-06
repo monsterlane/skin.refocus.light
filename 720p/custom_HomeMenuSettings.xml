@@ -912,7 +912,7 @@
 				<visible>Skin.String(Sub,System)</visible>
 				<!--remove system main menu-->
 				<control type="radiobutton" id="201">
-					<label>[BE CAREFUL!] Disable System section</label>
+					<label>[BE CAREFUL!] Hide System Menu</label>
 					<width>557</width>
 					<onclick>Skin.ToggleSetting(homemenu.removesystem)</onclick>
 					<selected>Skin.HasSetting(homemenu.removesystem)</selected>
