@@ -64,38 +64,9 @@
 				<label>$LOCALIZE[20367]</label>
 				<altlabel>$LOCALIZE[31900]</altlabel>
 				<onup>5</onup>
-				<ondown>7</ondown>
+				<ondown>19</ondown>
 				<onright>50</onright>
 				<include>button_Menu</include>
-			</control>
-		</control>
-		<!--stack-->
-		<control type="group">
-			<width>220</width>
-			<height>42</height>
-			<visible>Control.IsEnabled(7) + Window.IsVisible(videolibrary)</visible>
-			<control type="togglebutton" id="7">
-				<label>$LOCALIZE[14000]</label>
-				<altlabel>$LOCALIZE[14001]</altlabel>
-				<onup>14</onup>
-				<ondown>17</ondown>
-				<onright>50</onright>
-				<include>button_Menu</include>
-			</control>
-		</control>
-		<!--flatten-->
-		<control type="group">
-			<width>220</width>
-			<height>42</height>
-			<visible>Control.IsEnabled(17) + Window.IsVisible(videolibrary)</visible>
-			<control type="togglebutton" id="17">
-				<label>$LOCALIZE[20411]</label>
-				<altlabel>$LOCALIZE[31905]</altlabel>
-				<onup>7</onup>
-				<ondown>8</ondown>
-				<onright>50</onright>
-				<include>button_Menu</include>
-				<onclick>SetFocus(50)</onclick>
 			</control>
 		</control>
 		<!--filter-->
@@ -104,9 +75,9 @@
 			<height>42</height>
 			<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
 			<control type="button" id="19">
-				<label>$LOCALIZE[587]</label>
-				<onup>9</onup>
-				<ondown>20</ondown>
+				<label>587</label>
+				<onup>14</onup>
+				<ondown>98</ondown>
 				<onright>50</onright>
 				<include>button_Menu</include>
 				<onclick>SetFocus(300)</onclick>
@@ -116,14 +87,28 @@
 			<width>220</width>
 			<height>42</height>
 			<visible>Container.CanFilterAdvanced</visible>
-			<control type="button" id="20">
-				<label>$LOCALIZE[587]</label>
+			<control type="button" id="98">
+				<label>587</label>
 				<onup>19</onup>
-				<ondown>16</ondown>
+				<ondown>8</ondown>
 				<onright>50</onright>
 				<include>button_Menu</include>
 				<onclick>right</onclick>
 				<onclick>Filter</onclick>
+				<onclick>SetFocus(300)</onclick>
+			</control>
+		</control>
+		<!--search-->
+		<control type="group">
+			<width>220</width>
+			<height>42</height>
+			<control type="togglebutton" id="8">
+				<description>Search</description>
+				<label>137</label>
+				<onup>98</onup>
+				<ondown>16</ondown>
+				<onright>50</onright>
+				<include>button_Menu</include>
 				<onclick>SetFocus(300)</onclick>
 			</control>
 		</control>
@@ -133,11 +118,26 @@
 			<height>42</height>
 			<visible>Container.Content(musicvideos) | Window.IsVisible(musicfiles) | Window.IsActive(musiclibrary)</visible>
 			<control type="button" id="16">
-				<label>$LOCALIZE[589]</label>
-				<onup>19</onup>
+				<label>589</label>
+				<onup>8</onup>
+				<ondown>20</ondown>
+				<onright>50</onright>
+				<include>button_Menu</include>
+			</control>
+		</control>
+		<!--update library-->
+		<control type="group">
+			<width>220</width>
+			<height>42</height>
+			<control type="togglebutton" id="20">
+				<description>Update library</description>
+				<label>653</label>
+				<altlabel>13353</altlabel>
+				<onup>16</onup>
 				<ondown>31</ondown>
 				<onright>50</onright>
 				<include>button_Menu</include>
+				<onclick>SetFocus(300)</onclick>
 			</control>
 		</control>
 	</include>
