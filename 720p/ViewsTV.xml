@@ -1,4 +1,5 @@
-﻿<includes>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<includes>
 <!---TV CHANNELS------>
 	<include name="view_TVChannels">
 		<control type="list" id="11">

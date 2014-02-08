@@ -1,4 +1,5 @@
-﻿<includes>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<includes>
 <!---GLOBAL------>
 	<include name="autoscroll-plot">
 		<autoscroll delay="10000" time="3300" repeat="10000">!Control.HasFocus(4)</autoscroll>

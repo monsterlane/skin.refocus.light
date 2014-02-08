@@ -1,4 +1,5 @@
-﻿<includes>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<includes>
 <!---NEXTAIRED------>
 	<include name="nextaired_Date">
 		<posx>75</posx>

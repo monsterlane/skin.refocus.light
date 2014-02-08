@@ -1,4 +1,5 @@
-﻿<window id="139">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window id="139">
 	<defaultcontrol>5</defaultcontrol>
 	<include>dialogOpen</include>
 	<coordinates>

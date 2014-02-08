@@ -1,4 +1,5 @@
-﻿<includes>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<includes>
 	<include name="homeSubMenu">
 		<control type="group" id="1100">
 			<posy>30</posy>

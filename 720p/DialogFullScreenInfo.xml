@@ -1,4 +1,5 @@
-﻿<window type="dialog" id="142">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="142">
 	<defaultcontrol>7000</defaultcontrol>
 	<controls>
 		<include>clock</include>

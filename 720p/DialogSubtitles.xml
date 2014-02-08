@@ -1,4 +1,5 @@
-﻿<window>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window>
 	<defaultcontrol always="true">120</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<include>dialogOpen</include>

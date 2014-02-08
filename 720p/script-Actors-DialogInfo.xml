@@ -1,4 +1,5 @@
-﻿<window id="3000">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window id="3000">
 	<defaultcontrol always="true">8001</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<!-- <onload>Dialog.Close(movieinformation,true)</onload> -->

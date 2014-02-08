@@ -1,4 +1,5 @@
-﻿<includes>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<includes>
 	<include name="TVMenu">
 		<control type="grouplist" id="6000">
 			<posx>-275</posx>

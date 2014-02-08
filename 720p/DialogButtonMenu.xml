@@ -1,4 +1,5 @@
-﻿<window type="dialog" id="111">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="111">
 	<defaultcontrol always="true">500</defaultcontrol>
 	<coordinates>
 		<system>1</system>

@@ -1,4 +1,5 @@
-﻿<includes>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<includes>
 	<include name="view_List">
 		<control type="list" id="50">
 			<viewtype label="535">list</viewtype> 	

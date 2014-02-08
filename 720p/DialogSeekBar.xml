@@ -1,4 +1,5 @@
-﻿<window id="115">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window id="115">
 	<defaultcontrol>23</defaultcontrol>
 	<visible>![Window.IsActive(142)] + !Player.HasAudio + [Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)] + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.Caching] + ![Window.IsActive(infodialog) | Window.IsActive(SubtitleSearch)]</visible>
 	<controls>

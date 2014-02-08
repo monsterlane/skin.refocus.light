@@ -1,4 +1,5 @@
-﻿<includes>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<includes>
 	<include name="menu_Info-video">
 		<control type="group">
 			<visible>!Skin.HasSetting(global.kiosk)</visible>

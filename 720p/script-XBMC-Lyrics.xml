@@ -1,4 +1,5 @@
-﻿<skin>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<skin>
   <defaultresolution>pal</defaultresolution>
   <defaultresolutionwide>720p</defaultresolutionwide>
   <version>2.1</version>
