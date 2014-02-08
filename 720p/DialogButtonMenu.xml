@@ -99,7 +99,7 @@
 					<include>dialog_Button-list</include>
 				</control>
 				<!--cancel shutdown timer-->
-				<control type="button" id="509">
+				<control type="button" id="508">
 					<width>350</width>
 					<label>Cancel Shutdown Timer</label>
 					<onclick>Dialog.Close(shutdownmenu)</onclick>
@@ -108,21 +108,19 @@
 					<visible>System.HasAlarm(shutdowntimer)</visible>
 				</control>
 				<!--Filemanager-->
-					<control type="button" id="510">
+					<control type="button" id="509">
 					<width>350</width>
 					<label>File Manager</label>
 					<onclick>Dialog.Close(shutdownmenu)</onclick>
 					<onclick>ActivateWindow(FileManager)</onclick>
 					<include>dialog_Button-list</include>
 				</control>
-				<!--minimize-->
-				<control type="button" id="508">
+				<!--Screensaver-->
+				<control type="button" id="510">
 					<width>352</width>
-					<label>$LOCALIZE[13014]</label>
-					<onclick>Dialog.Close(shutdownmenu)</onclick>
-					<onclick>XBMC.Minimize()</onclick>
+					<label>Activate Screensaver</label>
+					<onclick>ActivateScreensaver</onclick>
 					<include>dialog_Button-list</include>
-					<visible>!System.IsStandalone</visible>
 				</control>
 				<!--Show System Menu-->
 				<control type="button" id="511">
