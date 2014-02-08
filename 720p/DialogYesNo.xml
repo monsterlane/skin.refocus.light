@@ -17,23 +17,15 @@
 			<label>13406</label>
 			<include>dialog_Windowtitle</include>
 		</control>
-		<!--line 1-->
-		<control type="label" id="2">
-			<posy>65</posy>
+		<control type="textbox" id="9">
+			<top>65</top>
 			<width>482</width>
-			<include>dialog_Line</include>
-		</control>
-		<!--line 2-->
-		<control type="label" id="3">
-			<posy>90</posy>
-			<width>482</width>
-			<include>dialog_Line</include>
-		</control>
-		<!--line 3-->
-		<control type="label" id="4">
-			<posy>115</posy>
-			<width>482</width>
-			<include>dialog_Line</include>
+			<left>34</left>
+			<height>85</height>
+			<align>center</align>
+			<font>small</font>
+			<textcolor>Color4</textcolor>
+			<scroll>false</scroll>
 		</control>
 	<!--dialog controls------>
 		<control type="group">
