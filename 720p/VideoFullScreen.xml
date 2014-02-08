@@ -21,26 +21,28 @@
 				<posx>10</posx>
 				<!--line 1-->
 				<control type="label" id="10">
-					<posy>5</posy>
+					<posy>0</posy>
 					<width>1260</width>
-					<label>-</label>
+					<height>40</height>
+					<!-- <label>-</label> -->
 					<textcolor>Color1</textcolor>
 					<font>smallerCaps</font>
 				</control>
 				<!--line 2-->
 				<control type="label" id="11">
-					<posy>35</posy>
+					<posy>40</posy>
 					<width>1260</width>
-					<label>-</label>
-					<font>smallerCaps</font>
+					<height>40</height>
+					<!-- <label>-</label> -->
 					<textcolor>Color1</textcolor>
+					<font>smallerCaps</font>
 				</control>
 				<!--line 3-->
 				<control type="label" id="12">
-					<posy>64</posy>
+					<posy>85</posy>
 					<width>1260</width>
-					<height>60</height>
-					<label>-</label>
+					<height>40</height>
+					<!-- <label>-</label> -->
 					<textcolor>Color1</textcolor>
 					<font>smallerCaps</font>
 				</control>

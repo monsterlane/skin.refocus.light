@@ -432,8 +432,9 @@
 		</font>
 		<font>
 			<name>smallerCaps</name>
-			<filename>Ubuntu-R.ttf</filename>
-			<size>18</size>
+			<filename>Ubuntu.ttf</filename>
+			<size>16</size>
+			<linespacing>0.8</linespacing>
 		</font>
 		<font>
 			<name>smallerCapsBIG</name>
