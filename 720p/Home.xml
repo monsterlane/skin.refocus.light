@@ -1,7 +1,8 @@
 <window id="0">
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<onload>Dialog.Close(all,true)</onload>
+	<!-- <onload>Dialog.Close(all,true)</onload> -->
+	<onload>Dialog.Close(movieinformation,true)</onload>
 
 	<controls>
 	
