@@ -82,8 +82,7 @@
 			</control>
 			<control type="image" id="6">
 				<description>Default Seperator</description>
-				<height>0</height>
-				<texture>-</texture>
+				<include>dialog_Separator</include>
 			</control>
 			<control type="label" id="7">
 				<include>dialog_Label-bold</include>
