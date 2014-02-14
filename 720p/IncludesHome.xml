@@ -5,7 +5,6 @@
 			<control type="label">
 				<posx>20</posx>
 				<posy>70</posy>
-				<posy>100</posy>
 				<width>640</width>
 				<height>50</height>
 				<font>homeMenu</font>
@@ -17,7 +16,6 @@
 			<control type="label">
 				<posx>20</posx>
 				<posy>70</posy>
-				<posy>100</posy>
 				<width>640</width>
 				<height>50</height>
 				<font>homeMenuAlt</font>
