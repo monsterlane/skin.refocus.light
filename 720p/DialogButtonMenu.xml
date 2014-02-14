@@ -18,7 +18,8 @@
 			<include>dialogOpen</include>
 			<control type="image" id="997">
 				<width>360</width>
-				<height>396</height>
+				<!-- <height>396</height> -->
+				<height>236</height>
 				<texture border="20">dialogs/button_Menu.png</texture>
 			</control>
 			<control type="image">
@@ -31,7 +32,8 @@
 				<posx>4</posx>
 				<posy>18</posy>
 				<width>352</width>
-				<height>480</height>
+				<!-- <height>480</height> -->
+				<height>200</height>
 				<onup>500</onup>
 				<ondown>500</ondown>
 				<onright>402</onright>
@@ -101,7 +103,7 @@
 				</control>
 				<!--cancel shutdown timer-->
 				<control type="button" id="508">
-					<width>350</width>
+					<width>352</width>
 					<label>Cancel Shutdown Timer</label>
 					<onclick>Dialog.Close(shutdownmenu)</onclick>
 					<onclick>XBMC.CancelAlarm(shutdowntimer)</onclick>
@@ -110,7 +112,7 @@
 				</control>
 				<!--Filemanager-->
 					<control type="button" id="509">
-					<width>350</width>
+					<width>352</width>
 					<label>File Manager</label>
 					<onclick>Dialog.Close(shutdownmenu)</onclick>
 					<onclick>ActivateWindow(FileManager)</onclick>
