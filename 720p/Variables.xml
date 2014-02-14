@@ -199,30 +199,6 @@
 		<value condition="[!IsEmpty(ListItem.Artist) | !IsEmpty(ListItem.Title)] + !IsEmpty(ListItem.Rating)">$INFO[ListItem.StarRating]</value>
 		<value condition="Container.Content(addons) | SubString(Container.FolderPath,addons)">$INFO[ListItem.Property(Addon.StarRating)]</value>
 	</variable>
-	<variable name="custom_Rating.Container">
-		<value condition="!IntegerGreaterThan(ListItem.Property(Rating),1)">rating/nf-rating0.png</value>
-		<value condition="!IntegerGreaterThan(ListItem.Property(Rating),2)">rating/nf-rating1.png</value>
-		<value condition="!IntegerGreaterThan(ListItem.Property(Rating),4)">rating/nf-rating2.png</value>
-		<value condition="!IntegerGreaterThan(ListItem.Property(Rating),6)">rating/nf-rating3.png</value>
-		<value condition="!IntegerGreaterThan(ListItem.Property(Rating),8)">rating/nf-rating4.png</value>
-		<value>rating/nf-rating5.png</value>
-	</variable>
-	<variable name="custom_Rating.Info">
-		<value condition="!IntegerGreaterThan(Container(52).ListItem.Property(Rating),1)">rating/nf-rating0.png</value>
-		<value condition="!IntegerGreaterThan(Container(52).ListItem.Property(Rating),2)">rating/nf-rating1.png</value>
-		<value condition="!IntegerGreaterThan(Container(52).ListItem.Property(Rating),4)">rating/nf-rating2.png</value>
-		<value condition="!IntegerGreaterThan(Container(52).ListItem.Property(Rating),6)">rating/nf-rating3.png</value>
-		<value condition="!IntegerGreaterThan(Container(52).ListItem.Property(Rating),8)">rating/nf-rating4.png</value>
-		<value>rating/nf-rating5.png</value>
-	</variable>
-	<variable name="custom_Rating_Home.Info">
-		<value condition="!IntegerGreaterThan(Container(8002).ListItem.Property(Rating),1)">rating/nf-rating0.png</value>
-		<value condition="!IntegerGreaterThan(Container(8002).ListItem.Property(Rating),2)">rating/nf-rating1.png</value>
-		<value condition="!IntegerGreaterThan(Container(8002).ListItem.Property(Rating),4)">rating/nf-rating2.png</value>
-		<value condition="!IntegerGreaterThan(Container(8002).ListItem.Property(Rating),6)">rating/nf-rating3.png</value>
-		<value condition="!IntegerGreaterThan(Container(8002).ListItem.Property(Rating),8)">rating/nf-rating4.png</value>
-		<value>rating/nf-rating5.png</value>
-	</variable>
 	<variable name="art_Logo.Condition">
 		<value condition="Container.Content(episodes) | Container.Content(seasons)">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
 		<value condition="Skin.HasSetting(artistlogo.enable) + [Window.IsVisible(musiclibrary) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)]">$INFO[Skin.String(artistlogo.path)]$INFO[ListItem.Artist]/logo.png</value>
