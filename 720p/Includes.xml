@@ -667,20 +667,6 @@
 		<fadetime>200</fadetime>d
 		<visible>Container.Content(tvshows) + Skin.HasSetting(tvshowlogos.enable)</visible>
 	</include>
-	<!--watchedOverlay
-	<include name="overlay_UnWatched">
-		<width>32</width>
-		<height>32</height>
-		<info>ListItem.Overlay</info>
-		<aspectratio align="right">keep</aspectratio>
-	</include>-->
-	<!--watchedOverlayAlt-->
-	<include name="overlay_UnWatchedAlt">
-		<width>32</width>
-		<height>32</height>
-		<info>ListItem.Overlay</info>
-		<aspectratio align="right">keep</aspectratio>
-	</include>
 	<include name="overlay_UnWatched">
 		<width>32</width>
 		<height>32</height>
@@ -700,14 +686,14 @@
 		<texture>overlays/OverlayResumable.png</texture>
 		<aspect>keepaspect</aspect>
 		<!--<visible>[Container.Content(movies) | Container.Content(episodes)] + ListItem.IsResumable + Skin.HasSetting(overlay.resumable) + IsEmpty(ListItem.Property(ReleaseDate)) + !SubString(Container.FolderPath,special://skin/playlists/Movies In Progress.xsp)</visible>-->
-		<visible>Skin.HasSetting(watched.original) + !Skin.HasSetting(watched.alternative) + ListItem.IsResumable + Skin.HasSetting(overlay.resumable) + !SubString(Container.FolderPath,special://skin/playlists/Movies In Progress.xsp)</visible>	
+		<visible>Skin.HasSetting(watched.original) + ListItem.IsResumable + Skin.HasSetting(overlay.resumable) + !SubString(Container.FolderPath,special://skin/playlists/Movies In Progress.xsp)</visible>	
 	</include>
 	<include name="overlay_Resumable-list">
 		<width>32</width>
 		<height>32</height>
 		<texture>overlays/OverlayResumable.png</texture>
 		<aspect>keepaspect</aspect>
-		<visible>Skin.HasSetting(watched.original) + !Skin.HasSetting(watched.alternative) + Container(50).ListItem.IsResumable + Skin.HasSetting(overlay.resumable) + !SubString(Container.FolderPath,special://skin/playlists/Movies In Progress.xsp)</visible>
+		<visible>Skin.HasSetting(watched.original) + Container(50).ListItem.IsResumable + Skin.HasSetting(overlay.resumable) + !SubString(Container.FolderPath,special://skin/playlists/Movies In Progress.xsp)</visible>
 	</include>
 
 <!--COLUMNS-->

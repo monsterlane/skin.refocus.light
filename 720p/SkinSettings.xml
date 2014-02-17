@@ -328,13 +328,6 @@
 				<selected>!Skin.HasSetting(overlay.enable)</selected>
 				<include>button_Settings</include>
 			</control>
-			<control type="radiobutton" id="707">
-				<label>$LOCALIZE[32028]</label>
-				<onclick>Skin.ToggleSetting(watched.alternative)</onclick>
-				<onclick>Skin.Reset(watched.original)</onclick>
-				<selected>Skin.HasSetting(watched.alternative)</selected>
-				<include>button_Settings</include>
-			</control>
 			<control type="radiobutton" id="708">
 				<label>$LOCALIZE[32400]</label>
 				<onclick>Skin.ToggleSetting(watched.original)</onclick>
