@@ -63,8 +63,7 @@
 		<animation effect="zoom" tween="Quadratic" start="135" end="100" center="65,90" time="100">UnFocus</animation>
 	</include>
 	<include name="focus_Thumbs">
-		<animation effect="zoom" tween="Cubic" easing="In" start="100" end="130" center="90,90" time="150">Focus</animation>
-		<animation effect="zoom" tween="Cubic" easing="Out" start="130" end="100" center="90,90" time="150">UnFocus</animation>
+		<animation effect="zoom" start="100" end="130" center="90,90" time="100">Focus</animation>
 	</include>
 	<include name="focus_WideThumbs">
 		<animation effect="zoom" tween="Cubic" start="100" end="130" center="110,80" time="200">Focus</animation>
@@ -108,11 +107,11 @@
 	</include>
 	<include name="focus_SlideMusic">
 		<animation type="focus">
-			<effect type="zoom" tween="Quadratic" start="100" end="135" center="150,150" easing="Out" time="200"/>
+			<effect type="zoom" start="100" end="135" center="150,150"/>
 		</animation>
-		<animation type="unfocus">
+		<!-- <animation type="unfocus">
 			<effect type="zoom" tween="Quadratic" start="135" end="100" center="150,150" easing="Out" time="200" />
-		</animation>
+		</animation> -->
 	</include>
 	<include name="focus_SlideLoginUser">
 		<animation type="Visible" reversible="false">
