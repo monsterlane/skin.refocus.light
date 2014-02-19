@@ -12,16 +12,7 @@
 			<include>screen_Dimensions</include>
 			<texture background="true">backgrounds/background.png</texture>
 			<aspectratio>scale</aspectratio>
-			<animation type="WindowOpen" condition="Window.Previous(2999)">
-				<effect type="fade" start="0" end="100" time="600" delay="0" />
-			</animation>
-			<animation type="WindowOpen" condition="!Window.Previous(2999)">
-				<effect type="fade" start="0" end="100" time="200" delay="0" />
-			</animation>
-			<animation type="WindowClose">
-				<effect type="fade" start="100" end="0" time="200" delay="0" />
-			</animation>
-			<visible>Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + ![Library.HasContent(movies) + Library.HasContent(tvshows)]] + ![Control.HasFocus(8001) | Control.HasFocus(8000) | Control.HasFocus(8002) | Control.HasFocus(8005) | [Control.HasFocus(8006) | Control.HasFocus(8007)] | [Control.HasFocus(8008) | Control.HasFocus(8009)]]</visible>
+			<visible>Skin.HasSetting(wallpaper.original) + ![Player.HasVideo + Skin.HasSetting(backgroundvideo)] + ![Control.HasFocus(8001) | Control.HasFocus(8000) | Control.HasFocus(8002) | Control.HasFocus(8005) | [Control.HasFocus(8006) | Control.HasFocus(8007)] | [Control.HasFocus(8008) | Control.HasFocus(8009)]]</visible>
 		</control>
 	<!-- background video --->
 		<control type="image">
