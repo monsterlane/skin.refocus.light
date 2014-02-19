@@ -132,6 +132,14 @@
 					<onclick>Skin.ToggleSetting(homemenu.removesystem)</onclick>
 					<include>dialog_Button-list</include>
 				</control>
+				<!--Reload Skin-->
+				<control type="button" id="512">
+					<width>352</width>
+					<label>Reload Skin</label>
+					<onclick>ReloadSkin()</onclick>
+					<include>dialog_Button-list</include>
+					<visible>Skin.HasSetting(devel)</visible>
+				</control>
 			</control>
 		</control>
 	</controls>
