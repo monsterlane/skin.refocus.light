@@ -10,6 +10,13 @@
 	<animation effect="fade" time="500">WindowClose</animation>
 	
 	<controls>
+		<control type="image">
+			<posx>-340</posx>
+			<posy>-235</posy>
+			<include>screen_Dimensions</include>
+			<texture background="true">overlays/vignette.png</texture>
+			<animation effect="fade" time="1000" delay="500">WindowOpen</animation>
+		</control>
 		<control type="group">
 			<control type="image">
 				<description>Dialog Background</description>
