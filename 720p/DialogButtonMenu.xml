@@ -10,7 +10,7 @@
 		<control type="image">
 			<include>screen_Dimensions</include>
 			<texture background="true">overlays/vignette.png</texture>
-			<include>fadeinout</include>
+			<animation effect="fade" time="1000" delay="500">WindowOpen</animation>
 		</control>
 		<control type="group">
 			<posx>460</posx>
