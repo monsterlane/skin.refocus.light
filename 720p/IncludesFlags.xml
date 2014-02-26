@@ -4,7 +4,7 @@
 	<include name="flags_Slide-media">
 		<control type="grouplist">
 			<posx>222</posx>
-			<posy>660</posy>
+			<posy>670</posy>
 			<width>900</width>
 			<height>64</height>
 			<itemgap>10</itemgap>

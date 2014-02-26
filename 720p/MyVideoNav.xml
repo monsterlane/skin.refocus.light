@@ -542,7 +542,7 @@
 				<control type="textbox">
 					<posy>60</posy>
 					<width>960</width>
-					<height>136</height>
+					<height>144</height>
 					<label>$VAR[global_Plot.Condition]</label>
 					<font>descriptionbig</font>
 					<include>description_Small</include>

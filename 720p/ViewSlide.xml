@@ -270,15 +270,6 @@
 				<aspectratio align="right">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio]</texture>
 			</control>
-			<control type="image" id="55555">
-				<posx>60</posx>
-				<posy>459</posy>
-				<width>128</width>
-				<height>64</height>
-				<aspectratio align="right">keep</aspectratio>
-				<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
-				<visible>StringCompare(Control.GetLabel(55455),empty)</visible>
-			</control>
 			<!-- logo -->
 			<control type="image">
 				<posx>20</posx>
