@@ -11,13 +11,18 @@
 		<control type="group">
 			<visible>player.paused</visible>
 				<control type ="image" id="1">
-					<posx>1022</posx>
-					<posy>527</posy>
-					<width>268</width>
-					<height>150</height>
+					<posx>923</posx>
+					<posy>477</posy>
+					<width>357</width>
+					<height>200</height>
 					<texture background="true">$INFO[Player.Art(tvshow.clearart)]</texture>
 					<aspectratio aligny="bottom">keep</aspectratio>
-					<include>transition_OSD</include>
+					<animation type="WindowOpen" reversible="false">
+						<effect type="fade" start="0" end="85" time="750" delay="2000" tween="Quadratic" easing="In" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+						<effect type="fade" start="85" end="0" time="300" />
+					</animation>
 					<visible>Skin.HasSetting(videoosd.clearart) + [VideoPlayer.Content(episodes) | VideoPlayer.Content(movies)]</visible>
 				</control>
 
