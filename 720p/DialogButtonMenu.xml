@@ -136,6 +136,7 @@
 				<control type="button" id="512">
 					<width>352</width>
 					<label>Reload Skin</label>
+					<onclick>dialog.close(all,true)</onclick>
 					<onclick>ReloadSkin()</onclick>
 					<include>dialog_Button-list</include>
 					<visible>Skin.HasSetting(devel)</visible>
