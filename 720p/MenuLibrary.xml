@@ -126,12 +126,11 @@
 				<include>button_Menu</include>
 			</control>
 		</control>
-		<!--update library-->
 		<control type="group">
 			<width>220</width>
 			<height>42</height>
 			<control type="togglebutton" id="20">
-				<description>Update library</description>
+				<description>Update library/Stop scanning</description>
 				<label>653</label>
 				<altlabel>13353</altlabel>
 				<onup>16</onup>
@@ -139,6 +138,7 @@
 				<onright>50</onright>
 				<include>button_Menu</include>
 				<onclick>SetFocus(300)</onclick>
+				<usealttexture>library.isscanningvideo</usealttexture>
 			</control>
 		</control>
 	</include>
