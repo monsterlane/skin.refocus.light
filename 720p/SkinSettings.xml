@@ -178,21 +178,13 @@
 				<selected>Skin.HasSetting(home.menuselect.disablefading)</selected>
 				<include>button_Settings</include>
 			</control>
-			<!--Extra Animations-->
-			<control type="radiobutton" id="114">
-				<label>$LOCALIZE[32070]</label>
-				<onclick>Skin.ToggleSetting(home.widgets.noanimations)</onclick>
-				<selected>Skin.HasSetting(home.widgets.noanimations)</selected>
-				<include>button_Settings</include>
-			</control>
 			<!--Menu Shade-->
-			<control type="radiobutton" id="115">
+			<control type="radiobutton" id="114">
 				<label>$LOCALIZE[32300]</label>
 				<onclick>Skin.ToggleSetting(home.menushade)</onclick>
 				<selected>Skin.HasSetting(home.menushade)</selected>
 				<include>button_Settings</include>
 			</control>
-			<!--Search-->
 		</control>
 <!--ARTWORK-->
 		<control type="grouplist" id="600">
