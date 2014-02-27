@@ -76,8 +76,7 @@
 			<include>screen_Dimensions</include>
 			<imagepath background="true">$INFO[Container(9000).ListItem.Icon]</imagepath>
 			<aspectratio>scale</aspectratio>
-			<include>fadeinout</include>
-			<timeperimage>slideshow_Timer</timeperimage>
+			<timeperimage>10000</timeperimage>
 			<fadetime>200</fadetime>
 			<randomize>true</randomize>
 			<loop>yes</loop>

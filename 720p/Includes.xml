@@ -43,7 +43,6 @@
 	<constant name="fadetime_Slideshow">1200</constant>
 	<constant name="transition_Open">350</constant>
 	<constant name="transition_Close">250</constant>
-	<constant name="slideshow_Timer">10000</constant>
 
 <!---GLOBAL------>
 	<include name="screen_Dimensions">
