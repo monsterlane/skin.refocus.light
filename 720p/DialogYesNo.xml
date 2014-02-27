@@ -19,10 +19,10 @@
 			<include>dialog_Windowtitle</include>
 		</control>
 		<control type="textbox" id="9">
-			<top>65</top>
+			<top>67</top>
 			<width>482</width>
 			<left>34</left>
-			<height>85</height>
+			<height>97</height>
 			<align>center</align>
 			<font>small</font>
 			<textcolor>Color4</textcolor>
