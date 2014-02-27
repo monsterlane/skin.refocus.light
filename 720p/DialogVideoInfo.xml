@@ -243,7 +243,7 @@
 							<label>$LOCALIZE[208]</label>
 							<onclick>SendClick(2003,8)</onclick>
 							<onleft>8007</onleft>
-							<onright>8002</onright>
+							<onright>8005</onright>
 							<include>button_Inline</include>
 						</control>
 					</control>
@@ -251,10 +251,10 @@
 					<control type="group">
 						<width>125</width>
 						<visible>Container.Content(tvshows)</visible>
-						<control type="button" id="8004">
+						<control type="button" id="8001">
 							<label>$LOCALIZE[1024]</label>
 							<onclick>SendClick(2003,8)</onclick>
-							<onleft>8003</onleft>
+							<onleft>8007</onleft>
 							<onright>8005</onright>
 							<include>button_Inline</include>
 						</control>
@@ -266,7 +266,7 @@
 							<label>$VAR[videoInfo.Cast]</label>
 							<onclick>SendClick(2003,5)</onclick>
 							<ondown>50</ondown>
-							<onleft>8004</onleft>
+							<onleft>8001</onleft>
 							<onright>8006</onright>
 							<include>button_Inline</include>
 						</control>
@@ -292,7 +292,7 @@
 							<onclick>ActivateWindow(62)</onclick>
 							<include>button_Inline</include>
 							<onleft>8006</onleft>
-							<onright>8008</onright>
+							<onright>8001</onright>
 							<ondown>60</ondown>
 						</control>
 					</control>
@@ -305,7 +305,7 @@
 				<!--plot-->
 				<control type="textbox" id="400">
 					<width>700</width>
-					<height>165</height>
+					<height>171</height>
 					<label>$INFO[ListItem.Plot]</label>
 				    <font>descriptionbig</font>
 					<include>autoscroll-plot</include>
