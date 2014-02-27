@@ -53,8 +53,7 @@
 		<height>41</height>
 		<font>small</font>
 		<align>center</align>
-		<aligny>-</aligny>
-		<textoffsety>5</textoffsety>
+		<textoffsety>7</textoffsety>
 		<texturenofocus border="14">dialogs/button.png</texturenofocus>
 		<texturefocus border="20,16,20,16">dialogs/button-focus.png</texturefocus>
 		<textcolor>Color4</textcolor>
@@ -76,7 +75,7 @@
 		<focusedcolor>Color1</focusedcolor>
 		<font>small</font>
 		<textoffsetx>15</textoffsetx>
-		<textoffsety>5</textoffsety>
+		<aligny>center</aligny>
 		<height>40</height>
 		<pulseonselect>false</pulseonselect>
 		<texturefocus border="3">dialogs/list-focus.png</texturefocus>
@@ -172,7 +171,7 @@
 		<radioheight>24</radioheight>
 		<radiowidth>48</radiowidth>
 		<textoffsetx>15</textoffsetx>
-		<textoffsety>6</textoffsety>
+		<aligny>center</aligny>
 		<pulseonselect>false</pulseonselect>
 	</include>
 	<include name="dialog_Spin">

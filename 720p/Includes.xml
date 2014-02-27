@@ -595,8 +595,8 @@
 		<height>50</height>
 		<font>category</font>
 		<align>right</align>
-		<textoffsety>3</textoffsety>
 		<textoffsetx>25</textoffsetx>
+		<aligny>center</aligny>
 		<textcolor>Color1</textcolor>
 		<texturefocus border="13,6,13,6">settings/list-focusRev.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
@@ -607,7 +607,7 @@
 		<height>46</height>
 		<font>normal</font>
 		<textoffsetx>30</textoffsetx>
-		<textoffsety>7</textoffsety>
+		<aligny>center</aligny>
 		<textcolor>Color1</textcolor>
 		<focusedcolor>black</focusedcolor>
 		<texturefocus border="13,6,13,6">settings/list-focus.png</texturefocus>
