@@ -619,7 +619,7 @@
 		<width>125</width>
 		<font>normal</font>
 		<align>center</align>
-		<textoffsety>2</textoffsety>
+		<textoffsety>4</textoffsety>
 		<textcolor>Color1</textcolor>
 		<focusedcolor>Color1</focusedcolor>
 		<texturenofocus border="8">views/button.png</texturenofocus>
@@ -1203,10 +1203,10 @@
 				</control>
 				<!--plot-->
 				<control type="group" id="1">
-					<posy>65</posy>
+					<posy>63</posy>
 					<visible>Player.HasVideo + ![VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)]</visible>
 					<control type="textbox" id="1">
-						<height>110</height>
+						<height>115</height>
 						<width>1090</width>
 						<label>$VAR[player_Plot.Condition]</label>
 						<textcolor>Color3</textcolor>
@@ -1294,11 +1294,6 @@
 			<control type="group">
 				<control type="group">
 				<include>toggle_ToastMute</include>
-				<!-- <animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
-						<effect type="fade" start="0" end="100" time="500" delay="0" />
-						<effect type="fade" start="100" end="0" time="500" delay="10000" />
-						<effect type="fade" start="100" end="0" time="500" delay="20000" />
-					</animation> -->
 					<control type="label" id="200">
 						<posx>20r</posx>
 						<width>350</width>
@@ -1320,33 +1315,6 @@
 						<include>toast_Side</include>
 					</control> -->
 				</control>
-				<!-- <control type="group">
-				<visible>MusicPlayer.HasNext</visible>
-					<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
-						<effect type="fade" start="0" end="100" time="500" delay="10500" />
-						<effect type="fade" start="100" end="0" time="500" delay="20000" />
-					</animation>
-					<control type="label">
-						<posx>120r</posx>
-						<label>$LOCALIZE[209]...</label>
-						<include>toast_Side</include>
-					</control>
-					<control type="label" id="200">
-						<posx>130r</posx>
-						<width>250</width>
-						<label>$INFO[MusicPlayer.offset(1).Title]</label>
-						<include>toast_Top</include>
-						<include>autoscroll-line</include>
-					</control>
-					<control type="label" id="201">
-						<posx>130r</posx>
-						<posy>28</posy>
-						<width>250</width>
-						<label>$INFO[MusicPlayer.offset(1).Artist]</label>
-						<include>toast_Bottom</include>
-						<include>autoscroll-line</include>
-					</control>
-				</control> -->
 			</control>
 		</control>
 	</include>
