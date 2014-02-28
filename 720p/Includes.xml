@@ -3,7 +3,6 @@
 	<include file="Defaults.xml" />
 	<include file="HomeMenu.xml" />
 	<include file="HomeSubMenu.xml" />
-	<include file="MenuAddons.xml" />
 	<include file="MenuFiles.xml" />
 	<include file="MenuInfo.xml" />
 	<include file="MenuLibrary.xml" />
@@ -18,7 +17,6 @@
 	<include file="IncludesDialogs.xml" />
 	<include file="IncludesPageControl.xml" />
 	<include file="IncludesPlayerControl.xml" />
-	<include file="IncludesWeather.xml" />
 	<include file="Variables.xml" />
 	<include file="ViewIcon.xml" />
 	<include file="ViewList.xml" />
@@ -30,7 +28,6 @@
 	<include file="ViewPortraitFanart.xml" />
 	<include file="ViewsTV.xml" />
 	<include file="ViewMovieSets.xml" /><!-- Added this view 'Movie Sets View' -->
-	<include file="custom_MovieSetsInfo.xml" />
 	<include file="IncludesHomeWidgets.xml" />
 
 
@@ -56,7 +53,7 @@
 		<include>clock_views</include>
 		<include>global_Sortletter</include>
 		<include>global_Itemcount</include>
-		<include>global_ItemcountViews</include>	
+		<include>global_ItemcountViews</include>
 		<include>global_Devmode</include>
 	</include>
 	<include name="global_Itemcount">
@@ -127,7 +124,7 @@
 			</control>
 		</control>
 	</include>
-	
+
 	<include name="home_Clock">
 		<control type="group">
 			<visible>![Player.HasMedia + !Skin.HasSetting(overlay.enable) + !Window.IsVisible(28)] + !Control.IsVisible(56) + ![Window.IsActive(extendedprogressdialog) | Window.IsActive(infodialog) |  Window.IsActive(614)] + ![Window.IsActive(pictures) + Control.IsVisible(52)]</visible>
@@ -222,7 +219,7 @@
 			</control>
 		</control>
 	</include>
-	
+
 	<include name="clock">
 		<control type="group">
 			<visible>Skin.HasSetting(home.time) + !Skin.HasSetting(home.timesmall) + ![Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog)]</visible>
@@ -445,7 +442,7 @@
 	<include name="scrollbar_X">
 		<showonepage>true</showonepage>
 		<height>8</height>
-		<texturesliderbackground border="8,1,8,1">views/scrollBackgroundHorizontal.png</texturesliderbackground>		
+		<texturesliderbackground border="8,1,8,1">views/scrollBackgroundHorizontal.png</texturesliderbackground>
 		<texturesliderbar border="10,1,10,1">views/scrollbarGripHorizontal.png</texturesliderbar>
 		<texturesliderbarfocus border="10,1,10,1">views/scrollbarGripHorizontal-focus.png</texturesliderbarfocus>
 		<textureslidernib border="1">-</textureslidernib>
@@ -683,7 +680,7 @@
 		<texture>overlays/OverlayResumable.png</texture>
 		<aspect>keepaspect</aspect>
 		<!--<visible>[Container.Content(movies) | Container.Content(episodes)] + ListItem.IsResumable + Skin.HasSetting(overlay.resumable) + IsEmpty(ListItem.Property(ReleaseDate)) + !SubString(Container.FolderPath,special://skin/playlists/Movies In Progress.xsp)</visible>-->
-		<visible>Skin.HasSetting(watched.original) + ListItem.IsResumable + Skin.HasSetting(overlay.resumable) + !SubString(Container.FolderPath,special://skin/playlists/Movies In Progress.xsp)</visible>	
+		<visible>Skin.HasSetting(watched.original) + ListItem.IsResumable + Skin.HasSetting(overlay.resumable) + !SubString(Container.FolderPath,special://skin/playlists/Movies In Progress.xsp)</visible>
 	</include>
 	<include name="overlay_Resumable-list">
 		<width>32</width>
@@ -1035,7 +1032,7 @@
 
 <!---OSD / SLIDESHOW------>
 	<include name="osd_Info">
-		<control type="group" id="1">			
+		<control type="group" id="1">
 			<posy>458</posy>
 			<animation effect="slide" start="0,0" end="0,42" time="0" condition="Player.HasAudio | VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)">Conditional</animation>
 			<visible>[Window.IsVisible(fullscreenvideo) | Window.IsActive(visualisation)] + ![[Window.IsActive(visualisationpresetlist) | Window.IsActive(videoosd) | Window.IsVisible(bookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsActive(script-XBMC_Lyrics-main.xml)]]</visible>
@@ -1183,7 +1180,7 @@
 						<visible>VideoPlayer.Content(musicvideos)</visible>
 					</control>-->
 					<control type="group">
-					<visible>!IsEmpty(VideoPlayer.Rating)</visible>	
+					<visible>!IsEmpty(VideoPlayer.Rating)</visible>
 						<control type="image">
 							<posx>15</posx>
 							<width>28</width>
@@ -1216,7 +1213,7 @@
 				</control>
 			</control>
 		</control>
-		
+
 	</include>
 
 <!---WINDOW TITLES------->
@@ -1239,7 +1236,7 @@
 			<include>windowTitle</include>
 			<visible>!Control.IsVisible(47)</visible>
 		</control>
-	</include>		
+	</include>
 	<include name="windowTitle_Music">
 		<control type="label">
 			<label>$VAR[window_Title.Music]</label>
@@ -1289,7 +1286,7 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<visible>Player.HasAudio + !Skin.HasSetting(overlay.enable) + ![Window.IsActive(infodialog) | Window.IsActive(videoscan) | Window.IsActive(musicscan) | Window.IsActive(home) | Window.IsActive(fullscreenvideo) | Window.IsActive(614) | Window.IsActive(extendedprogressdialog)]</visible>
-				
+
 	 <!-- Music -->
 			<control type="group">
 				<control type="group">
