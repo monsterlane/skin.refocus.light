@@ -10,7 +10,6 @@
 		<include>nav_Indicator</include>
 		<include>PageControls</include>
 		<include>windowTitle_Music</include>
-		<include>view_SlideMusic</include>
 		<include>view_IconFiles</include>
 		<include>view_IconSquare</include>
 		<include>view_IconSquare2</include>
@@ -19,7 +18,7 @@
 		<include>view_IconLandscape</include>
 		<include>view_BigList</include>
 
-<!---TRIGGER------>	
+<!---TRIGGER------>
 		<control type="button" id="8000">
 			<label>SHOULD NOT SEE ME</label>
 			<onup>54</onup>
@@ -54,7 +53,7 @@
 <!---SLIDE VIEW------>
 		<include>info_Slide</include>
 		<include>info_SlideAddons</include>
-		
+
 
 <!---THUMBNAILS VIEW------>
 		<control type="group">

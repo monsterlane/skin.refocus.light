@@ -142,7 +142,7 @@
 			</control>
 		</control>
 	</include>
-	
+
 	<include name="menu_Video">
 		<control type="group" id="6000">
 			<visible>!Skin.HasSetting(global.kiosk)</visible>
@@ -180,7 +180,7 @@
 						<include>button_Menu</include>
 					</control>
 				</control>
-<!--layout options-->	
+<!--layout options-->
 				<!--SLIDE: use posters-->
 				<control type="group">
 					<width>220</width>
@@ -489,7 +489,7 @@
 				<control type="group">
 					<width>220</width>
 					<height>42</height>
-					<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)] + !SubString(Container.FolderPath,plugin://)] | [Container.Content(movies) + SubString(Container.FolderPath,plugin://)]</visible>
+					<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)] + !SubString(Container.FolderPath,plugin://) | [Container.Content(movies) + SubString(Container.FolderPath,plugin://)]</visible>
 					<control type="button" id="403">
 						<label>$LOCALIZE[537]</label>
 						<onclick>Container.SetViewMode(51)</onclick>
@@ -769,7 +769,7 @@
 						<include>button_Menu</include>
 					</control>
 				</control>
-				
+
 <!--layout options-->
 				<!--SLIDE: landscape-->
 				<control type="group">
