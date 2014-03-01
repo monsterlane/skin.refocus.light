@@ -2,7 +2,7 @@
 <window id="25">
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>47,50,501,51,52,521,522,53,531,54,541,5411,54111,550,551,57,571,5711,574,575,576,592</views>	
+	<views>47,50,501,51,52,521,522,53,531,54,541,5411,54111,550,551,57,571,5711,574,575,576,592</views>
 	<onload condition="Library.HasContent(Movies) + System.HasAddon(script.moviesets) + IsEmpty(Window(Home).Property(DontRunTVShowScripts))">RunScript(script.moviesets,containerId=7000)</onload>
 	<controls>
 	  <include condition="System.HasAddon(script.moviesets)">ContainerMovieSets</include>
@@ -15,7 +15,6 @@
 		<include>view_Fanart</include>
 		<include>view_ThumbEpisode</include>
 		<include>view_IconSquare</include>
-		<include>view_SlideMusic</include>
 		<include>view_SlideSquare</include>
 		<include>view_IconSquare3</include>
 		<include>view_MovieSets</include>
@@ -24,7 +23,7 @@
 		<include>view_BannerDoubleRow</include>
 		<include>view_BannerPoster</include>
 
-	<!---TRIGGER------>	
+	<!---TRIGGER------>
 		<control type="button" id="8000">
 			<label>SHOULD NOT SEE ME</label>
 			<onup>53</onup>
@@ -486,7 +485,7 @@
 			</control>
 		</control>
 		<include>view_MovieSets</include>
-		
+
 <!---SLIDE------>
 <control type="group">
 			<include>toggle_Menu</include>
@@ -512,7 +511,7 @@
 				<visible>StringCompare(Control.GetLabel(88788),empty)</visible>
 			</control>
 			<include>flags_Slide-media</include>
-			<!---info--->	
+			<!---info--->
 			<control type="group">
 				<visible>!Container.Content(addons)</visible>
 				<posx>220</posx>
@@ -565,7 +564,7 @@
 			<include>transition_Container</include>
 			<include>infoDialogHide</include>
 			<include>toggle_Menu</include>
-			<!---large grid---> 
+			<!---large grid--->
 			<control type="group">
 				<visible>Control.IsVisible(57) | Control.IsVisible(573)</visible>
 				<!---flags--->
@@ -819,7 +818,7 @@
 					<width>1100</width>
 					<label>$INFO[ListItem.Duration,, $LOCALIZE[31100]]$INFO[ListItem.Genre, • ]</label>
 					<font>smallerCaps</font>
-					<align>left</align>	
+					<align>left</align>
 					<textcolor>Color4</textcolor>
 					<visible>Container.Content(movies)</visible>
 				</control>
@@ -828,7 +827,7 @@
 					<width>1100</width>
 					<label>$VAR[global_Info]</label>
 					<font>smallerCaps</font>
-					<align>left</align>	
+					<align>left</align>
 					<textcolor>Color4</textcolor>
 					<visible>Container.Content(tvshows) + !SubString(ListItem.Icon,default)</visible>
 				</control>
@@ -873,7 +872,7 @@
 				<align>left</align>
 				<texture background="true">$VAR[thumb_Portrait.Condition]</texture>
 				<aspectratio>stretch</aspectratio>
-			</control>						
+			</control>
 			<control type="group">
 				<posx>200</posx>
 				<posy>13</posy>
@@ -890,7 +889,7 @@
 					<width>930</width>
 					<label>$INFO[ListItem.Year,,]$INFO[ListItem.Genre, • ]</label>
 					<font>smallerCaps</font>
-					<align>left</align>	
+					<align>left</align>
 					<textcolor>Color2</textcolor>
 					<visible>Container.Content(movies)</visible>
 				</control>
@@ -899,7 +898,7 @@
 					<width>930</width>
 					<label>$VAR[global_Info]</label>
 					<font>smallerCaps</font>
-					<align>left</align>	
+					<align>left</align>
 					<textcolor>Color2</textcolor>
 					<visible>Container.Content(tvshows) + !SubString(ListItem.Icon,default)</visible>
 				</control>
@@ -912,7 +911,7 @@
 					<colordiffuse>Color1</colordiffuse>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!SubString(ListItem.Icon,default)</visible>
-				</control>				
+				</control>
 				<control type="textbox" id="1">
 					<posy>70</posy>
 					<height>97</height>
@@ -930,7 +929,7 @@
 					<aspectratio align="center">keep</aspectratio>
 					<texture>flags/video/HD/nf-HD.png</texture>
 					<visible>IntegerGreaterThan(ListItem.VideoResolution,540)</visible>
-				</control>		
+				</control>
 			<!--<control type="group">
 				    <align>right</align>
 				    <posx>950</posx>
@@ -940,7 +939,7 @@
 					    <height>39</height>
 					    <texture>$INFO[Listitem.VideoResolution,flags/video/resolution/,.png]</texture>
 				    </control>
-			    </control>	-->			
+			    </control>	-->
 			    <control type="group">
 				    <posx>1047</posx>
 				    <posy>146</posy>
@@ -978,9 +977,9 @@
 					<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
 					<visible>StringCompare(Control.GetLabel(9999),empty) + Container.Content(tvshows) + Skin.HasSetting(tvnetworklogos.enable)</visible>
 				</control>
-			    </control>						
+			    </control>
 			</control>
-		</control>		
+		</control>
 <!---WINDOWMENU------>
 		<include>menu_Video</include>
 	</controls>
