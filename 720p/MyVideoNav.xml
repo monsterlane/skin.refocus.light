@@ -165,14 +165,7 @@
 						<posy>526</posy>
 						<animation effect="rotate" end="90" time="0" condition="True">Conditional</animation>
 						<include>overlay_UnWatched</include>
-						<visible>!SubString(Container.FolderPath,special://videoplaylists) + !Skin.HasSetting(watched.alternative)</visible>
-					</control>
-					<control type="image">
-						<posx>-54</posx>
-						<posy>526</posy>
-						<animation effect="rotate" end="90" time="0" condition="True">Conditional</animation>
-						<include>overlay_UnWatchedAlt</include>
-						<visible>!SubString(Container.FolderPath,special://videoplaylists) + Skin.HasSetting(watched.alternative)</visible>
+						<visible>!SubString(Container.FolderPath,special://videoplaylists)</visible>
 					</control>
 					<control type="image">
 						<posx>-54</posx>
@@ -202,14 +195,7 @@
 						<posy>526</posy>
 						<animation effect="rotate" end="90" time="0" condition="True">Conditional</animation>
 						<include>overlay_UnWatched</include>
-						<visible>!SubString(Container.FolderPath,special://videoplaylists) + !Skin.HasSetting(watched.alternative)</visible>
-					</control>
-					<control type="image">
-						<posx>-54</posx>
-						<posy>526</posy>
-						<animation effect="rotate" end="90" time="0" condition="True">Conditional</animation>
-						<include>overlay_UnWatchedAlt</include>
-						<visible>!SubString(Container.FolderPath,special://videoplaylists) + Skin.HasSetting(watched.alternative)</visible>
+						<visible>!SubString(Container.FolderPath,special://videoplaylists)</visible>
 					</control>
 					<control type="image">
 						<posx>-54</posx>
@@ -255,7 +241,6 @@
 					<posx>0</posx>
 					<posy>-48</posy>
 					<visible>Control.IsVisible(523) + Control.HasFocus(523) + Container.Content(Movies) + [StringCompare(Container.FolderPath,videodb://1/7/) | !IsEmpty(Window(10025).Property(Content.MovieSets)) | !IsEmpty(Container(7000).ListItem.Property(IsSet))]</visible>
-					<include>thumb_Set-114x148r1s65</include>
 					<control type="label">
 						<posx>0</posx>
 						<posy>148</posy>
@@ -437,7 +422,6 @@
 				<height>64</height>
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
-				<include>flags_MovieSet-media</include>
 			</control>
 			<!-- studio flags -->
 			<control type="image" id="789">

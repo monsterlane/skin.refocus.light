@@ -141,7 +141,7 @@
 				<onclick>ActivateWindow(1160)</onclick>
 				<include>button_Settings</include>
 				<visible>Skin.HasSetting(devel)</visible>
-			</control>			
+			</control>
 			<!--time-->
 			<control type="radiobutton" id="105">
 				<label>$LOCALIZE[31907]</label>
@@ -634,7 +634,6 @@
 				<autoscroll time="1000" delay="5000" repeat="5000">true</autoscroll>
 				<textcolor>Color1</textcolor>
 				<font>smallAlt</font>
-				<include>textBox</include>
 			</control>
 		</control>
 <!---IMAGES------>
