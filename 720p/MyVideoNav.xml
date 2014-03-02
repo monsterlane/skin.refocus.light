@@ -432,15 +432,6 @@
 				<aspectratio align="center">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio]</texture>
 			</control>
-			<control type="image" id="1789">
-				<posx>30</posx>
-				<posy>462</posy>
-				<width>163</width>
-				<height>110</height>
-				<aspectratio align="center">keep</aspectratio>
-				<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
-				<visible>StringCompare(Control.GetLabel(789),empty)</visible>
-			</control>
 			<control type="label">
 				<posx>220</posx>
 				<posy>462</posy>
@@ -484,15 +475,6 @@
 				<height>64</height>
 				<aspectratio align="center">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio]</texture>
-			</control>
-			<control type="image" id="88988">
-				<posx>46</posx>
-				<posy>560</posy>
-				<width>128</width>
-				<height>64</height>
-				<aspectratio align="center">keep</aspectratio>
-				<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
-				<visible>StringCompare(Control.GetLabel(88788),empty)</visible>
 			</control>
 			<include>flags_Slide-media</include>
 			<!---info--->
@@ -569,15 +551,6 @@
 					<texture fallback="empty">$VAR[flag_Studio]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>SubString(Container.FolderPath,plugin://plugin.video.the.trailers)</visible>
-				</control>
-				<control type="image" id="99299">
-					<posx>235r</posx>
-					<posy>637</posy>
-					<width>128</width>
-					<height>64</height>
-					<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
-					<aspectratio align="right">keep</aspectratio>
-					<visible>StringCompare(Control.GetLabel(99199),empty) + SubString(Container.FolderPath,plugin://plugin.video.the.trailers)</visible>
 				</control>
 				<control type="group">
 					<posx>85</posx>
@@ -669,15 +642,6 @@
 				<texture fallback="empty">$VAR[flag_Studio]</texture>
 				<visible>Control.IsVisible(571) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
 			</control>
-			<control type="image" id="123456789">
-				<posx>780</posx>
-				<posy>610</posy>
-				<width>128</width>
-				<height>64</height>
-				<aspectratio align="left">keep</aspectratio>
-				<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
-				<visible>StringCompare(Control.GetLabel(12345678),empty) + Control.IsVisible(571) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
-			</control>
 		</control>
 		<include>view_IconPoster</include>
 		<include>view_IconWide</include>
@@ -697,15 +661,6 @@
 				<height>64</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio]</texture>
-			</control>-->
-			<control type="image" id="999">
-				<posx>105</posx>
-				<posy>590</posy>
-				<width>128</width>
-				<height>64</height>
-				<aspectratio align="right">keep</aspectratio>
-				<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
-				<visible>StringCompare(Control.GetLabel(99),empty)</visible>
 			</control>
 			<!---strip bottom--->
 			<control type="group">
@@ -954,12 +909,6 @@
 					<height>45</height>
 					<texture fallback="empty">$VAR[flag_Studio]</texture>
 					<visible>Container.Content(tvshows) + Skin.HasSetting(tvnetworklogos.enable)</visible>
-				</control>
-				<control type="image" id="99999">
-					<width>90</width>
-					<height>45</height>
-					<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
-					<visible>StringCompare(Control.GetLabel(9999),empty) + Container.Content(tvshows) + Skin.HasSetting(tvnetworklogos.enable)</visible>
 				</control>
 			    </control>
 			</control>
