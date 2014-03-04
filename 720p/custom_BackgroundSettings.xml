@@ -150,15 +150,6 @@
 						<selected>Skin.HasSetting(fanart.global)</selected>
 						<include>dialog_Radio</include>
 					</control>
-					<!--vignette-->
-					<control type="radiobutton" id="203">
-						<width>557</width>
-						<label>$LOCALIZE[31929]</label>
-						<onclick>Skin.ToggleSetting(fanart.global.alt)</onclick>
-						<selected>Skin.HasSetting(fanart.global.alt)</selected>
-						<include>dialog_Radio</include>
-						<enable>Skin.HasSetting(fanart.global)</enable>
-					</control>
 					<!--vignette home-->
 					<control type="radiobutton" id="204">
 						<width>557</width>
