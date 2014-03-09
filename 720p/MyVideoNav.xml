@@ -165,14 +165,7 @@
 						<posy>526</posy>
 						<animation effect="rotate" end="90" time="0" condition="True">Conditional</animation>
 						<include>overlay_UnWatched</include>
-						<visible>!SubString(Container.FolderPath,special://videoplaylists) + !Skin.HasSetting(watched.alternative)</visible>
-					</control>
-					<control type="image">
-						<posx>-54</posx>
-						<posy>526</posy>
-						<animation effect="rotate" end="90" time="0" condition="True">Conditional</animation>
-						<include>overlay_UnWatchedAlt</include>
-						<visible>!SubString(Container.FolderPath,special://videoplaylists) + Skin.HasSetting(watched.alternative)</visible>
+						<visible>!SubString(Container.FolderPath,special://videoplaylists)</visible>
 					</control>
 					<control type="image">
 						<posx>-54</posx>
@@ -202,14 +195,7 @@
 						<posy>526</posy>
 						<animation effect="rotate" end="90" time="0" condition="True">Conditional</animation>
 						<include>overlay_UnWatched</include>
-						<visible>!SubString(Container.FolderPath,special://videoplaylists) + !Skin.HasSetting(watched.alternative)</visible>
-					</control>
-					<control type="image">
-						<posx>-54</posx>
-						<posy>526</posy>
-						<animation effect="rotate" end="90" time="0" condition="True">Conditional</animation>
-						<include>overlay_UnWatchedAlt</include>
-						<visible>!SubString(Container.FolderPath,special://videoplaylists) + Skin.HasSetting(watched.alternative)</visible>
+						<visible>!SubString(Container.FolderPath,special://videoplaylists)</visible>
 					</control>
 					<control type="image">
 						<posx>-54</posx>
@@ -240,13 +226,6 @@
 					<posx>230</posx>
 					<posy>-245</posy>
 					<width>960</width>
-					<label>$VAR[global_Title.Video]</label>
-					<include>info_Title</include>
-				</control>
-				<control type="label">
-					<posx>230</posx>
-					<posy>-245</posy>
-					<width>960</width>
 					<label>$INFO[ListItem.Label]</label>
 					<visible>Container.Content(Movies)</visible>
 					<include>info_Title</include>
@@ -255,7 +234,6 @@
 					<posx>0</posx>
 					<posy>-48</posy>
 					<visible>Control.IsVisible(523) + Control.HasFocus(523) + Container.Content(Movies) + [StringCompare(Container.FolderPath,videodb://1/7/) | !IsEmpty(Window(10025).Property(Content.MovieSets)) | !IsEmpty(Container(7000).ListItem.Property(IsSet))]</visible>
-					<include>thumb_Set-114x148r1s65</include>
 					<control type="label">
 						<posx>0</posx>
 						<posy>148</posy>
@@ -437,7 +415,6 @@
 				<height>64</height>
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
-				<include>flags_MovieSet-media</include>
 			</control>
 			<!-- studio flags -->
 			<control type="image" id="789">
@@ -447,15 +424,6 @@
 				<height>110</height>
 				<aspectratio align="center">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio]</texture>
-			</control>
-			<control type="image" id="1789">
-				<posx>30</posx>
-				<posy>462</posy>
-				<width>163</width>
-				<height>110</height>
-				<aspectratio align="center">keep</aspectratio>
-				<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
-				<visible>StringCompare(Control.GetLabel(789),empty)</visible>
 			</control>
 			<control type="label">
 				<posx>220</posx>
@@ -480,7 +448,7 @@
 				<textcolor>Color7</textcolor>
 				<font>descriptionSmall</font>
 				<aligny>top</aligny>
-				<label>$VAR[global_Plot.Condition2]</label>
+				<label>$VAR[global_Plot.Condition]</label>
 				<autoscroll time="3500" delay="5000" repeat="5000">True</autoscroll>
 			</control>
 		</control>
@@ -501,43 +469,12 @@
 				<aspectratio align="center">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio]</texture>
 			</control>
-			<control type="image" id="88988">
-				<posx>46</posx>
-				<posy>560</posy>
-				<width>128</width>
-				<height>64</height>
-				<aspectratio align="center">keep</aspectratio>
-				<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
-				<visible>StringCompare(Control.GetLabel(88788),empty)</visible>
-			</control>
 			<include>flags_Slide-media</include>
 			<!---info--->
 			<control type="group">
 				<visible>!Container.Content(addons)</visible>
 				<posx>220</posx>
 				<posy>462</posy>
-				<control type="label">
-					<width>960</width>
-					<label>$VAR[global_Title.Video]</label>
-					<font>titleSpecial2</font>
-					<include>info_Title</include>
-				</control>
-				<control type="label">
-					<posy>28</posy>
-					<width>960</width>
-					<label>$VAR[global_Info.Video]</label>
-					<font>list</font>
-					<include>info_Sub</include>
-					<visible>!SubString(Container.FolderPath,plugin)</visible>
-				</control>
-				<control type="label">
-					<posy>28</posy>
-					<width>960</width>
-					<label>$VAR[global_Info.Addon]</label>
-						<font>list</font>
-					<include>info_Sub</include>
-					<visible>SubString(Container.FolderPath,plugin)</visible>
-				</control>
 				<control type="textbox">
 					<posy>60</posy>
 					<width>960</width>
@@ -586,15 +523,6 @@
 					<aspectratio align="right">keep</aspectratio>
 					<visible>SubString(Container.FolderPath,plugin://plugin.video.the.trailers)</visible>
 				</control>
-				<control type="image" id="99299">
-					<posx>235r</posx>
-					<posy>637</posy>
-					<width>128</width>
-					<height>64</height>
-					<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
-					<aspectratio align="right">keep</aspectratio>
-					<visible>StringCompare(Control.GetLabel(99199),empty) + SubString(Container.FolderPath,plugin://plugin.video.the.trailers)</visible>
-				</control>
 				<control type="group">
 					<posx>85</posx>
 					<posy>640</posy>
@@ -609,14 +537,6 @@
 						<width>750</width>
 						<include>info_Sub</include>
 						<visible>!SubString(Container.FolderPath,plugin) + !SubString(ListItem.Icon,default)</visible>
-					</control>
-					<control type="label">
-						<posy>28</posy>
-						<label>$VAR[global_Info.Addon]</label>
-						<font>descriptionbig</font>
-						<width>750</width>
-						<include>info_Sub</include>
-						<visible>SubString(Container.FolderPath,plugin) + !SubString(ListItem.Icon,default)</visible>
 					</control>
 				</control>
 			</control>
@@ -685,15 +605,6 @@
 				<texture fallback="empty">$VAR[flag_Studio]</texture>
 				<visible>Control.IsVisible(571) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
 			</control>
-			<control type="image" id="123456789">
-				<posx>780</posx>
-				<posy>610</posy>
-				<width>128</width>
-				<height>64</height>
-				<aspectratio align="left">keep</aspectratio>
-				<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
-				<visible>StringCompare(Control.GetLabel(12345678),empty) + Control.IsVisible(571) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Title)]</visible>
-			</control>
 		</control>
 		<include>view_IconPoster</include>
 		<include>view_IconWide</include>
@@ -713,15 +624,6 @@
 				<height>64</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio]</texture>
-			</control>-->
-			<control type="image" id="999">
-				<posx>105</posx>
-				<posy>590</posy>
-				<width>128</width>
-				<height>64</height>
-				<aspectratio align="right">keep</aspectratio>
-				<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
-				<visible>StringCompare(Control.GetLabel(99),empty)</visible>
 			</control>
 			<!---strip bottom--->
 			<control type="group">
@@ -970,12 +872,6 @@
 					<height>45</height>
 					<texture fallback="empty">$VAR[flag_Studio]</texture>
 					<visible>Container.Content(tvshows) + Skin.HasSetting(tvnetworklogos.enable)</visible>
-				</control>
-				<control type="image" id="99999">
-					<width>90</width>
-					<height>45</height>
-					<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
-					<visible>StringCompare(Control.GetLabel(9999),empty) + Container.Content(tvshows) + Skin.HasSetting(tvnetworklogos.enable)</visible>
 				</control>
 			    </control>
 			</control>
