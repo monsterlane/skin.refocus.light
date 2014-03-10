@@ -577,7 +577,7 @@
 		<font>windowMenu</font>
 		<textcolor>Color1</textcolor>
 		<focusedcolor>Color5</focusedcolor>
-		<textoffsety>60</textoffsety>
+		<aligny>center</aligny>
 		<textoffsetx>35</textoffsetx>
 		<texturenofocus>-</texturenofocus>
 		<texturefocus>home/menuSelect.png</texturefocus>
