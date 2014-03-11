@@ -162,13 +162,13 @@
 					<item id="523">
 						<label>$LOCALIZE[31993]</label>
 						<label2>-</label2>
-						<onclick>ActivateWindow(10025,videodb://1/7/,return)</onclick>
+						<onclick>ActivateWindow(10025,videodb://movies/sets/,return)</onclick>
 						<visible>Skin.HasSetting(homemenu.moviesets) + !Library.HasContent(Movies)</visible>
 					</item>
 					<item id="523">
 						<label>$LOCALIZE[31993]</label>
 						<label2>-</label2>
-						<onclick>ActivateWindow(10025,videodb://1/7/,return)</onclick>
+						<onclick>ActivateWindow(10025,videodb://movies/sets/,return)</onclick>
 						<visible>!Skin.HasSetting(homemenu.moviesets) + Library.HasContent(Movies)</visible>
 					</item>-->
 				<!--movies-->

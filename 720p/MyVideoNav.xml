@@ -218,7 +218,7 @@
 			<include>transition_Info</include>
 			<include>infoDialogHide</include>
 			<visible>Control.IsVisible(523) + Control.HasFocus(523) + System.HasAddon(script.moviesets)</visible>
-			<visible>Control.IsVisible(523) + Control.HasFocus(523) + Container.Content(Movies) + [StringCompare(Container.FolderPath,videodb://1/7/) | !IsEmpty(Window(10025).Property(Content.MovieSets)) | !IsEmpty(Container(7000).ListItem.Property(IsSet))]</visible>
+			<visible>Control.IsVisible(523) + Control.HasFocus(523) + Container.Content(Movies) + [StringCompare(Container.FolderPath,videodb://movies/sets/) | !IsEmpty(Window(10025).Property(Content.MovieSets)) | !IsEmpty(Container(7000).ListItem.Property(IsSet))]</visible>
 			<control type="group">
 				<posx>220</posx>
 				<posy>362</posy>
@@ -233,7 +233,7 @@
 				<control type="group">
 					<posx>0</posx>
 					<posy>-48</posy>
-					<visible>Control.IsVisible(523) + Control.HasFocus(523) + Container.Content(Movies) + [StringCompare(Container.FolderPath,videodb://1/7/) | !IsEmpty(Window(10025).Property(Content.MovieSets)) | !IsEmpty(Container(7000).ListItem.Property(IsSet))]</visible>
+					<visible>Control.IsVisible(523) + Control.HasFocus(523) + Container.Content(Movies) + [StringCompare(Container.FolderPath,videodb://movies/sets/) | !IsEmpty(Window(10025).Property(Content.MovieSets)) | !IsEmpty(Container(7000).ListItem.Property(IsSet))]</visible>
 					<control type="label">
 						<posx>0</posx>
 						<posy>148</posy>
@@ -340,7 +340,7 @@
 					</control>
 				</control>
 				<control type="grouplist">
-					<visible>Control.IsVisible(523) + Control.HasFocus(523) + [StringCompare(Container.FolderPath,videodb://1/7/) | !IsEmpty(Window(10025).Property(Content.MovieSets)) | !IsEmpty(Container(7000).ListItem.Property(IsSet))]</visible>
+					<visible>Control.IsVisible(523) + Control.HasFocus(523) + [StringCompare(Container.FolderPath,videodb://movies/sets/) | !IsEmpty(Window(10025).Property(Content.MovieSets)) | !IsEmpty(Container(7000).ListItem.Property(IsSet))]</visible>
 					<description>Media Codec Flagging Images</description>
 					<posx>-100</posx>
 					<posy>-380</posy>
@@ -388,7 +388,7 @@
 					<orientation>horizontal</orientation>
 					<include>flag_MPAA</include>
 					<visible>!IsEmpty(Container(7000).ListItem.Property(IsSet))</visible>
-					<visible>Control.IsVisible(523) + Control.HasFocus(523) + [StringCompare(Container.FolderPath,videodb://1/7/) | !IsEmpty(Window(10025).Property(Content.MovieSets)) | !IsEmpty(Container(7000).ListItem.Property(IsSet))]</visible>
+					<visible>Control.IsVisible(523) + Control.HasFocus(523) + [StringCompare(Container.FolderPath,videodb://movies/sets/) | !IsEmpty(Window(10025).Property(Content.MovieSets)) | !IsEmpty(Container(7000).ListItem.Property(IsSet))]</visible>
 				</control>
 			</control>
 		</control>

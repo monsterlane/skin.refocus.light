@@ -221,7 +221,7 @@
 	<!--nodes-->
 		<!--movies--><value condition="StringCompare(Container.FolderPath,videodb://movies/)">$LOCALIZE[342]</value>
 		<!--tv shows--><value condition="StringCompare(Container.FolderPath,videodb://tvshows/) | IsEmpty(Container.FolderPath)">$LOCALIZE[20343]</value>
-		<!--music videos--><value condition="stringcompare(Container.FolderPath,videodb://3/)">$LOCALIZE[20389]</value>
+		<!--music videos--><value condition="stringcompare(Container.FolderPath,videodb://musicvideos/)">$LOCALIZE[20389]</value>
 	<!--movies-->
 		<value condition="SubString(Container.FolderPath,videodb://movies/) + !StringCompare(Container.FolderPath,videodb://movies/) + !Window.IsVisible(script-Actors-DialogInfo.xml)">$LOCALIZE[342] [COLOR=Color2]$INFO[Container.FolderName][/COLOR]</value>
 		<!--new--><value condition="SubString(Container.FolderPath,videodb://recentlyaddedmovies/)">$LOCALIZE[31926]</value>
