@@ -919,38 +919,6 @@
 					<selected>Skin.HasSetting(homemenu.removesystem)</selected>
 					<include>dialog_Radio</include>
 				</control>
-				<!--system info-->
-				<control type="radiobutton" id="203">
-					<label>$LOCALIZE[130]</label>
-					<width>557</width>
-					<onclick>Skin.ToggleSetting(systemmenu.info)</onclick>
-					<selected>Skin.HasSetting(systemmenu.info)</selected>
-					<include>dialog_Radio</include>
-				</control>
-				<!--file manager-->
-				<control type="radiobutton" id="204">
-					<label>$LOCALIZE[7]</label>
-					<width>557</width>
-					<onclick>Skin.ToggleSetting(systemmenu.filemanager)</onclick>
-					<selected>Skin.HasSetting(systemmenu.filemanager)</selected>
-					<include>dialog_Radio</include>
-				</control>
-				<!--home menu config-->
-				<control type="radiobutton" id="205">
-					<label>$LOCALIZE[31030]</label>
-					<width>557</width>
-					<onclick>Skin.ToggleSetting(systemmenu.home)</onclick>
-					<selected>Skin.HasSetting(systemmenu.home)</selected>
-					<include>dialog_Radio</include>
-				</control>
-				<!--exit-->
-				<control type="radiobutton" id="206">
-					<label>$LOCALIZE[13012]</label>
-					<width>557</width>
-					<onclick>Skin.ToggleSetting(systemmenu.exit)</onclick>
-					<selected>Skin.HasSetting(systemmenu.exit)</selected>
-					<include>dialog_Radio</include>
-				</control>
 			</control>
 			<!--favourites submenu-->
 			<control type="grouplist" id="200">
