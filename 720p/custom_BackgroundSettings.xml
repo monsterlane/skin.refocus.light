@@ -20,7 +20,7 @@
 		</control>
 		<control type="group">
 			<posx>19</posx>
-			<posy>75</posy>		
+			<posy>75</posy>
 			<control type="image">
 				<width>762</width>
 				<include>dialog_Separator</include>
@@ -35,7 +35,7 @@
 				<width>762</width>
 				<include>dialog_Separator</include>
 			</control>
-			<!--button area--->	
+			<!--button area--->
 			<control type="grouplist" id="100">
 				<width>225</width>
 				<height>480</height>
@@ -121,7 +121,7 @@
 				</control>
 			</control>
 
-			<!---control area------>	
+			<!---control area------>
 			<control type="group">
 				<!--global submenu-->
 				<control type="grouplist" id="200">
@@ -150,16 +150,8 @@
 						<selected>Skin.HasSetting(fanart.global)</selected>
 						<include>dialog_Radio</include>
 					</control>
-					<!--vignette home-->
-					<control type="radiobutton" id="204">
-						<width>557</width>
-						<label>$LOCALIZE[32057]</label>
-						<onclick>Skin.ToggleSetting(home.vignette)</onclick>
-						<selected>Skin.HasSetting(home.vignette)</selected>
-						<include>dialog_Radio</include>
-					</control>
 					<!--background video-->
-					<control type="radiobutton" id="205">
+					<control type="radiobutton" id="203">
 						<width>557</width>
 						<label>$LOCALIZE[31028]</label>
 						<onclick>Skin.ToggleSetting(backgroundvideo)</onclick>
@@ -167,7 +159,7 @@
 						<include>dialog_Radio</include>
 					</control>
 					<!--reset wallpapers-->
-					<control type="button" id="206">
+					<control type="button" id="204">
 						<width>557</width>
 						<label>$LOCALIZE[32058]</label>
 						<onclick>Skin.Reset(fanart.video.path)</onclick>
@@ -673,7 +665,7 @@
 						<label>$LOCALIZE[32003]</label>
 						<onclick>Skin.SetImage(fanart.weather.image)</onclick>
 						<!--<onclick>Skin.Reset(fanart.weather.path)</onclick>-->
-						<onclick>Skin.Reset(fanart.weather.singlepath)</onclick>							
+						<onclick>Skin.Reset(fanart.weather.singlepath)</onclick>
 						<label2>$INFO[Skin.String(fanart.weather.image)]</label2>
 						<selected>Skin.HasSetting(fanart.weather.singleimage)</selected>
 						<selected>!Skin.HasSetting(fanart.weather.singlepaths)</selected>
