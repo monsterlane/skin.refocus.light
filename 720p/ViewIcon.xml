@@ -28,28 +28,12 @@
 					<bordertexture border="6" width="177" height="250">frames/frame_Square-small.png</bordertexture>
 					<bordersize>6</bordersize>
 					<aspectratio>stretch</aspectratio>
-					<!--<visible>Container.Content(movies) | SubString(Container.FolderPath,plugin://plugin.video.xbmcflicks) | Container.Content(tvshows) | Container.Content(seasons)</visible>-->
 				</control>
-				<control type="group">
+				<control type="image">
 					<posx>139</posx>
 					<posy>213</posy>
-					<control type="image">
-						<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
-						<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
-						<visible>!Skin.HasSetting(watched.alternative)</visible>
-					</control>
-					<control type="image">
-						<include>overlay_Resumable</include>
-						<visible>Skin.HasSetting(watched.original)</visible>
-					</control>
-				</control>
-				<control type="group">
-					<posx>110</posx>
-					<posy>182</posy>
-					<visible>Skin.HasSetting(watched.alternative)</visible>
-					<control type="image">
-						<info>ListItem.Overlay</info>
-					</control>
+					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+					<include condition="Skin.HasSetting(watched.original)">overlay_Resumable</include>
 				</control>
 			</itemlayout>
 			<focusedlayout height="260" width="186">
@@ -61,30 +45,13 @@
 					<bordersize>6</bordersize>
 					<aspectratio>stretch</aspectratio>
 					<include>focus_ThumbPoster</include>
-					<!--<visible>Container.Content(movies) | SubString(Container.FolderPath,plugin://plugin.video.xbmcflicks) | Container.Content(tvshows) | Container.Content(seasons)</visible>-->
 				</control>
-				<control type="group">
+				<control type="image">
 					<posx>139</posx>
 					<posy>213</posy>
 					<include>focus_ThumbPoster</include>
-					<control type="image">
-						<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
-						<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
-						<visible>!Skin.HasSetting(watched.alternative)</visible>
-					</control>
-					<control type="image">
-						<include>overlay_Resumable</include>
-						<visible>Skin.HasSetting(watched.original)</visible>
-					</control>
-				</control>
-				<control type="group">
-					<posx>110</posx>
-					<posy>182</posy>
-					<visible>Skin.HasSetting(watched.alternative)</visible>
-					<include>focus_ThumbPoster</include>
-					<control type="image">
-						<info>ListItem.Overlay</info>
-					</control>
+					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+					<include condition="Skin.HasSetting(watched.original)">overlay_Resumable</include>
 				</control>
 			</focusedlayout>
 		</control>
@@ -124,27 +91,12 @@
 					<label>$VAR[global_Title]</label>
 					<width>340</width>
 					<include>info_Title</include>
-					</control>
-				<control type="group">
+				</control>
+				<control type="image">
 					<posx>336</posx>
 					<posy>184</posy>
-					<control type="image">
-						<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
-						<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
-						<visible>!Skin.HasSetting(watched.alternative)</visible>
-					</control>
-					<control type="image">
-						<include>overlay_Resumable</include>
-						<visible>Skin.HasSetting(watched.original)</visible>
-					</control>
-				</control>
-				<control type="group">
-					<posx>304</posx>
-					<posy>153</posy>
-					<visible>Skin.HasSetting(watched.alternative)</visible>
-					<control type="image">
-						<info>ListItem.Overlay</info>
-					</control>
+					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+					<include condition="Skin.HasSetting(watched.original)">overlay_Resumable</include>
 				</control>
 			</itemlayout>
 			<focusedlayout height="280" width="400">
@@ -169,27 +121,12 @@
 					<label>$VAR[global_Title]</label>
 					<width>340</width>
 					<include>info_Title</include>
-					</control>
-				<control type="group">
+				</control>
+				<control type="image">
 					<posx>336</posx>
 					<posy>184</posy>
-					<control type="image">
-						<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
-						<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
-						<visible>!Skin.HasSetting(watched.alternative)</visible>
-					</control>
-					<control type="image">
-						<include>overlay_Resumable</include>
-						<visible>Skin.HasSetting(watched.original)</visible>
-					</control>
-				</control>
-				<control type="group">
-					<posx>304</posx>
-					<posy>153</posy>
-					<visible>Skin.HasSetting(watched.alternative)</visible>
-					<control type="image">
-						<info>ListItem.Overlay</info>
-					</control>
+					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+					<include condition="Skin.HasSetting(watched.original)">overlay_Resumable</include>
 				</control>
 			</focusedlayout>
 		</control>
@@ -224,26 +161,11 @@
 					<bordersize>6</bordersize>
 					<aspectratio align="center">stretch</aspectratio>
 				</control>
-				<control type="group">
+				<control type="image">
 					<posx>96</posx>
 					<posy>147</posy>
-					<control type="image">
-						<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
-						<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
-						<visible>!Skin.HasSetting(watched.alternative)</visible>
-					</control>
-					<control type="image">
-						<include>overlay_Resumable</include>
-						<visible>Skin.HasSetting(watched.original)</visible>
-					</control>
-				</control>
-				<control type="group">
-					<posx>68</posx>
-					<posy>118</posy>
-					<visible>Skin.HasSetting(watched.alternative)</visible>
-					<control type="image">
-						<info>ListItem.Overlay</info>
-					</control>
+					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+					<include condition="Skin.HasSetting(watched.original)">overlay_Resumable</include>
 				</control>
 			</itemlayout>
 			<focusedlayout height="190" width="140">
@@ -256,28 +178,12 @@
 					<aspectratio align="center">stretch</aspectratio>
 					<include>focus_ThumbPosterInfo</include>
 				</control>
-				<control type="group">
+				<control type="image">
 					<posx>96</posx>
 					<posy>147</posy>
 					<include>focus_ThumbPosterInfo</include>
-					<control type="image">
-						<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
-						<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
-						<visible>!Skin.HasSetting(watched.alternative)</visible>
-					</control>
-					<control type="image">
-						<include>overlay_Resumable</include>
-						<visible>Skin.HasSetting(watched.original)</visible>
-					</control>
-				</control>
-				<control type="group">
-					<posx>68</posx>
-					<posy>118</posy>
-					<include>focus_ThumbPosterInfo</include>
-					<visible>Skin.HasSetting(watched.alternative)</visible>
-					<control type="image">
-						<info>ListItem.Overlay</info>
-					</control>
+					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+					<include condition="Skin.HasSetting(watched.original)">overlay_Resumable</include>
 				</control>
 			</focusedlayout>
 		</control>
@@ -370,15 +276,6 @@
 					<visible>!IsEmpty(ListItem.Plot)</visible>
 				</control>
 			</control>
-			<control type="image">
-				<posx>800</posx>
-				<posy>615</posy>
-				<width>128</width>
-				<height>32</height>
-				<texture>$INFO[ListItem.Property(Addon.StarRating)]</texture>
-				<aspectratio align="left">keep</aspectratio>
-				<visible>Control.IsVisible(574) + !IsEmpty(ListItem.Property(Addon.StarRating))</visible>
-			</control>
 			<!--container-->
 			<control type="panel" id="574">
 				<viewtype label="Thumbnails">bigicon</viewtype>
@@ -443,18 +340,9 @@
 					<width>390</width>
 					<height>238</height>
 					<texture background="true">$VAR[thumb_Landscape.Condition]</texture>
-					<bordertexture border="40">frames/frame_Square.png</bordertexture>
+					<bordertexture border="40">frames/frame_Square_clear.png</bordertexture>
 					<bordersize>22</bordersize>
 					<aspectratio align="center">scale</aspectratio>
-				</control>
-				<control type="image">
-					<posx>31</posx>
-					<posy>142</posy>
-					<width>156</width>
-					<height>64</height>
-					<texture background="true">$INFO[ListItem.Path]logo.png</texture>
-					<aspectratio align="center">keep</aspectratio>
-					<visible>Skin.HasSetting(tvshowlogos.enable) + [StringCompare(Container.FolderPath,videodb://recentlyaddedepisodes/) | SubString(Container.FolderPath,special://skin/playlists/)]</visible>
 				</control>
 				<control type="group">
 					<posx>25</posx>
@@ -474,26 +362,11 @@
 						<visible>!SubString(Container.FolderPath,plugin://)</visible>
 					</control>
 				</control>
-				<control type="group">
+				<control type="image">
 					<posx>336</posx>
 					<posy>184</posy>
-					<control type="image">
-						<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
-						<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
-						<visible>!Skin.HasSetting(watched.alternative)</visible>
-					</control>
-					<control type="image">
-						<include>overlay_Resumable</include>
-						<visible>Skin.HasSetting(watched.original)</visible>
-					</control>
-				</control>
-				<control type="group">
-					<posx>336</posx>
-					<posy>184</posy>
-					<visible>Skin.HasSetting(watched.alternative)</visible>
-					<control type="image">
-						<info>ListItem.Overlay</info>
-					</control>
+					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+					<include condition="Skin.HasSetting(watched.original)">overlay_Resumable</include>
 				</control>
 			</itemlayout>
 			<focusedlayout height="280" width="400">
@@ -502,7 +375,7 @@
 					<posy>12</posy>
 					<width>366</width>
 					<height>214</height>
-					<texture border="10">frames/frame_Square-border.png</texture>
+					<texture border="10">frames/frame_Square-border_clear_inside.png</texture>
 				</control>
 				<control type="image">
 					<width>390</width>
@@ -510,15 +383,6 @@
 					<texture background="true">$VAR[thumb_Landscape.Condition]</texture>
 					<bordersize>22</bordersize>
 					<aspectratio align="center">scale</aspectratio>
-				</control>
-				<control type="image">
-					<posx>31</posx>
-					<posy>142</posy>
-					<width>156</width>
-					<height>64</height>
-					<texture background="true">$INFO[ListItem.Path]logo.png</texture>
-					<aspectratio align="center">keep</aspectratio>
-					<visible>Skin.HasSetting(tvshowlogos.enable) + [StringCompare(Container.FolderPath,videodb://recentlyaddedepisodes/) | SubString(Container.FolderPath,special://skin/playlists/)]</visible>
 				</control>
 				<control type="group">
 					<posx>25</posx>
@@ -538,26 +402,11 @@
 						<visible>!SubString(Container.FolderPath,plugin://)</visible>
 					</control>
 				</control>
-				<control type="group">
+				<control type="image">
 					<posx>336</posx>
 					<posy>184</posy>
-					<control type="image">
-						<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
-						<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
-						<visible>!Skin.HasSetting(watched.alternative)</visible>
-					</control>
-					<control type="image">
-						<include>overlay_Resumable</include>
-						<visible>Skin.HasSetting(watched.original)</visible>
-					</control>
-				</control>
-				<control type="group">
-					<posx>336</posx>
-					<posy>184</posy>
-					<visible>Skin.HasSetting(watched.alternative)</visible>
-					<control type="image">
-						<info>ListItem.Overlay</info>
-					</control>
+					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+					<include condition="Skin.HasSetting(watched.original)">overlay_Resumable</include>
 				</control>
 			</focusedlayout>
 		</control>
