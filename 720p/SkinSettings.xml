@@ -239,21 +239,6 @@
 				<selected>Skin.HasSetting(removelogos.enable)</selected>
 				<include>button_Settings</include>
 			</control>
-
-
-			<!--studio and network logos
-			<control type="radiobutton" id="617">
-				<label>$LOCALIZE[32101]</label>
-				<onclick>Skin.ToggleSetting(studionetwork.enable)</onclick>
-				<selected>!Skin.HasSetting(studionetwork.enable)</selected>
-				<include>button_Settings</include>
-			</control>
-			<control type="radiobutton" id="618">
-				<label>$LOCALIZE[32102]</label>
-				<onclick>Skin.ToggleSetting(studionetworkosd.enable)</onclick>
-				<selected>!Skin.HasSetting(studionetworkosd.enable)</selected>
-				<include>button_Settings</include>-->
-
 			<!-- artist logos -->
 			<control type="radiobutton" id="621">
 				<label>$LOCALIZE[31995]</label>
@@ -446,23 +431,6 @@
 				<visible>System.HasAddon(script.artistslideshow) + Skin.HasSetting(background-slideshow)</visible>
 				<include>button_Settings</include>
 			</control>
-			<!--tvtunes-->
-			<control type="radiobutton" id="805">
-				<label>$LOCALIZE[32009]</label>
-				<onclick>Skin.ToggleSetting(tvtunes.addon)</onclick>
-				<selected>Skin.HasSetting(tvtunes.addon)</selected>
-				<enable>System.HasAddon(script.tvtunes)</enable>
-				<visible>System.HasAddon(script.tvtunes)</visible>
-				<include>button_Settings</include>
-			</control>
-			<control type="button" id="806">
-				<label>- $LOCALIZE[32010]</label>
-				<onclick>XBMC.RunScript(script.tvtunes)</onclick>
-				<include>button_Settings</include>
-				<visible>Skin.HasSetting(tvtunes.addon)</visible>
-				<enable>System.HasAddon(script.tvtunes)</enable>
-			</control>
-
 		</control>
 <!---OTHER------>
 		<control type="grouplist" id="900">
@@ -485,36 +453,29 @@
 				<selected>Skin.String(backspacehome,return)</selected>
 				<include>button_Settings</include>
 			</control>
-			<!--smooth scrolling-->
-			<control type="radiobutton" id="902">
-				<label>$LOCALIZE[31060]</label>
-				<onclick>Skin.ToggleSetting(smoothscrolling.enable)</onclick>
-				<selected>Skin.HasSetting(smoothscrolling.enable)</selected>
-				<include>button_Settings</include>
-			</control>
 			<!--keyboard-->
-			<control type="radiobutton" id="903">
+			<control type="radiobutton" id="902">
 				<label>$LOCALIZE[31035]</label>
 				<onclick>Skin.ToggleSetting(keyboard.enable)</onclick>
 				<selected>!Skin.HasSetting(keyboard.enable)</selected>
 				<include>button_Settings</include>
 			</control>
 			<!--kiosk mode-->
-			<control type="radiobutton" id="904">
+			<control type="radiobutton" id="903">
 				<label>$LOCALIZE[31964]</label>
 				<onclick>Skin.ToggleSetting(global.kiosk)</onclick>
 				<selected>Skin.HasSetting(global.kiosk)</selected>
 				<include>button_Settings</include>
 			</control>
 			<!-- developer mode -->
-			<control type="radiobutton" id="905">
+			<control type="radiobutton" id="904">
 				<label>Enable Developer Mode [Warning! can be unstable]</label>
 				<onclick>Skin.ToggleSetting(devel)</onclick>
 				<selected>Skin.HasSetting(devel)</selected>
 				<include>button_Settings</include>
 			</control>
 			<!-- Startup Splash Screen -->
-			<control type="radiobutton" id="907">
+			<control type="radiobutton" id="905">
 				<label>Remove reFocus-Logo Splash screen on startup</label>
 				<onclick>Skin.ToggleSetting(startup.splash)</onclick>
 				<selected>!Skin.HasSetting(startup.splash)</selected>
