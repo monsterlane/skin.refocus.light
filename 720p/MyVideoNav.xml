@@ -209,9 +209,6 @@
 		<include>info_MusicList</include>
 		<include>info_AddonList</include>
 
-<!---BIG LIST------>
-		<include>view_BigList</include>
-
 <!-- MOVIE SETS VIEW (Multiple Movie) -->
 		<control type="group">
 			<include>toggle_Menu</include>
