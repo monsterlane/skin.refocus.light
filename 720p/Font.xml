@@ -9,6 +9,12 @@
 			<size>26</size>
 		</font>
 		<font>
+			<name>ratingsmall</name>
+			<filename>Ubuntu-R.ttf</filename>
+			<size>22</size>
+			<style>bold</style>
+		</font>
+		<font>
 			<name>osd_rating</name>
 			<filename>Regular.ttf</filename>
 			<style>bold</style>
