@@ -209,9 +209,6 @@
 		<include>info_MusicList</include>
 		<include>info_AddonList</include>
 
-<!---BIG LIST------>
-		<include>view_BigList</include>
-
 <!-- MOVIE SETS VIEW (Multiple Movie) -->
 		<control type="group">
 			<include>toggle_Menu</include>
@@ -569,12 +566,6 @@
 					<include>info_Sub</include>
 					<visible>Container.Content(movies)</visible>
 				</control>
-				<control type="label">
-					<width>435</width>
-					<label>$VAR[tvshow_Info.NextAired]</label>
-					<include>info_Sub</include>
-					<visible>Container.Content(tvshows) + !IsEmpty(ListItem.TVShowTitle)</visible>
-				</control>
 				<control type="image">
 					<width>128</width>
 					<height>48</height>
@@ -660,99 +651,11 @@
 							<width>750</width>
 							<include>info_Sub</include>
 						</control>
-						<control type="label">
-							<posy>47</posy>
-							<label>$VAR[tvshow_Info.NextAired]</label>
-							<width>750</width>
-							<font>listBig</font>
-							<include>info_Sub</include>
-						</control>
 					</control>
 				</control>
 			</control>
 		</control>
 		<include>view_Gallery</include>
-		<!---fullscreen/expanded---
-		<control type="group">
-			<posy>475</posy>
-			<include>transition_Container</include>
-			<include>infoDialogHide</include>
-			<animation effect="slide" start="0,600" end="0,0" easing="Out" tween="Quadratic" time="350">Visible</animation>
-			<animation effect="slide" start="0,0" end="0,600" easing="Out" tween="Quadratic" time="350">Hidden</animation>
-			<visible>[[Control.IsVisible(53) + Control.HasFocus(8000)] | Control.IsVisible(531)] + !ControlGroup(6000).HasFocus()</visible>
-			<control type="image">
-				<width>1280</width>
-				<height>245</height>
-				<texture border="0,0,0,15">osd/fullscreenInfo.png</texture>
-			</control>
-			<control type="group">
-				<posx>20</posx>
-				<posy>35</posy>
-				<control type="label">
-					<label>$VAR[global_Title]</label>
-					<font>osdTitle</font>
-					<aligny>top</aligny>
-					<width>1100</width>
-					<textcolor>Color4</textcolor>
-					<width>screen_Width</width>
-				</control>
-				<control type="image">
-					<posx>1190</posx>
-					<posy>4</posy>
-					<width>48</width>
-					<height>48</height>
-					<texture>$INFO[ListItem.VideoResolution,flags/hd/fo-,.png]</texture>
-					<colordiffuse>Color4</colordiffuse>
-					<aspectratio align="right">keep</aspectratio>
-				</control>
-				<control type="image">
-					<posx>1110</posx>
-					<posy>43</posy>
-					<width>128</width>
-					<height>22</height>
-					<texture>$INFO[ListItem.StarRating,rating/fo-,]</texture>
-					<colordiffuse>Color4</colordiffuse>
-					<aspectratio align="right">keep</aspectratio>
-					<visible>!SubString(ListItem.Icon,default)</visible>
-				</control>
-				<control type="label">
-					<posy>40</posy>
-					<width>1100</width>
-					<label>$INFO[ListItem.Duration,, $LOCALIZE[31100]]$INFO[ListItem.Genre, • ]</label>
-					<font>smallerCaps</font>
-					<align>left</align>
-					<textcolor>Color4</textcolor>
-					<visible>Container.Content(movies)</visible>
-				</control>
-				<control type="label">
-					<posy>40</posy>
-					<width>1100</width>
-					<label>$VAR[global_Info]</label>
-					<font>smallerCaps</font>
-					<align>left</align>
-					<textcolor>Color4</textcolor>
-					<visible>Container.Content(tvshows) + !SubString(ListItem.Icon,default)</visible>
-				</control>
-				<control type="image">
-					<posx>-250</posx>
-					<posy>75</posy>
-					<width>1530</width>
-					<height>1</height>
-					<texture>views/separatorFaded.png</texture>
-					<colordiffuse>Color4</colordiffuse>
-					<visible>!IsEmpty(ListItem.Title)</visible>
-				</control>
-				<control type="textbox" id="4">
-					<posy>80</posy>
-					<width>1240</width>
-					<height>115</height>
-					<label>$VAR[global_Plot.Condition]</label>
-					<textcolor>Color4</textcolor>
-					<include>description_Small</include>
-					<visible>!SubString(ListItem.Icon,default)</visible>
-				</control>
-			</control>
-		</control>     ---->
 		<!---fullscreen/expanded--->
 		<control type="group">
 			<posy>500</posy>
@@ -832,7 +735,7 @@
 					<texture>flags/video/HD/nf-HD.png</texture>
 					<visible>IntegerGreaterThan(ListItem.VideoResolution,540)</visible>
 				</control>
-			<!--<control type="group">
+				<!-- <control type="group">
 				    <align>right</align>
 				    <posx>950</posx>
 					<posy>5</posy>
@@ -841,7 +744,7 @@
 					    <height>39</height>
 					    <texture>$INFO[Listitem.VideoResolution,flags/video/resolution/,.png]</texture>
 				    </control>
-			    </control>	-->
+			    </control> -->
 			    <control type="group">
 				    <posx>1047</posx>
 				    <posy>146</posy>
