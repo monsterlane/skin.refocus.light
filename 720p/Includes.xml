@@ -1240,7 +1240,7 @@
 	</include>
 	<include name="windowTitle_Programs">
 		<control type="label">
-			<label>[LOWERCASE]$LOCALIZE[0][/LOWERCASE]</label>
+			<label>$LOCALIZE[0]</label>
 			<include>windowTitle</include>
 		</control>
 	</include>
