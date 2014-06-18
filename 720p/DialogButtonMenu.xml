@@ -36,7 +36,7 @@
 				<height>200</height>
 				<onup>500</onup>
 				<ondown>500</ondown>
-				<onright>402</onright>
+				<onright>Dialog.Close(ShutdownMenu)</onright>
 				<scrolltime>150</scrolltime>
 				<itemgap>0</itemgap>
 				<!--logoff-->
