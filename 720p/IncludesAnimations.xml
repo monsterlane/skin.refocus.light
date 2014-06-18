@@ -49,16 +49,10 @@
 		<animation type="focus">
 			<effect type="zoom" tween="Quadratic" start="100" end="140" center="130,130" easing="Out" time="200"/>
 		</animation>
-		<animation type="unfocus">
-			<effect type="zoom" tween="Quadratic" start="140" end="100" center="130,130" easing="Out" time="200" />
-		</animation>
 	</include>
-        <include name="focus_FanartPortrait">
+	<include name="focus_FanartPortrait">
 		<animation type="focus">
 			<effect type="zoom" tween="Quadratic" start="100" end="140" center="90,170" easing="Out" time="200"/>
-		</animation>
-		<animation type="unfocus">
-			<effect type="zoom" tween="Quadratic" start="140" end="100" center="90,170" easing="Out" time="200" />
 		</animation>
 	</include>
 	<include name="focus_SlideLoginUser">

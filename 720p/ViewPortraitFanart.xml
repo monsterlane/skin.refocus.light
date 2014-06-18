@@ -8,53 +8,55 @@
 			<include>infoDialogHide</include>
 			<visible>[Control.IsVisible(550) | Control.IsVisible(551)] + Container.Content(movies)</visible>
 			<!---flags--->
-            <posy>640</posy>
+            <posy>650</posy>
 			<control type="image" id="99199">
-				<posx>10</posx>
+				<posx>20</posx>
                 <posy>-15</posy>
 				<width>128</width>
 				<height>64</height>
 				<aspectratio align="left">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio]</texture>
 			</control>
-            <control type="image">
-                <posx>132</posx>
-				<width>128</width>
-				<height>32</height>
-				<info>ListItem.StarRating</info>
-				<aspectratio align="center">keep</aspectratio>
+			<control type="grouplist">
+				<posx>142</posx>
+				<orientation>horizontal</orientation>
+					<control type="image">
+						<width>33</width>
+						<height>32</height>
+						<texture>rating/star_rating.png</texture>
+						<aspectratio align="center">keep</aspectratio>
+						<visible>!IsEmpty(ListItem.Rating)</visible>
+					</control>
+					<control type="label">
+						<width>58</width>
+						<height>32</height>
+						<font>rating</font>
+						<label>$INFO[ListItem.Rating]</label>
+						<textcolor>Color3</textcolor>
+					</control>
 			</control>
 			<control type="image">
-				<posx>1125</posx>
-				<posy>-10</posy>
-				<width>55</width>
-				<height>55</height>
+				<posx>1084</posx>
+				<width>106</width>
+				<height>34</height>
 				<aspectratio align="center">keep</aspectratio>
-				<texture>flags/video/HD/nf-HD.png</texture>
-				<visible>IntegerGreaterThan(ListItem.VideoResolution,540)</visible>
+				<texture>$INFO[Listitem.VideoResolution,flags/video/resolution/,.png]</texture>
+				<visible>!IsEmpty(Listitem.VideoResolution)</visible>
 			</control>
 			<control type="image">
-                <posx>1220</posx>
+                <posx>1207</posx>
 				<width>53</width>
 				<height>34</height>
 				<aspectratio align="center">keep</aspectratio>
 				<texture>$INFO[Listitem.AudioChannels,flags/audio/,.png]</texture>
 				<visible>!IsEmpty(Listitem.AudioChannels)</visible>
 			</control>
-			<!-- logo -->
-			<control type="image">
-				<posx>20</posx>
-				<posy>-600</posy>
-				<width>250</width>
-				<height>97</height>
-				<aspectratio align="center">keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Path]logo.png</texture>
-			</control>
 			<!---info--->
 			<control type="group">
 				<visible>!Container.Content(addons)</visible>
 				<control type="label">
 				<posx>270</posx>
+				<posy>-10</posy>
 				<width>730</width>
 					<label>$VAR[global_Title]</label>
 					<font>titleSpecial</font>
@@ -62,7 +64,7 @@
                     <include>info_Title</include>
 				</control>
 				<control type="label">
-					<posy>39</posy>
+					<posy>29</posy>
 					<width>1280</width>
 					<label>$VAR[global_Info]</label>
 					<font>titleSmallest</font>
@@ -75,20 +77,22 @@
 	</include>
     <!---PORTRAIT--->
     <include name="view_PortraitFanart">
-		<control type="wraplist" id="551">
+		<control type="fixedlist" id="551">
 			<viewtype label="WideSlide">biginfo</viewtype>
 			<posx>-150</posx>
 			<posy>390</posy>
 			<width>2200</width>
 			<height>330</height>
-			<onleft>521</onleft>
-			<onright>521</onright>
+			<onleft>551</onleft>
+			<onright>551</onright>
 			<onup>6000</onup>
 			<ondown>72</ondown>
 			<focusposition>5</focusposition>
 			<pagecontrol>72</pagecontrol>
-			<scrolltime tween="Cubic" easing="Out">400</scrolltime>
-			<preloaditems>2</preloaditems>
+			<!--  -->
+			<scrolltime tween="Cubic" easing="Out">200</scrolltime>
+			<!--  -->
+			<!-- <preloaditems>2</preloaditems> -->
 			<orientation>horizontal</orientation>
 			<include>transition_Container</include>
 			<include>infoDialogHide</include>
@@ -111,31 +115,17 @@
 				<control type="image">
 					<width>180</width>
 					<height>240</height>
-					<texture background="true">$VAR[thumb_Portrait.Condition]</texture>
+					<!-- <texture background="true">$VAR[thumb_Portrait.Condition]</texture> -->
+					<texture background="true">$INFO[ListItem.Thumb]</texture>
 					<bordertexture border="31">frames/frame_Square.png</bordertexture>
                     <aspectratio align="center">stretch</aspectratio>
 					<bordersize>22</bordersize>
 				</control>
-				<control type="group">
+				<control type="image">
 					<posx>126</posx>
 					<posy>186</posy>
-					<control type="image">
-						<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
-						<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
-						<visible>!Skin.HasSetting(watched.alternative)</visible>
-					</control>
-					<control type="image">
-						<include>overlay_Resumable</include>
-						<visible>Skin.HasSetting(watched.original)</visible>
-					</control>
-				</control>
-				<control type="group">
-					<posx>126</posx>
-					<posy>186</posy>
-					<visible>Skin.HasSetting(watched.alternative)</visible>
-					<control type="image">
-						<info>ListItem.Overlay</info>
-					</control>
+					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+					<include condition="Skin.HasSetting(watched.original)">overlay_Resumable</include>
 				</control>
 			</control>
 		</itemlayout>
@@ -145,31 +135,17 @@
 				<control type="image">
 					<width>180</width>
 					<height>240</height>
-					<texture background="true">$VAR[thumb_Portrait.Condition]</texture>
+					<!-- <texture background="true">$VAR[thumb_Portrait.Condition]</texture> -->
+					<texture background="true">$INFO[ListItem.Thumb]</texture>
 					<bordertexture border="27">frames/frame_Square.png</bordertexture>
                     <aspectratio align="center">stretch</aspectratio>
 					<bordersize>22</bordersize>
 				</control>
-				<control type="group">
+				<control type="image">
 					<posx>126</posx>
 					<posy>186</posy>
-					<control type="image">
-						<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
-						<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
-						<visible>!Skin.HasSetting(watched.alternative)</visible>
-					</control>
-					<control type="image">
-						<include>overlay_Resumable</include>
-						<visible>Skin.HasSetting(watched.original)</visible>
-					</control>
-				</control>
-				<control type="group">
-					<posx>126</posx>
-					<posy>186</posy>
-					<visible>Skin.HasSetting(watched.alternative)</visible>
-					<control type="image">
-						<info>ListItem.Overlay</info>
-					</control>
+					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+					<include condition="Skin.HasSetting(watched.original)">overlay_Resumable</include>
 				</control>
 			</control>
 		</focusedlayout>
