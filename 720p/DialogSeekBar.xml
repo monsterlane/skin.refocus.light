@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <window id="115">
 	<defaultcontrol>23</defaultcontrol>
-	<visible>!Player.HasAudio + [Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)] + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.Caching | Window.IsActive(fullscreeninfo)] + ![Window.IsActive(infodialog) | Window.IsActive(SubtitleSearch)]</visible>
+	<visible>![Window.IsActive(142)] + !Player.HasAudio + [Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)] + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.Caching] + ![Window.IsActive(infodialog) | Window.IsActive(SubtitleSearch)]</visible>
 	<controls>
 		<include>clock</include>
 		
@@ -9,7 +9,7 @@
 <!-- reFocus light OSD -->
 		<!-- clearart -->
 		<control type="group">
-			<visible>player.paused + !Window.IsActive(fullscreeninfo)</visible>
+			<visible>player.paused</visible>
 				<control type ="image" id="1">
 					<posx>923</posx>
 					<posy>477</posy>
@@ -66,6 +66,9 @@
 
 		<control type="group" id="213">
 			<posy>677</posy>
+			<animation type="WindowOpen">
+				<effect type="slide" start="0,64" end="0,0" tween="Cubic" center="auto" easing="Out" time="250" />
+			</animation>
 			<animation type="WindowClose">
 				<effect type="slide" start="0,0" end="0,64" tween="Cubic" center="auto" easing="Out" time="250" />
 			</animation>
@@ -75,12 +78,12 @@
 				<texture>osd/infoOverlay.png</texture>
 			</control>
 			<control type="group">
-				<posx>160</posx>
+				<posx>255</posx>
 				<posy>3</posy>
 				<!--playback progress-->
 				<control type="progress" id="1">
 					<posy>10</posy>
-					<width>920</width>
+					<width>770</width>
 					<height>21</height>
 					<texturebg border="10">dialogs/progressBackground.png</texturebg>
 					<info>Player.Progress</info>
@@ -91,14 +94,14 @@
 				<control type="label" id="1">
 				    <font>description</font>
 		            <textcolor>Color2</textcolor>
-					<posx>145</posx>
+					<posx>240</posx>
 					<label>$VAR[player_Status.Condition]</label>
 					<include>seekbar_Label</include>
 				</control>
 				<control type="label" id="22">
 				    <font>description</font>
 		            <textcolor>Color2</textcolor>
-					<posx>1095</posx>
+					<posx>1040</posx>
 					<width>250</width>
 					<align>left</align>
 					<label>[B]$INFO[Player.Time][/B] / $INFO[Player.Duration]</label>

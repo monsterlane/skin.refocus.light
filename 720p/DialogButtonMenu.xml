@@ -10,8 +10,7 @@
 		<control type="image">
 			<include>screen_Dimensions</include>
 			<texture background="true">overlays/vignette.png</texture>
-			<animation effect="fade" time="1000" delay="700">WindowOpen</animation>
-			<animation effect="fade" time="500">WindowClose</animation>
+			<animation effect="fade" time="1000" delay="500">WindowOpen</animation>
 		</control>
 		<control type="group">
 			<posx>460</posx>
@@ -37,7 +36,7 @@
 				<height>200</height>
 				<onup>500</onup>
 				<ondown>500</ondown>
-				<onright>Dialog.Close(ShutdownMenu)</onright>
+				<onright>402</onright>
 				<scrolltime>150</scrolltime>
 				<itemgap>0</itemgap>
 				<!--logoff-->

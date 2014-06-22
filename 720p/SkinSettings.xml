@@ -239,6 +239,24 @@
 				<selected>Skin.HasSetting(removelogos.enable)</selected>
 				<include>button_Settings</include>
 			</control>
+<<<<<<< HEAD
+=======
+
+
+			<!--studio and network logos
+			<control type="radiobutton" id="617">
+				<label>$LOCALIZE[32101]</label>
+				<onclick>Skin.ToggleSetting(studionetwork.enable)</onclick>
+				<selected>!Skin.HasSetting(studionetwork.enable)</selected>
+				<include>button_Settings</include>
+			</control>
+			<control type="radiobutton" id="618">
+				<label>$LOCALIZE[32102]</label>
+				<onclick>Skin.ToggleSetting(studionetworkosd.enable)</onclick>
+				<selected>!Skin.HasSetting(studionetworkosd.enable)</selected>
+				<include>button_Settings</include>-->
+
+>>>>>>> origin/master
 			<!-- artist logos -->
 			<control type="radiobutton" id="621">
 				<label>$LOCALIZE[31995]</label>
@@ -475,7 +493,11 @@
 				<include>button_Settings</include>
 			</control>
 			<!-- Startup Splash Screen -->
+<<<<<<< HEAD
 			<control type="radiobutton" id="905">
+=======
+			<control type="radiobutton" id="907">
+>>>>>>> origin/master
 				<label>Remove reFocus-Logo Splash screen on startup</label>
 				<onclick>Skin.ToggleSetting(startup.splash)</onclick>
 				<selected>!Skin.HasSetting(startup.splash)</selected>

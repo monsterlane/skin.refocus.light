@@ -102,6 +102,20 @@
 		<value condition="Container.Content(movies) + !IsEmpty(ListItem.Property(ReleaseDate))">$INFO[ListItem.Property(ReleaseDate)]</value>
 		<value>$INFO[ListItem.Year,, • ]$INFO[ListItem.Duration,, $LOCALIZE[31100]]</value>
 	</variable>
+<<<<<<< HEAD
+=======
+	<variable name="tvshow_Info.NextAired">
+		<!--nextaired--><value condition="Container.Content(tvshows) + !IsEmpty(Window(Home).Property(NextAired.Label)) + !IsEmpty(Window(Home).Property(NextAired.NextDate))">$INFO[Window(Home).Property(NextAired.NextDate),$LOCALIZE[31076] ]</value>
+		<!--canceled tv show--><value condition="Container.Content(tvshows) + !IsEmpty(Window(Home).Property(NextAired.Label)) + IsEmpty(Window(Home).Property(NextAired.NextDate)) + StringCompare(Window(Home).Property(NextAired.Status),canceled/ended)">$INFO[Window(Home).Property(NextAired.Status)]</value>
+		<!--tv shows--><value condition="Container.Content(tvshows) + !IsEmpty(Window(Home).Property(NextAired.Label)) + IsEmpty(Window(Home).Property(NextAired.NextDate)) + !StringCompare(Window(Home).Property(NextAired.Status),canceled/ended)">$INFO[Window(Home).Property(NextAired.LatestDate),$LOCALIZE[31075] ]</value>
+	</variable>
+
+	<variable name="tvshow_Info.ShowStatus">
+        <value condition="!IsEmpty(Window(Home).Property(NextAired.Label))">$INFO[Window(Home).Property(NextAired.Status)]</value>
+        <value>$LOCALIZE[32022]</value>
+    	</variable>
+
+>>>>>>> origin/master
 	<variable name="playlist_Title">
 		<value condition="!IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.Title]</value>
 		<value>$INFO[ListItem.Label]</value>
@@ -124,10 +138,10 @@
     	<value>-</value>
     </variable>
 	<variable name="thumb_Landscape.Condition">
-		<!-- <value condition="!IsEmpty(ListItem.Art(fanart)) + ![Container.Content(episodes) | Container.Content(musicvideos)]">$INFO[ListItem.Art(fanart)]</value>
+		<value condition="!IsEmpty(ListItem.Art(fanart)) + ![Container.Content(episodes) | Container.Content(musicvideos)]">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="IsEmpty(ListItem.Art(fanart)) + IsEmpty(ListItem.Thumb) + Container.Content(movies)">thumbs/movie_landscape.jpg</value>
 		<value condition="IsEmpty(ListItem.Art(fanart)) + IsEmpty(ListItem.Thumb) + Container.Content(tvshows)">thumbs/tvshow_landscape.jpg</value>
-		<value condition="IsEmpty(ListItem.Art(fanart)) + IsEmpty(ListItem.Thumb) + Container.Content(artists)">thumbs/artist_landscape.png</value> -->
+		<value condition="IsEmpty(ListItem.Art(fanart)) + IsEmpty(ListItem.Thumb) + Container.Content(artists)">thumbs/artist_landscape.png</value>
 		<value condition="Container.Content(musicvideos) + IsEmpty(ListItem.Thumb)">thumbs/music_landscape.jpg</value>
 		<value condition="Container.Content(episodes) + IsEmpty(ListItem.Thumb)">thumbs/tvshow_landscape.jpg</value>
 		<value condition="Window.IsActive(pictures) + IsEmpty(ListItem.Thumb)">thumbs/picture_landscape.jpg</value>
@@ -137,9 +151,12 @@
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="view_Landscape.Thumb">
-		<value condition="Container.Content(episodes)">$INFO[ListItem.Art(thumb)]</value>
-		<value condition="IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.Art(fanart)]</value>
-		<value>$INFO[ListItem.Art(landscape)]</value>
+		<value condition="Container.Content(movies)">$INFO[ListItem.Path,,landscape.jpg]</value>
+		<value condition="Container.Content(movies)">$INFO[ListItem.Path,,extrathumbs/thumb2.jpg]</value>
+		<value condition="Container.Content(seasons)">$INFO[ListItem.Path]$INFO[ListItem.Season,season,-landscape.jpg]</value>
+		<value condition="Container.Content(episodes)">$INFO[ListItem.Icon]</value>
+		<value condition="Container.Content(tvshows)">$INFO[ListItem.Path,,landscape.jpg]</value>
+		<value>$INFO[ListItem.Art(fanart)]</value>
 	</variable>
 	<variable name="thumb_Portrait.Condition">
 		<value condition="StringCompare(Container.FolderPath,plugin://plugin.video.the.trailers/)">$INFO[ListItem.Icon]</value>
@@ -147,6 +164,7 @@
 		<value condition="IsEmpty(ListItem.Thumb) + [Container.Content(tvshows) | Container.Content(seasons)]">thumbs/tvshow_portrait.jpg</value>
 		<value condition="IsEmpty(ListItem.Thumb) + Container.Content(actors)">thumbs/actor_portrait.jpg</value>
 		<value condition="!IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
+		<value>$INFO[ListItem.Art(poster)]</value>
 	</variable>
 	<variable name="thumb_Portrait.Wide">
 		<value condition="IsEmpty(ListItem.Title) + Container.Content(movies)">thumbs/movie_landscape.jpg</value>
@@ -207,13 +225,22 @@
 		<!--tv shows--><value condition="StringCompare(Container.FolderPath,videodb://tvshows/) | IsEmpty(Container.FolderPath)">$LOCALIZE[20343]</value>
 		<!--music videos--><value condition="stringcompare(Container.FolderPath,videodb://musicvideos/)">$LOCALIZE[20389]</value>
 	<!--movies-->
+<<<<<<< HEAD
 		<value condition="SubString(Container.FolderPath,videodb://movies/) + !StringCompare(Container.FolderPath,videodb://movies/) + !Window.IsVisible(script-Actors-DialogInfo.xml)">$LOCALIZE[342] [COLOR=Color2]$INFO[Container.FolderName][/COLOR]</value>
 		<!--new--><value condition="SubString(Container.FolderPath,videodb://recentlyaddedmovies/)">$LOCALIZE[31926]</value>
+=======
+		<value condition="SubString(Container.FolderPath,videodb://1/) + !StringCompare(Container.FolderPath,videodb://1/) + !Window.IsVisible(script-Actors-DialogInfo.xml)">$LOCALIZE[342] [COLOR=Color2]$INFO[Container.FolderName][/COLOR]</value>
+		<!--new--><value condition="SubString(Container.FolderPath,videodb://4/)">$LOCALIZE[31926]</value>
+>>>>>>> origin/master
 		<!--movies unwatched--><value condition="SubString(Container.FolderPath,special://skin/playlists/Unwatched Movies.xsp)">$LOCALIZE[342] [COLOR=Color2]$LOCALIZE[16101][/COLOR]</value>
 		<!--movies in progress--><value condition="SubString(Container.FolderPath,special://skin/playlists/Movies In Progress.xsp)">$LOCALIZE[342] [COLOR=Color2]$LOCALIZE[575][/COLOR]</value>
 	<!--tvshows-->
 		<value condition="Container.Content(tvshows) + SubString(Container.FolderPath,videodb)">$LOCALIZE[20343] [COLOR=Color2]$INFO[Container.FolderName][/COLOR]</value>
+<<<<<<< HEAD
 		<value condition="SubString(Container.FolderPath,videodb://tvshows/) + !Container.Content(episodes) + !Window.IsVisible(script-Actors-DialogInfo.xml)">$LOCALIZE[20343] [COLOR=Color2]$INFO[Container.FolderName][/COLOR]</value>
+=======
+		<value condition="SubString(Container.FolderPath,videodb://2/) + !Container.Content(episodes) + !Window.IsVisible(script-Actors-DialogInfo.xml)">$LOCALIZE[20343] [COLOR=Color2]$INFO[Container.FolderName][/COLOR]</value>
+>>>>>>> origin/master
 	<!--seasons-->
 		<!--linked movie--><value condition="Container.Content(seasons) + IsEmpty(ListItem.Property(UnWatchedEpisodes)) + !SubString(ListItem.Icon,default)">$LOCALIZE[31091]</value>
 		<value condition="Container.Content(seasons) + !IsEmpty(Container().ListItem(0).TVShowTitle)">$INFO[ListItem.TVShowTitle] [COLOR=Color2]$LOCALIZE[33054][/COLOR]</value>
@@ -236,7 +263,11 @@
 	</variable>
 	<variable name="window_Title.Music">
 		<!--musicdb-->
+<<<<<<< HEAD
 		<value condition="![SubString(Container.FolderPath,musicdb://recentlyaddedmusicvideos/) | SubString(Container.FolderPath,musicdb://recentlyplayedalbums/) | Window.IsVisible(script-Actors-DialogInfo.xml)]">$LOCALIZE[2] [COLOR=Color2]$INFO[Container.FolderName][/COLOR]</value>
+=======
+		<value condition="![SubString(Container.FolderPath,musicdb://6/) | SubString(Container.FolderPath,musicdb://7/) | Window.IsVisible(script-Actors-DialogInfo.xml)]">$LOCALIZE[2] [COLOR=Color2]$INFO[Container.FolderName][/COLOR]</value>
+>>>>>>> origin/master
 		<!--new albums-->
 		<value condition="SubString(Container.FolderPath,musicdb://recentlyaddedmusicvideos/)">$LOCALIZE[31932]</value>
 		<!--recently played albums-->
@@ -340,7 +371,6 @@
 		<value condition="Player.DisplayAfterSeek + ![Player.Forwarding | Player.Rewinding]">$LOCALIZE[773] $INFO[Player.SeekOffset]</value>
 		<!--buffering--><value condition="[Player.Paused + Player.Caching] + !Player.Seeking">$LOCALIZE[15107] $INFO[Player.CacheLevel]%</value>
 		<!--paused--><value condition="[Player.Paused + !Player.Caching] + !Player.Seeking + !Player.DisplayAfterSeek">$LOCALIZE[112]</value>
-		<!--playing--><value condition="Player.Playing">Playing</value>
 		<!--fwd2--><value condition="Player.Forwarding2x">$LOCALIZE[31041]</value>
 		<!--fwd4--><value condition="Player.Forwarding4x">$LOCALIZE[31042]</value>
 		<!--fwd8--><value condition="Player.Forwarding8x">$LOCALIZE[31043]</value>

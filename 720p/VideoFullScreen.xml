@@ -2,6 +2,12 @@
 <window id="2005">
 	<defaultcontrol>-</defaultcontrol>
 	<controls>
+		<control type="image" id="1">
+			<include>screen_Dimensions</include>
+			<texture border="16">overlays/vignette.png</texture>
+			<visible>Window.IsActive(infodialog)</visible>
+			<include>fadeinout</include>
+		</control>
 		<!--regular stream info-->
 		<control type="group" id="0">
 			<posx>5</posx>

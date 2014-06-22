@@ -7,6 +7,34 @@
 			<include>transition_Info</include>
 			<include>infoDialogHide</include>
 			<visible>[Control.IsVisible(550) | Control.IsVisible(551)] + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+			<!---flags--->
+			<!--<control type="image" id="99199">
+				<posx>40</posx>
+				<posy>640</posy>
+				<width>128</width>
+				<height>64</height>
+				<aspectratio align="right">keep</aspectratio>
+				<texture fallback="empty">$VAR[flag_Studio]</texture>
+			</control>
+			<control type="image" id="99299">
+				<posx>40</posx>
+				<posy>640</posy>
+				<width>128</width>
+				<height>64</height>
+				<aspectratio align="right">keep</aspectratio>
+				<texture fallback="empty">$VAR[flag_Studio_alt]</texture>
+				<visible>StringCompare(Control.GetLabel(99199),empty)</visible>
+			</control>
+			<include>flags_Slide-media</include>-->
+			<!-- logo -->
+			<control type="image">
+				<posx>20</posx>
+				<posy>20</posy>
+				<width>250</width>
+				<height>97</height>
+				<aspectratio align="center">keep</aspectratio>
+				<texture background="true">$INFO[ListItem.Path]logo.png</texture>
+			</control>
 			<!---info--->	
 			<control type="group">
 				<visible>!Container.Content(addons)</visible>
@@ -45,8 +73,8 @@
 			<ondown>72</ondown>
 			<focusposition>2</focusposition>
 			<pagecontrol>72</pagecontrol>
-			<!-- <scrolltime tween="Cubic" easing="Out">400</scrolltime> -->
-			<preloaditems>0</preloaditems>
+			<scrolltime tween="Cubic" easing="Out">400</scrolltime>
+			<preloaditems>2</preloaditems>
 			<orientation>horizontal</orientation>
 			<include>transition_Container</include>
 			<include>infoDialogHide</include>
@@ -62,17 +90,17 @@
 			<include>fadeinout</include>
 			<visible>Control.IsVisible(550) + ControlGroup(6000).HasFocus()</visible>
 		</control>
-		<control type="image">
-			<width>1280</width>
-			<height>284</height>
-			<posy>466</posy>
-			<texture>views/fanart_bg_overlay.png</texture>
-			<visible>[Control.IsVisible(550) | Control.IsVisible(551)] + !Window.IsActive(2003)</visible>
-		</control>
     </include>
 	<include name="LandscapeVideo">
 		<itemlayout width="285" height="220">
 			<control type="group">
+				<!--<control type="image">
+					<width>324</width>
+					<height>201</height>
+					<texture background="true">$INFO[ListItem.property(fanart_image)]</texture>
+					<bordertexture border="31">frames/frame_Square.png</bordertexture>
+					<bordersize>22</bordersize>
+				</control>-->
 				<control type="image">
 					<width>324</width>
 					<height>201</height>
@@ -80,11 +108,26 @@
 					<bordertexture border="31">frames/frame_Square.png</bordertexture>
 					<bordersize>22</bordersize>
 				</control>
-				<control type="image">
+				<control type="group">
 					<posx>270</posx>
 					<posy>147</posy>
-					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
-					<include condition="Skin.HasSetting(watched.original)">overlay_Resumable</include>
+					<control type="image">
+						<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
+						<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+						<visible>!Skin.HasSetting(watched.alternative)</visible>
+					</control>
+					<control type="image">
+						<include>overlay_Resumable</include>
+						<visible>Skin.HasSetting(watched.original)</visible>
+					</control>
+				</control>
+				<control type="group">
+					<posx>238</posx>
+					<posy>115</posy>
+					<visible>Skin.HasSetting(watched.alternative)</visible>
+					<control type="image">
+						<info>ListItem.Overlay</info>
+					</control>
 				</control>
 			</control>
 		</itemlayout>
@@ -94,15 +137,37 @@
 				<control type="image">
 					<width>324</width>
 					<height>201</height>
-					<texture background="true">$VAR[view_Landscape.Thumb]</texture>
+					<texture background="true">$INFO[ListItem.property(fanart_image)]</texture>
 					<bordertexture border="27">frames/frame_Square.png</bordertexture>
 					<bordersize>22</bordersize>
 				</control>
 				<control type="image">
+					<width>324</width>
+					<height>201</height>
+					<texture background="true">$VAR[view_Landscape.Thumb]</texture>
+					<bordertexture border="27">frames/frame_Square.png</bordertexture>
+					<bordersize>22</bordersize>
+				</control>
+				<control type="group">
 					<posx>270</posx>
 					<posy>147</posy>
-					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
-					<include condition="Skin.HasSetting(watched.original)">overlay_Resumable</include>
+					<control type="image">
+						<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
+						<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+						<visible>!Skin.HasSetting(watched.alternative)</visible>
+					</control>
+					<control type="image">
+						<include>overlay_Resumable</include>
+						<visible>Skin.HasSetting(watched.original)</visible>
+					</control>
+				</control>
+				<control type="group">
+					<posx>238</posx>
+					<posy>115</posy>
+					<visible>Skin.HasSetting(watched.alternative)</visible>
+					<control type="image">
+						<info>ListItem.Overlay</info>
+					</control>
 				</control>
 			</control>
 		</focusedlayout>
