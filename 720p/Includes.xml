@@ -679,11 +679,7 @@
 		<texture>overlays/OverlayResumable.png</texture>
 		<aspect>keepaspect</aspect>
 		<!--<visible>[Container.Content(movies) | Container.Content(episodes)] + ListItem.IsResumable + Skin.HasSetting(overlay.resumable) + IsEmpty(ListItem.Property(ReleaseDate)) + !SubString(Container.FolderPath,special://skin/playlists/Movies In Progress.xsp)</visible>-->
-<<<<<<< HEAD
 		<visible>Skin.HasSetting(watched.original) + ListItem.IsResumable + Skin.HasSetting(overlay.resumable) + !SubString(Container.FolderPath,special://skin/playlists/Movies In Progress.xsp)</visible>
-=======
-		<visible>Skin.HasSetting(watched.original) + !Skin.HasSetting(watched.alternative) + ListItem.IsResumable + Skin.HasSetting(overlay.resumable) + !SubString(Container.FolderPath,special://skin/playlists/Movies In Progress.xsp)</visible>
->>>>>>> origin/master
 	</include>
 	<include name="overlay_Resumable-list">
 		<width>32</width>
@@ -1244,7 +1240,7 @@
 	</include>
 	<include name="windowTitle_Programs">
 		<control type="label">
-			<label>[LOWERCASE]$LOCALIZE[0][/LOWERCASE]</label>
+			<label>$LOCALIZE[0]</label>
 			<include>windowTitle</include>
 		</control>
 	</include>
@@ -1284,14 +1280,6 @@
 			<control type="group">
 				<control type="group">
 				<include>toggle_ToastMute</include>
-<<<<<<< HEAD
-=======
-				<!-- <animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
-						<effect type="fade" start="0" end="100" time="500" delay="0" />
-						<effect type="fade" start="100" end="0" time="500" delay="10000" />
-						<effect type="fade" start="100" end="0" time="500" delay="20000" />
-					</animation> -->
->>>>>>> origin/master
 					<control type="label" id="200">
 						<posx>20r</posx>
 						<width>350</width>
@@ -1310,110 +1298,10 @@
 					<!-- <control type="label" id="1">
 						<posx>180r</posx>
 						<label>$INFO[MusicPlayer.TimeRemaining(hh:mm:ss)]</label>
-<<<<<<< HEAD
 						<include>toast_Side</include>
 					</control> -->
 				</control>
 			</control>
 		</control>
 	</include>
-=======
-						<include>toast_Side</include>
-					</control> -->
-				</control>
-				<!-- <control type="group">
-				<visible>MusicPlayer.HasNext</visible>
-					<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
-						<effect type="fade" start="0" end="100" time="500" delay="10500" />
-						<effect type="fade" start="100" end="0" time="500" delay="20000" />
-					</animation>
-					<control type="label">
-						<posx>120r</posx>
-						<label>$LOCALIZE[209]...</label>
-						<include>toast_Side</include>
-					</control>
-					<control type="label" id="200">
-						<posx>130r</posx>
-						<width>250</width>
-						<label>$INFO[MusicPlayer.offset(1).Title]</label>
-						<include>toast_Top</include>
-						<include>autoscroll-line</include>
-					</control>
-					<control type="label" id="201">
-						<posx>130r</posx>
-						<posy>28</posy>
-						<width>250</width>
-						<label>$INFO[MusicPlayer.offset(1).Artist]</label>
-						<include>toast_Bottom</include>
-						<include>autoscroll-line</include>
-					</control>
-				</control> -->
-			</control>
-		</control>
-	</include>
-
-
-<!---INTRO------>
-	<include name="intro_Enable">
-		<control type="videowindow" id="1">
-			<posx>280</posx>
-			<posy>156</posy>
-			<width>720</width>
-			<height>405</height>
-			<visible>Player.HasVideo</visible>
-		</control>
-		<control type="image">
-			<aspectratio>stretch</aspectratio>
-			<include>screen_Dimensions</include>
-			<texture>black.png</texture>
-			<animation effect="fade" delay="4200" end="100" time="350">WindowOpen</animation>
-		</control>
-		<control type="button" id="8999">
-			<onfocus>PlayMedia(special://skin/intro/intro.m4v,1)</onfocus>
-			<onfocus>SetFocus(10)</onfocus>
-			<label>SHOULD NOT SEE ME</label>
-			<visible allowhiddenfocus="true">false</visible>
-		</control>
-		<control type="button" id="10">
-			<onfocus>ReplaceWindow(Home)</onfocus>
-			<texturenofocus>-</texturenofocus>
-			<texturefocus>-</texturefocus>
-			<animation effect="fade" delay="4950" end="100" time="350">Focus</animation>
-		</control>
-	</include>
-	<include name="intro_Enable-1080">
-		<control type="videowindow" id="1">
-			<posx>600</posx>
-			<posy>338</posy>
-			<width>720</width>
-			<height>405</height>
-			<visible>Player.HasVideo</visible>
-		</control>
-		<control type="image">
-			<aspectratio>stretch</aspectratio>
-			<include>screen_Dimensions</include>
-			<texture>black.png</texture>
-			<animation effect="fade" delay="4200" end="100" time="350">WindowOpen</animation>
-		</control>
-		<control type="button" id="8999">
-			<onfocus>PlayMedia(special://skin/intro/intro.m4v,1)</onfocus>
-			<onfocus>SetFocus(10)</onfocus>
-			<label>SHOULD NOT SEE ME</label>
-			<visible allowhiddenfocus="true">false</visible>
-		</control>
-		<control type="button" id="10">
-			<onfocus>ReplaceWindow(Home)</onfocus>
-			<texturenofocus>-</texturenofocus>
-			<texturefocus>-</texturefocus>
-			<animation effect="fade" delay="4950" end="100" time="350">Focus</animation>
-		</control>
-	</include>
-	<include name="intro_Disable">
-		<control type="button" id="8999">
-			<onfocus>ReplaceWindow(Home)</onfocus>
-			<label>SHOULD NOT SEE ME</label>
-			<visible allowhiddenfocus="true">false</visible>
-		</control>
-	</include>
->>>>>>> origin/master
 </includes>
