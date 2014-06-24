@@ -313,8 +313,8 @@
 					<height>42</height>
 					<visible>Control.IsVisible(50) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)]</visible>
 					<control type="togglebutton" id="90">
-						<label>$LOCALIZE[31039]</label>
-						<altlabel>$LOCALIZE[31061]</altlabel>
+						<altlabel>$LOCALIZE[31039]</altlabel>
+						<label>$LOCALIZE[31061]</label>
 						<onup>31</onup>
 						<ondown>1</ondown>
 						<onright>50</onright>
