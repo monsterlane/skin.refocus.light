@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-	<addon id="skin.refocus.light" version="1.0.1" name="reFocus light" provider-name="Salem - modded by freem@n">
+<addon id="skin.refocus.light" version="1.0.2" name="reFocus light" provider-name="Salem - modded by freem@n">
 	<requires>
 		<import addon="xbmc.gui" version="5.0.1"/>
 		<import addon="script.favourites" version="5.0.0"/>
