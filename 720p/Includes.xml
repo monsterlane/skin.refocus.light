@@ -655,9 +655,9 @@
 		<fadetime>fadetime_Thumb</fadetime>
 	</include>
 	<include name="art_TVShowLogo">
-		<texture background="true">$INFO[ListItem.Path]logo.png</texture>
+		<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 		<aspectratio align="center">keep</aspectratio>
-		<fadetime>200</fadetime>d
+		<fadetime>200</fadetime>
 		<visible>Container.Content(tvshows) + Skin.HasSetting(tvshowlogos.enable)</visible>
 	</include>
 	<include name="overlay_UnWatched">

@@ -23,7 +23,7 @@
 						<label>$INFO[Container(53).ListItem(1).Label]</label>
 						<width>750</width>
 						<include>info_Title</include>
-						<animation effect="fade" start="100" end="30" time="0" condition="true">Conditional</animation>
+						<animation effect="fade" start="100" end="40" time="0" condition="true">Conditional</animation>
 					</control>
 				</control>
 			</control>
@@ -66,37 +66,15 @@
 				<width>750</width>
 				<height>422</height>
 				<aspectratio>stretch</aspectratio>
-				<texture background="true">$VAR[thumb_Landscape.Condition]</texture>
+				<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+				<!-- <animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation> -->
 			</control>
 			<control type="image">
-				<posx>0</posx>
-				<posy>300</posy>
-				<width>750</width>
-				<height>96</height>
-				<include>art_TVShowLogo</include>
-			</control>
-			<control type="group">
 				<posx>718</posx>
 				<posy>390</posy>
-				<visible>!Skin.HasSetting(watched.alternative)</visible>
 				<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
-				<control type="image">
-					<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
-					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
-				</control>
-				<control type="image">
-					<include>overlay_Resumable</include>
-					<visible>Skin.HasSetting(watched.original)</visible>
-				</control>
-			</control>
-			<control type="group">
-				<posx>685</posx>
-				<posy>360</posy>
-				<visible>Skin.HasSetting(watched.alternative)</visible>
-				<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
-				<control type="image">
-					<info>ListItem.Overlay</info>
-				</control>
+				<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+				<include condition="Skin.HasSetting(watched.original)">overlay_Resumable</include>
 			</control>
 		</itemlayout>
 		<focusedlayout height="800" width="750">
@@ -104,7 +82,7 @@
 				<width>750</width>
 				<height>422</height>
 				<aspectratio>stretch</aspectratio>
-				<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+				<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 				<animation effect="zoom" start="100" end="173" time="200" center="362,185" tween="Cubic" condition="Control.HasFocus(8000) + !IsEmpty(ListItem.Title)">Conditional</animation>
 			</control>
 			<control type="image">
@@ -114,27 +92,14 @@
 				<height>96</height>
 				<include>art_TVShowLogo</include>
 				<animation effect="zoom" start="100" end="173" time="200" center="362,185" tween="Cubic" condition="Control.HasFocus(8000)">Conditional</animation>
+				<!-- <animation effect="fade" start="100" end="0" time="200" condition="Control.HasFocus(8000)">Conditional</animation> -->
 			</control>
-			<control type="group">
+			<control type="image">
 				<posx>718</posx>
 				<posy>390</posy>
-				<visible>!Skin.HasSetting(watched.alternative) + !Control.HasFocus(8000)</visible>
-				<control type="image">
-					<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
-					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
-				</control>
-				<control type="image">
-					<include>overlay_Resumable</include>
-					<visible>Skin.HasSetting(watched.original)</visible>
-				</control>
-			</control>
-			<control type="group">
-				<posx>686</posx>
-				<posy>359</posy>
-				<visible>Skin.HasSetting(watched.alternative) + !Control.HasFocus(8000)</visible>
-				<control type="image">
-					<info>ListItem.Overlay</info>
-				</control>
+				<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+				<include condition="Skin.HasSetting(watched.original)">overlay_Resumable</include>
+				<visible>!Control.HasFocus(8000)</visible>
 			</control>
 		</focusedlayout>
 	</include>
@@ -171,7 +136,7 @@
 			<onup>6000</onup>
 			<ondown>8000</ondown>
 			<preloaditems>2</preloaditems>
-			<scrolltime tween="Cubic" easing="Out">300</scrolltime>
+			<scrolltime>0</scrolltime>
 			<orientation>horizontal</orientation>
 			<include>transition_Container</include>
 			<include>infoDialogHide</include>
@@ -211,25 +176,8 @@
 	<!---container contents--->
 	<include name="GalleryFullVideo">
 		<itemlayout height="screen_Height" width="screen_Width">
-			<control type="image">
-				<include>screen_Dimensions</include>
-				<aspectratio>keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
-			</control>
-			<control type="image">
-				<posx>20</posx>
-				<posy>20</posy>
-				<width>217</width>
-				<height>84</height>
-				<include>art_TVShowLogo</include>
-			</control>
 		</itemlayout>
 		<focusedlayout height="screen_Height" width="screen_Width">
-			<control type="image">
-				<include>screen_Dimensions</include>
-				<aspectratio aligny="left">scale</aspectratio>
-				<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
-			</control>
 			<control type="image">
 				<posx>20</posx>
 				<posy>20</posy>

@@ -124,8 +124,9 @@
     	<value>-</value>
     </variable>
 	<variable name="thumb_Landscape.Condition">
-		<!-- <value condition="!IsEmpty(ListItem.Art(fanart)) + ![Container.Content(episodes) | Container.Content(musicvideos)]">$INFO[ListItem.Art(fanart)]</value>
-		<value condition="IsEmpty(ListItem.Art(fanart)) + IsEmpty(ListItem.Thumb) + Container.Content(movies)">thumbs/movie_landscape.jpg</value>
+		<value condition="!IsEmpty(ListItem.Art(landscape)) + ![Container.Content(episodes) | Container.Content(musicvideos)]">$INFO[ListItem.Art(landscape)]</value>
+		<value condition="IsEmpty(ListItem.Art(landscape)) + !IsEmpty(ListItem.Art(fanart)) + ![Container.Content(episodes) | Container.Content(musicvideos)]">$INFO[ListItem.Art(fanart)]</value>
+		<!-- <value condition="IsEmpty(ListItem.Art(fanart)) + IsEmpty(ListItem.Thumb) + Container.Content(movies)">thumbs/movie_landscape.jpg</value>
 		<value condition="IsEmpty(ListItem.Art(fanart)) + IsEmpty(ListItem.Thumb) + Container.Content(tvshows)">thumbs/tvshow_landscape.jpg</value>
 		<value condition="IsEmpty(ListItem.Art(fanart)) + IsEmpty(ListItem.Thumb) + Container.Content(artists)">thumbs/artist_landscape.png</value> -->
 		<value condition="Container.Content(musicvideos) + IsEmpty(ListItem.Thumb)">thumbs/music_landscape.jpg</value>
