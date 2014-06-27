@@ -2,8 +2,12 @@
 <window id="0">
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
+<<<<<<< HEAD
 	<!-- <onload>Dialog.Close(all,true)</onload> -->
 	<onload>Dialog.Close(movieinformation,true)</onload>
+=======
+	<onload>Dialog.Close(all,true)</onload>
+>>>>>>> origin/master
 
 	<controls>
 

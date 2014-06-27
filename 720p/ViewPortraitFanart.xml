@@ -17,6 +17,7 @@
 				<aspectratio align="left">keep</aspectratio>
 				<texture fallback="empty">$VAR[flag_Studio]</texture>
 			</control>
+<<<<<<< HEAD
 			<control type="grouplist">
 				<posx>142</posx>
 				<orientation>horizontal</orientation>
@@ -34,6 +35,14 @@
 						<label>$INFO[ListItem.Rating]</label>
 						<textcolor>Color3</textcolor>
 					</control>
+=======
+            <control type="image">
+                <posx>132</posx>
+				<width>128</width>
+				<height>32</height>
+				<info>ListItem.StarRating</info>
+				<aspectratio align="center">keep</aspectratio>
+>>>>>>> origin/master
 			</control>
 			<control type="image">
 				<posx>1084</posx>
@@ -51,12 +60,27 @@
 				<texture>$INFO[Listitem.AudioChannels,flags/audio/,.png]</texture>
 				<visible>!IsEmpty(Listitem.AudioChannels)</visible>
 			</control>
+<<<<<<< HEAD
+=======
+			<!-- logo -->
+			<control type="image">
+				<posx>20</posx>
+				<posy>-600</posy>
+				<width>250</width>
+				<height>97</height>
+				<aspectratio align="center">keep</aspectratio>
+				<texture background="true">$INFO[ListItem.Path]logo.png</texture>
+			</control>
+>>>>>>> origin/master
 			<!---info--->
 			<control type="group">
 				<visible>!Container.Content(addons)</visible>
 				<control type="label">
 				<posx>270</posx>
+<<<<<<< HEAD
 				<posy>-10</posy>
+=======
+>>>>>>> origin/master
 				<width>730</width>
 					<label>$VAR[global_Title]</label>
 					<font>titleSpecial</font>
