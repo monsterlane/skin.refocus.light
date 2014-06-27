@@ -22,7 +22,6 @@
 			    <visible>Container.Content(episodes)</visible>
 		    </control>
 		</control>
-<<<<<<< HEAD
 		<control type="image">
 			<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 			<include>screen_Dimensions</include>
@@ -45,35 +44,6 @@
 			<include>transition_Fanart</include>
 			<visible>Control.IsVisible(47) + ControlGroup(6000).HasFocus()</visible>
 		</control>
-=======
-			<control type="image">
-				<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
-				<include>screen_Dimensions</include>
-				<fadetime>fadetime_Fanart</fadetime>
-				<include>fadeinout</include>
-				<visible>Control.IsVisible(47)</visible>
-			</control>
-			<control type="image">
-				<texture background="true">backgrounds/background.png</texture>
-				<include>screen_Dimensions</include>
-				<fadetime>fadetime_Fanart</fadetime>
-				<include>fadeinout</include>
-				<visible>Control.IsVisible(47) + Window.IsActive(movieinformation)</visible>
-			</control>
-			<control type="image">
-				<include>screen_Dimensions</include>
-				<aspectratio align="left">stretch</aspectratio>
-				<texture>home/menuBackground.png</texture>
-				<include>fadeinout</include>
-				<include>transition_Fanart</include>
-				<visible>Control.IsVisible(47) + ControlGroup(6000).HasFocus()</visible>
-			</control>
-			<!--<control type="group">
-				<include>global_Clock</include>
-				<visible>Control.IsVisible(47)</visible>
-			</control>-->
-
->>>>>>> origin/master
 		<control type="group">
 			<posy>500</posy>
 			<include>transition_Container</include>
@@ -130,11 +100,7 @@
 				<control type="label">
 					<posy>40</posy>
 					<width>780</width>
-<<<<<<< HEAD
 					<label>$INFO[ListItem.Season,$LOCALIZE[20373] , • ]$INFO[ListItem.Episode,$LOCALIZE[20359] ]</label>
-=======
-					<label>$INFO[ListItem.Season,$LOCALIZE[20373] , � ]$INFO[ListItem.Episode,$LOCALIZE[20359] ]</label>
->>>>>>> origin/master
 					<font>descriptionbig</font>
 					<align>left</align>
 					<textcolor>Color4</textcolor>
@@ -167,18 +133,6 @@
 					<font>descriptionbig</font>
 					<include>description_OSD</include>
 				</control>
-<<<<<<< HEAD
-=======
-			    <control type="group">
-				    <align>right</align>
-				    <posx>803</posx>
-					<posy>3</posy>
-				    <control type="image">
-					    <width>119</width>
-					    <height>42</height>
-				    </control>
-			    </control>
->>>>>>> origin/master
 			    <control type="image">
 					<posx>913</posx>
 					<posy>110</posy>

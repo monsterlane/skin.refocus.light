@@ -18,10 +18,6 @@
 			<visible allowhiddenfocus="true">![ControlGroup(1100).HasFocus() | ControlGroup(4000).HasFocus() | ControlGroup(2100).HasFocus()]</visible>
 			<include>transition_HomeMenu</include>
 			<include>homeMenusLayoutOriginal</include>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 			<content>
 				<!--custom categories-->
 				<!--first subcategory-->
