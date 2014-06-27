@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <includes>
+=======
+﻿<includes>
+>>>>>>> origin/master
 	<!---POSTER------>
 	<include name="view_IconPoster">
 		<control type="panel" id="57">
@@ -35,6 +39,17 @@
 					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
 					<include condition="Skin.HasSetting(watched.original)">overlay_Resumable</include>
 				</control>
+<<<<<<< HEAD
+=======
+				<control type="group">
+					<posx>110</posx>
+					<posy>182</posy>
+					<visible>Skin.HasSetting(watched.alternative)</visible>
+					<control type="image">
+						<info>ListItem.Overlay</info>
+					</control>
+				</control>
+>>>>>>> origin/master
 			</itemlayout>
 			<focusedlayout height="260" width="186">
 				<control type="image">
@@ -167,6 +182,17 @@
 					<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
 					<include condition="Skin.HasSetting(watched.original)">overlay_Resumable</include>
 				</control>
+<<<<<<< HEAD
+=======
+				<control type="group">
+					<posx>68</posx>
+					<posy>118</posy>
+					<visible>Skin.HasSetting(watched.alternative)</visible>
+					<control type="image">
+						<info>ListItem.Overlay</info>
+					</control>
+				</control>
+>>>>>>> origin/master
 			</itemlayout>
 			<focusedlayout height="190" width="140">
 				<control type="image">
@@ -361,6 +387,22 @@
 						<textcolor>Color2</textcolor>
 						<visible>!SubString(Container.FolderPath,plugin://)</visible>
 					</control>
+<<<<<<< HEAD
+=======
+				</control>
+				<control type="group">
+					<posx>336</posx>
+					<posy>184</posy>
+					<control type="image">
+						<include condition="Skin.HasSetting(watched.original)">overlay_UnWatchedOriginal</include>
+						<include condition="!Skin.HasSetting(watched.original)">overlay_UnWatched</include>
+						<visible>!Skin.HasSetting(watched.alternative)</visible>
+					</control>
+					<control type="image">
+						<include>overlay_Resumable</include>
+						<visible>Skin.HasSetting(watched.original)</visible>
+					</control>
+>>>>>>> origin/master
 				</control>
 				<control type="image">
 					<posx>336</posx>

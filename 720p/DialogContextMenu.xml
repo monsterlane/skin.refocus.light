@@ -40,7 +40,11 @@
 					<width>302</width>
 					<label>trakt.tv options</label>
 					<onclick>RunScript(script.trakt,action=contextmenu)</onclick>
+<<<<<<< HEAD
 					<visible>System.HasAddon(script.trakt) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)]</visible>
+=======
+					<visible>System.HasAddon(script.trakt) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+>>>>>>> origin/master
 					<include>dialog_Button-list</include>
 			</control>
 			<control type="button" id="2007">
